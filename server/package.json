@@ -1,0 +1,10 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server side json file",
+  "main": "server.js",
+  "repository": "https://github.com/kfusilier/antiSocial_Network.git",
+  "author": "Group: FULLSTACK ATTACK! Erik Yang, Nat Zeng, Pete Setthin, Xavier Comacho & Kristin Fusilier",
+  "license": "MIT",
+  "private": true
+}
