@@ -1,7 +1,10 @@
+require("dotenv").config(); 
+
 /* ===== External Modules ===== */
 const express = require('express');
 
 /* ===== Internal Modules ===== */
+require('./models');
 
 /* ===== Instanced Modules ===== */
 const app = express();
