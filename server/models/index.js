@@ -12,3 +12,7 @@ mongoose
     })
     .catch((err) => console.log(`failed mongodb at Error: ${err}`))
 
+
+module.exports ={
+    Post: require('./Post'),
+}
