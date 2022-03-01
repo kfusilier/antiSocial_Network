@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+// bring in React from React
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// define our Hello functional component
+function Hello() {
+	// what should the component return
+	return (
+		// Make sure to return some UI
+		<h1>Hello World!</h1>
+	);
 }
 
-export default App;
+export default Hello;
+// export default App;

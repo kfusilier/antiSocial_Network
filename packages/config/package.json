@@ -1,6 +1,6 @@
 {
-    "name": "@antisocial_network/config",
-    "version": "0.1.0",
-    "main": index.js",
-    "license": "MIT"
+	"name": "@antisocial_network/config",
+	"version": "0.1.0",
+	"main": "index.js",
+	"license": "MIT"
 }
