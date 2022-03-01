@@ -24,5 +24,5 @@ app.all('/api/*', (req, res, next) => {
 
 /* ===== Server Listener ===== */
 app.listen(config.PORT, () => {
-	console.log(`antisocial live on http://localhost${'config.PORT'}`);
+	console.log(`antiSocial live on http://localhost:${config.PORT}`);
 });
