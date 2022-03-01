@@ -6,7 +6,7 @@ function Hello() {
 	// what should the component return
 	return (
 		// Make sure to return some UI
-		<h1>Hello World!</h1>
+		<h1>Hello World! Test!</h1>
 	);
 }
 
