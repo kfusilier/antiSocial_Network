@@ -12,6 +12,10 @@ const app = express();
 /* ===== Configuration ===== */
 const config = require('@antisocial_network/config');
 
+
+/* ===== Middleware ===== */
+app.use(express.static(path.join("build")));
+
 /* ===== Routes & Controllers ===== */
 app.all('/api/*', (req, res, next) => {
 	res.send("This isn't what you're looking for!");
