@@ -9,5 +9,4 @@ function Home(props) {
     )
 };
 
-export default Home;
-yarn 
+export default Home; 
