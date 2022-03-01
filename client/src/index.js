@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//test
+import Home from './pages/HomePage/index.js';
 import Hello from './App.js';
 import './index.css';
 import App from './App';
@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<Home />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
