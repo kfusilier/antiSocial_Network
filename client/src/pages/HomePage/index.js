@@ -3,7 +3,7 @@ import Landing from "../../components/Landing";
 
 function Home(props) {
     return (
-        <div>
+        <div className="landingDiv">
         <Landing />
         </div>
     )

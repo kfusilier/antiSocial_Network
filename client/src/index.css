@@ -1,0 +1,21 @@
+.landingDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: rgb(122, 238, 122);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  color: rgb(122, 238, 122);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(55, 119, 64);
+  height: 100%;
+  width: 100%;
+}
