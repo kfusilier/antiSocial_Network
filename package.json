@@ -1,0 +1,49 @@
+{
+	"name": "antisocial_network",
+	"version": "0.1.0",
+	"description": "Social media app for introverts",
+	"main": "index.js",
+	"repository": "https://github.com/kfusilier/antiSocial_Network.git",
+	"author": "Group: FULLSTACK ATTACK! Erik Yang, Nat Zeng, Pete Sertthin, Xavier Comacho & Kristin Fusilier",
+	"private": true,
+	"workspaces": [
+		"client",
+		"server",
+		"packages/*"
+	],
+	"dependencies": {
+		"@testing-library/jest-dom": "^5.16.2",
+		"@testing-library/react": "^12.1.3",
+		"@testing-library/user-event": "^13.5.0",
+		"concurrently": "^7.0.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-scripts": "5.0.0",
+		"web-vitals": "^2.1.4"
+	},
+	"scripts": {
+		"start": "yarn --cwd server start",
+		"build": "yarn --cwd client build && mv ./client/build ./server/build",
+		"start-server-dev": "yarn --cwd server dev",
+		"start-client-dev": "yarn --cwd client start",
+		"dev": "concurrently --kill-others --handle-input -n client,server 'yarn:start-client-dev' 'yarn:start-server-dev'"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
