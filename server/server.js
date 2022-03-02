@@ -1,5 +1,6 @@
-require("dotenv").config(); 
 const path = require("path");
+require("dotenv").config({path: '../.env'}); 
+
 /* ===== External Modules ===== */
 const express = require('express');
 const cors = require("cors");
@@ -35,5 +36,7 @@ app.all('/api/*', (req, res, next) => {
 
 /* ===== Server Listener ===== */
 app.listen(config.PORT, () => {
-	console.log(`antisocial live on http://localhost:${config.PORT}`);
+
+	console.log(`antiSocial live on http://localhost:${config.PORT}`);
+
 });
