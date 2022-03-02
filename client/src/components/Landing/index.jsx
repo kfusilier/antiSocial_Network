@@ -1,12 +1,12 @@
-import React from 'react';
+import style from './landing.module.css';
 
 function Landing() {
 	return (
-		<div id='homeBrand'>
-			<div className='homeLogo'>
+		<div className={style.homeBrand}>
+			<div id={style.homeLogo}>
 				<p>antiSocial</p>
 			</div>
-			<div className='homeBlurb'>
+			<div id={style.homeBlurb}>
 				<p>a place to be alone, together.</p>
 			</div>
 		</div>
