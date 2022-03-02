@@ -12,13 +12,13 @@ import CreateUser from '../../components/CreateUser';
 const Home = () => {
 	return (
 		<div>
-			<NavBar1 />
 			<Landing />
-			<LoginForm />
-			<CreateUser />
 		</div>
 	);
 };
+// <NavBar1 />;
+// <LoginForm />
+// <CreateUser />
 
 export default Home;
 

@@ -4,8 +4,8 @@
 }
 
 :root {
-	--bg: rgb(92, 179, 92);
-	--main-color: white;
+	--bg: rgb(177, 217, 137);
+	--main-color: rgb(215, 235, 206);
 }
 
 body {
@@ -15,15 +15,39 @@ body {
 	color: var(--main-color);
 }
 
+.homeLogo {
+	color: rgb(215, 235, 206);
+	font-family: 'Fredoka One', cursive;
+	font-size: 70px;
+}
+
+.homeBlurb {
+	color: rgb(215, 235, 206);
+	font-family: 'Fredoka One', cursive;
+	font-size: 40px;
+}
+
+#homeBrand {
+	margin: auto;
+	width: 50%;
+	padding: 350px;
+}
+/* border: 3px solid green; */
+
 h1 {
-	color: yellow;
-	font-family: 'Titan One', cursive;
+	color: hotpink;
+	font-family: 'Fredoka One', cursive;
 	/* font-weight: bold; */
 }
 
+h2 {
+	color: purple;
+	font-family: 'Titan One', cursive;
+}
+
 h3 {
-	color: grey;
-	font-family: Arial, Helvetica, sans-serif;
+	color: yellow;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* body {
