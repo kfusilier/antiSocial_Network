@@ -29,7 +29,7 @@ app.use(express.json());
 
 /* ===== Routes & Controllers ===== */
 app.use("/api", routes.posts);
-app.use("/api/posts", routes.users);
+app.use("/api/users", routes.users);
 
 app.all('/api/*', (req, res, next) => {
 	res.send("This isn't what you're looking for!");

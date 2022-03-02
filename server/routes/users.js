@@ -3,6 +3,6 @@ const ctrl = require("../controllers");
 
 router.get("/", ctrl.users.index);
 router.get("/:id", ctrl.users.show);
-router.put("/", ctrl.users.create);
+// router.put("/", ctrl.users.create);
 
 module.exports = router;
