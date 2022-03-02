@@ -7,6 +7,7 @@ import NavBar1 from '../../components/navbar1';
 // import { Routes, Route } from 'react-router-dom';
 import Landing from '../../components/Landing';
 import LoginForm from '../../components/loginForm';
+import CreateUser from '../../components/CreateUser';
 
 const Home = () => {
 	return (
@@ -14,6 +15,7 @@ const Home = () => {
 			<NavBar1 />
 			<Landing />
 			<LoginForm />
+			<CreateUser />
 		</div>
 	);
 };
