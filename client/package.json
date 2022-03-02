@@ -12,5 +12,8 @@
 	"repository": "https://github.com/kfusilier/antiSocial_Network.git",
 	"author": "Group: FULLSTACK ATTACK! Erik Yang, Nat Zeng, Pete Sertthin, Xavier Comacho & Kristin Fusilier",
 	"license": "MIT",
-	"private": true
+	"private": true,
+	"dependencies": {
+		"react-dom": "^17.0.2"
+	}
 }
