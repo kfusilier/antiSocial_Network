@@ -6,12 +6,14 @@ import NavBar1 from '../../components/navbar1';
 // import UsersPage from '../UsersPage';
 // import { Routes, Route } from 'react-router-dom';
 import Landing from '../../components/Landing';
+import LoginForm from '../../components/loginForm';
 
 const Home = () => {
 	return (
 		<div>
 			<NavBar1 />
 			<Landing />
+			<LoginForm />
 		</div>
 	);
 };
