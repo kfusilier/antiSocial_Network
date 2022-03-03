@@ -32,6 +32,10 @@ app.use(express.json());
 app.use("/api/posts", routes.posts);
 app.use("/api/users", routes.users);
 
+///test
+
+app.use('/api/auth', routes.auth);
+
 
 
 app.all('/api/*', (req, res, next) => {
@@ -44,3 +48,6 @@ app.listen(config.PORT, () => {
 	console.log(`antiSocial live on http://localhost:${config.PORT}`);
 
 });
+
+
+
