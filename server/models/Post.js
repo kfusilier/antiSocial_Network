@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const commentSchema = require("./Comment.js");
 
 const postSchema = new Schema(
     {
         user: { type: Schema.Types.ObjectId, ref: "User" },
         text: String,
-        comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
+        comments: [commentSchema],
         followers: {type: Boolean, default: false},
     }, 
     {
