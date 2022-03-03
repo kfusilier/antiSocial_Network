@@ -1,4 +1,4 @@
-// Follow Friend Icon - person walking towards arrow sign to the right
+// Follow Friend Icon -
 
 function FollowFriendIcon() {
 	return (

@@ -1,3 +1,4 @@
+/* div around logo and blurb */
 .homeBrand {
 	/* margin: auto; */
 	width: 50%;
@@ -5,24 +6,21 @@
 	/* border: 3px solid purple; */
 }
 
+/* 'antiSocial' */
 #homeLogo {
-	color: rgb(215, 235, 206);
+	color: white;
 	font-family: 'Fredoka One', cursive;
 	font-size: 80px;
 	/* border: 3px solid green; */
 }
 
+/* 'a place to be alone, together.' */
 #homeBlurb {
-	color: rgb(215, 235, 206);
+	color: white;
 	font-family: 'Fredoka One', cursive;
 	font-size: 40px;
 	/* border: 3px solid hotpink; */
 }
 
-/* body {
-	background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
-	background-size: 100vw 100vh;
-} */
-
-
-/* border: 3px solid green; */
+/* alternative color for text 
+#e9f5e4 */
