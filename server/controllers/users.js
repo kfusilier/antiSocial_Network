@@ -6,7 +6,7 @@ const index = (req, res) => {
         if (err) return res.status(400).json({
             message: "Utter Failure! for INDEX",
             error: err,
-        });
+        })
         return res.status(200).json({
 			message: "Success!",
 			data: allUsers,
@@ -31,8 +31,6 @@ const create = (req, res) => {
 
 module.exports = {
     index,
-    show,
-    newUser,
     create,
     
 }
