@@ -1,0 +1,18 @@
+/* Log in icon CSS */
+
+.icon {
+	fill: white;
+}
+
+.primary {
+	fill: green;
+}
+
+.alert {
+	fill: white;
+	background: orange;
+}
+
+.default {
+	fill: black;
+}

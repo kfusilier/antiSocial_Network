@@ -10,17 +10,12 @@ import Signup from '../SignupPage';
 import SignUpIcon from '../../components/NavBarIcons/SignUp.index';
 import Login from '../LoginPage';
 import LogInIcon from '../../components/NavBarIcons/LogIn.index';
-import ToggleOffIcon from '../../components/OtherIcons/ToggleOff.index';
 
 const Home = () => {
 	return (
 		<>
 			<div>
 				<NavBar1 />
-				<SignUpIcon />
-				<LogInIcon />
-				<ToggleOffIcon />
-
 				<Routes>
 					<Route path='/SignupPage' element={<Signup />}></Route>
 					<Route path='/LoginPage' element={<Login />}></Route>
