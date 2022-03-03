@@ -3,9 +3,13 @@
 	padding: 0;
 }
 
-:root {
+body {
 	background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+	background-size: 100vw 100vh;
 }
+/* :root {
+	background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+} */
 
 /* .background {
 	background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);

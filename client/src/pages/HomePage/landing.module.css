@@ -2,21 +2,27 @@
 	/* margin: auto; */
 	width: 50%;
 	padding: 100px;
-	border: 3px solid purple;
+	/* border: 3px solid purple; */
 }
 
 #homeLogo {
 	color: rgb(215, 235, 206);
 	font-family: 'Fredoka One', cursive;
 	font-size: 80px;
-	border: 3px solid green;
+	/* border: 3px solid green; */
 }
 
 #homeBlurb {
 	color: rgb(215, 235, 206);
 	font-family: 'Fredoka One', cursive;
 	font-size: 40px;
-	border: 3px solid hotpink;
+	/* border: 3px solid hotpink; */
 }
+
+/* body {
+	background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+	background-size: 100vw 100vh;
+} */
+
 
 /* border: 3px solid green; */

@@ -1,10 +1,11 @@
-import NavBar1 from '../../components/navbar1';
+import NavBar1 from '../../components/NavBar1';
+import CreateUser from '../../components/CreateUser';
 // import { Routes, Route } from 'react-router-dom';
 
 const Signup = () => {
 	return (
 		<div>
-			<NavBar1 />
+			<CreateUser />
 		</div>
 	);
 };
