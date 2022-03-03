@@ -8,16 +8,11 @@ import NavBar1 from '../../components/NavBar1';
 import Landing from '../../components/Landing';
 // import LoginForm from '../../components/LoginForm';
 // import CreateUser from '../../components/CreateUser';
-// import style from ''
+import styled from 'styled-components';
 
-// const bgStyles = {
-// 	color: 'red',
-// 	border: '3px',
-// 	borderColor: 'blue',
-// };
-// 	backgroundImage: linear-gradient;
-// 	(to top, #37ecba 0%, #72afd3 100%)
-//
+const Text = styled.div`
+	background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+`;
 
 const Home = () => {
 	return (
