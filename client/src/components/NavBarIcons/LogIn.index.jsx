@@ -1,6 +1,6 @@
 // Log in Icon = Open Door w/ arrow entering
 
-import style from './icon.module.css';
+import style from './icons.module.css';
 import IconPath from './IconPath';
 
 function LogInIcon() {
