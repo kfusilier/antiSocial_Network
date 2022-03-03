@@ -1,12 +1,11 @@
-import loginForm from '../../components/login_form';
-import NavBar1 from '../../components/navbar1';
+import LoginForm from '../../components/loginForm';
+import NavBar1 from '../../components/NavBar1';
 // import { Routes, Route } from 'react-router-dom';
 
 const Login = () => {
 	return (
 		<div>
-			<NavBar1 />
-			<loginForm />
+			<LoginForm />
 		</div>
 	);
 };
