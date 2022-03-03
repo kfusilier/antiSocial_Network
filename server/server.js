@@ -28,7 +28,10 @@ app.use(express.json());
 
 
 /* ===== Routes & Controllers ===== */
-app.use('/api', routes);
+
+app.use("/api/posts", routes.posts);
+app.use("/api/users", routes.users);
+
 
 
 app.all('/api/*', (req, res, next) => {
