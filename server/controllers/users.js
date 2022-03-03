@@ -14,6 +14,21 @@ const index = (req, res) => {
     });
 };
 
+const show = (req, res) => {
+	db.User.findById(req.params.id), (err, foundUser) => {
+		if(err)
+			return res.status(400).json({
+				message: "Utter Failure on Show!",
+				error: err,
+			});
+		return res.status(201).json({
+			message: "Success",
+			data: foundUser,
+		});
+
+	};
+}
+
 const create = (req, res) => {
 	db.User.create(req.body, (err, createdUser) => {
 		if (err)
@@ -28,9 +43,26 @@ const create = (req, res) => {
 	});
 };
 
+const destroy = (req, res) => {
+	db.User.findByIdAndDelete(req.params.id, (err, deletedUser) => {
+		if (err) 
+			return res.status(400).json({
+				message: "Utter Failure on delete!",
+				error: err,
+			});
+		return res.status(200).json({
+			message: "Success!",
+			data: deletedUser,
+		});
+	});
+};
+
 
 module.exports = {
     index,
     create,
+	show,
+	destroy,
+
     
 }
