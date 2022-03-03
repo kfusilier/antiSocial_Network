@@ -4,22 +4,33 @@
 // import PostForm from '../../components/PostForm';
 import NavBar1 from '../../components/NavBar1';
 // import UsersPage from '../UsersPage';
-// import { Routes, Route } from 'react-router-dom';
-import Landing from '../../components/Landing';
-// import LoginForm from '../../components/LoginForm';
-// import CreateUser from '../../components/CreateUser';
-import styled from 'styled-components';
-
-const Text = styled.div`
-	background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
-`;
+import { Routes, Route } from 'react-router-dom';
+import Signup from '../SignupPage';
+import Login from '../LoginPage'
+import style from "./landing.module.css"
+import SignUpIcon from '../../components/NavBarIcons/SignUp.index';
 
 const Home = () => {
 	return (
+		<>
 		<div>
-			<NavBar1 />
-			<Landing />
+		<NavBar1 />
+		<Routes>
+			<Route path ='/SignupPage' element = {<Signup />}></Route>
+			<Route path ='/LoginPage' element = {<Login />}></Route>
+		</Routes>
 		</div>
+
+		<div className={style.homeBrand}>
+			<div id={style.homeLogo}>
+				<p>antiSocial</p>
+			</div>
+			<div id={style.homeBlurb}>
+				<p>a place to be alone, together.</p>
+			</div>
+			<SignUpIcon />
+		</div>
+		</>
 	);
 };
 
