@@ -38,24 +38,24 @@ While antiSocial in its current state is a project out team is very proud of, th
 ★·.·´¯`·.·★ CONTRIBUTING INSTRUCTION ★·.·´¯`·.·★
 Thanks for your interest in antiSocial. We are open your input! We want to make every contribution to this project as transparent and effortless as possible.
 
-Instructions
-Fork this Repository
-Clone your forked repository
-Add your scripts
-Commit & Push
-Create a pull request
-Star this repository
-Wait for Pull Request to merge
-Celebrate, your first step into the open Source World and contribute more★·.·´¯`·.·★ Installation ★·.·´¯`·.·★
+**_Instructions_**
+
+-    Fork this Repository
+-    Clone your forked repository
+-    Add your scripts
+-    Commit & Push
+-    Create a pull request
+-    Star this repository
+-    Wait for Pull Request to merge
+-    Celebrate your contribution to the open Source World
+-    Find a new project, rinse, repeat!
+
+★·.·´¯`·.·★ Installation ★·.·´¯`·.·★
 
 ★·.·´¯`·.·★ License ★·.·´¯`·.·★
 If you submit code changes, your submissions are understood to be under the same [MIT License](https://choosealicense.com/licenses/mit/) that covers the project.
 
 ★·.·´¯`·.·★ Support ★·.·´¯`·.·★
-
-★·.·´¯`·.·★ ★·.·´¯`·.·★
-
-★·.·´¯`·.·★ ★·.·´¯`·.·★
 
 <!-- https://www.makeareadme.com/ -->
 
