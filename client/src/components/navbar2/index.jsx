@@ -18,3 +18,17 @@ export default function NavBar2() {
 		</>
 	);
 }
+
+import { LogInIcon } from '../NavBarIcons/LogIn.import LogInIcon from '../NavBarIcons/LogIn.index';
+import SignUpIcon from '../NavBarIcons/SignUp.index';
+
+export default function NavBar1() {
+	return (
+		<>
+			<div className='nav'>
+				<SignUpIcon />
+				<LogInIcon />
+			</div>
+		</>
+	);
+}

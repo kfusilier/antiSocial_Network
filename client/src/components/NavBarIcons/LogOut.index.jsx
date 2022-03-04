@@ -1,4 +1,4 @@
-// Log out icon - open door with arrow pointing right
+// Log out icon - open door with arrow exiting pointing right
 
 function LogOutIcon() {
 	return (
