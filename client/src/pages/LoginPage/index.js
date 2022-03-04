@@ -5,8 +5,8 @@ import NavBar1 from '../../components/NavBar1';
 const Login = () => {
 	return (
 		<div>
-			<LoginForm />
 			<NavBar1 />
+			<LoginForm />
 		</div>
 	);
 };

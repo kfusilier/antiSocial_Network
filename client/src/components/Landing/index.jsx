@@ -3,10 +3,10 @@ import style from './landing.module.css';
 function Landing() {
 	return (
 		<div className={style.homeBrand}>
-			<div id={style.homeLogo}>
+			<div className={style.homeLogo}>
 				<p>antiSocial</p>
 			</div>
-			<div id={style.homeBlurb}>
+			<div className={style.homeBlurb}>
 				<p>a place to be alone, together.</p>
 			</div>
 		</div>

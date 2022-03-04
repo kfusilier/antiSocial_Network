@@ -15,13 +15,12 @@ const Home = () => {
 		<>
 			<div>
 				<NavBar1 />
-				<UserHomePageIcon />
 				<Routes>
-					<Route path='/' element={<Landing />}></Route>
-
 					<Route path='/SignupPage' element={<Signup />}></Route>
 
 					<Route path='/LoginPage' element={<Login />}></Route>
+
+					<Route path='/' element={<Landing />}></Route>
 				</Routes>
 			</div>
 		</>
