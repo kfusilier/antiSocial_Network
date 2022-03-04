@@ -15,10 +15,10 @@ const index = (req, res) => {
 };
 
 const show = (req, res) => {
-	db.User.findById(req.params.id), (err, foundUser) => {
+	db.User.findById(req.params.id, (err, foundUser) => {
 		if(err)
 			return res.status(400).json({
-				message: "Utter Failure on Show!",
+				message: "Utter Failure on user Show!",
 				error: err,
 			});
 		return res.status(201).json({
@@ -26,14 +26,14 @@ const show = (req, res) => {
 			data: foundUser,
 		});
 
-	};
+	});
 }
 
 const create = (req, res) => {
 	db.User.create(req.body, (err, createdUser) => {
 		if (err)
 			return res.status(400).json({
-				message: "Utter Failure! for create",
+				message: "Utter Failure! on user create",
 				error: err,
 			});
 		return res.status(201).json({
@@ -47,7 +47,7 @@ const destroy = (req, res) => {
 	db.User.findByIdAndDelete(req.params.id, (err, deletedUser) => {
 		if (err) 
 			return res.status(400).json({
-				message: "Utter Failure on delete!",
+				message: "Utter Failure on user delete!",
 				error: err,
 			});
 		return res.status(200).json({
