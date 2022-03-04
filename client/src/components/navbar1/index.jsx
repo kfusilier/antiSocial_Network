@@ -2,6 +2,7 @@ import { NavLink, Link } from 'react-router-dom';
 import SignUpIcon from '../NavBarIcons/SignUp.index';
 import UserDropMenuIcon from '../NavBarIcons/UserDropMenu.index';
 import style from './navBar.module.css';
+import heart from './heart.png';
 
 export default function NavBar1() {
 	return (
@@ -16,7 +17,7 @@ export default function NavBar1() {
 					style={({ isActive }) => ({
 						color: isActive ? 'green' : 'blue',
 					})}>
-					SignUp
+					<img src={heart} width='50' height='33' alt='heart' />
 				</NavLink>
 
 				<NavLink

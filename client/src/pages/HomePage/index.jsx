@@ -10,12 +10,14 @@ import SignUpIcon from '../../components/NavBarIcons/SignUp.index';
 import Login from '../LoginPage';
 import LogInIcon from '../../components/NavBarIcons/LogIn.index';
 import Landing from '../../components/Landing';
+import UserHomePageIcon from '../../components/NavBarIcons/UserHomePage.index';
 
 const Home = () => {
 	return (
 		<>
 			<div>
 				<NavBar1 />
+				<UserHomePageIcon />
 				<Routes>
 					<Route path='/' element={<Landing />}></Route>
 
