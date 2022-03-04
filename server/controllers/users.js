@@ -43,6 +43,25 @@ const create = (req, res) => {
 	});
 };
 
+const update = (req, res) => {
+	db.User.findByIdAndUpdate(
+		req.params.id,
+		req.body,
+		{ new: true },
+		(err, updatedUser) => {
+			if (err)
+				return res.status(400).json({
+					message: "Utter Failure in update user!",
+					error: err,
+				});
+			return res.status(202).json({
+				message: "Success!",
+				data: updatedUser,
+			});
+		}
+	);
+};
+
 const destroy = (req, res) => {
 	db.User.findByIdAndDelete(req.params.id, (err, deletedUser) => {
 		if (err) 
@@ -60,8 +79,9 @@ const destroy = (req, res) => {
 
 module.exports = {
     index,
-    create,
 	show,
+    create,
+	update,
 	destroy,
 
     
