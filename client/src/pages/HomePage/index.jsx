@@ -3,7 +3,7 @@ import Signup from '../SignupPage';
 import Login from '../LoginPage';
 import Landing from '../../components/Landing';
 
-import NavBar1 from '../../components/navbar1';
+import NavBar1 from '../../components/NavBar1';
 import UserHomePageIcon from '../../components/NavBarIcons/UserHomePage.index';
 
 import ProfilePage from '../ProfilePage';
