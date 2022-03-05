@@ -22,18 +22,16 @@ const BrowsePage = () => {
         <div>
        <h1>antiSocial</h1>
        <>
-       <PostForms refreshPosts={() => fetchPosts()} />
        {posts.map((post) => {
            return(
                <Post 
-               title={post.title}
                author={post.user}
                body={post.text}
-               comments={post.comments}
                key={post._id}
                />
            );
        })}
+        <PostForms refreshPosts={() => fetchPosts()} />
        </>
        </div>
     )

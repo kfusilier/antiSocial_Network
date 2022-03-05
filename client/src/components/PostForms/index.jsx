@@ -4,13 +4,13 @@ import * as postService from "../../api/post.service"
 
 const PostForms = ({ refreshPosts }) => {
     const [title, setTitle] = useState("");
-    const [body, setBody] = useState("");
+    const [text, setText] = useState("");
 
     const handleSubmit = async () => {
-        let newPost = { title, body };
+        let newPost = { text };
         let res = await postService.create(newPost).then(() => {
             setTitle("");
-            setBody("");
+            setText("");
             refreshPosts();
             console.log(newPost);
         });
@@ -26,27 +26,17 @@ const PostForms = ({ refreshPosts }) => {
         <div>
             <form>
                 <label>
-                    Post Title:
-                    <input
-                        onChange={(e) => setTitle(e.target.value)}
-                        value={title}
-                        type="text"
-                        name="title"
-                        placeholder="Title..."
-                    />
-                </label>
-                <label>
 					What's on your mind?
 					<textarea
-						onChange={(e) => setBody(e.target.value)}
-						value={body}
+						onChange={(e) => setText(e.target.value)}
+						value={text}
 						type="text"
 						name="body"
 						placeholder="Post..."
 					/>
 				</label>
             </form>
-            <button onCLick={handleSubmit}>Add Post!</button>
+            <button onClick={handleSubmit}>Add Post!</button>
         </div>
     );
 
@@ -57,3 +47,13 @@ PostForms.propTypes = {
 };
 
 export default PostForms;
+
+
+// Post Title:
+// <input
+//     onChange={(e) => setTitle(e.target.value)}
+//     value={title}
+//     type="text"
+//     name="title"
+//     placeholder="Title..."
+// />
