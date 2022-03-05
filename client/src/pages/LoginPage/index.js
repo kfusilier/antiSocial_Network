@@ -1,14 +1,9 @@
-import LoginForm from '../../components/loginForm';
-import NavBar1 from '../../components/NavBar1';
+import LoginForm from '../../components/LoginForm';
 
 // import { Routes, Route } from 'react-router-dom';
 
 const Login = () => {
-	return (
-		<div>
-			<LoginForm />
-		</div>
-	);
+	return <LoginForm />;
 };
 
 export default Login;

@@ -9,33 +9,7 @@ export default function NavBar2() {
                 <Link to="/">Home</Link>
                 <Link to="/posts">Posts</Link> */}
 				{/* NavLink is helpful when differentiating between nav links and regular links. It also automatically assigns an "isActive" class that makes it easier to style! */}
-				<NavLink
-					to='/SignupPage'
-					style={({ isActive }) => ({
-						color: isActive ? '#37ecba' : 'white',
-						textDecoration: 'none',
-						padding: '5px',
-					})}>
-					Sign Up
-				</NavLink>
-				<NavLink
-					to='/LoginPage'
-					style={({ isActive }) => ({
-						color: isActive ? '#37ecba' : 'white',
-						textDecoration: 'none',
-						padding: '5px',
-					})}>
-					Login
-				</NavLink>
-				<NavLink
-					to='/SignupPage'
-					style={({ isActive }) => ({
-						color: isActive ? '#37ecba' : 'white',
-						textDecoration: 'none',
-						padding: '5px',
-					})}>
-					User Menu
-				</NavLink>
+
 				<NavLink
 					to='/BrowsePage'
 					style={({ isActive }) => ({
@@ -55,7 +29,7 @@ export default function NavBar2() {
 					Profile
 				</NavLink>
 				<NavLink
-					to='/UserPage'
+					to='/UsersPage'
 					style={({ isActive }) => ({
 						color: isActive ? '#37ecba' : 'white',
 						textDecoration: 'none',
@@ -64,7 +38,7 @@ export default function NavBar2() {
 					User List
 				</NavLink>
 				<NavLink
-					to='/LogoutPage'
+					to='/HomePage'
 					style={({ isActive }) => ({
 						color: isActive ? '#37ecba' : 'white',
 						textDecoration: 'none',
