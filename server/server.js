@@ -34,7 +34,7 @@ app.use("/api/users", routes.users);
 
 ///test
 
-app.use('/api/auth', routes.auth);
+// app.use('/api/auth', routes.auth);
 
 
 

@@ -1,6 +1,6 @@
 import { string } from "prop-types";
 
-function Post(props) {
+function Comment(props) {
 	return (
 		<>
 			<h1>{props.title}</h1>
@@ -13,14 +13,14 @@ function Post(props) {
 	);
 }
 
-Post.propTypes = {
+Comment.propTypes = {
 	title: string.isRequired,
 	author: string.isRequired,
 	body: string.isRequired,
 };
 
-Post.defaultProps = {
+Comment.defaultProps = {
 	author: "Tester",
 };
 
-export default Post;
+export default Comment;
