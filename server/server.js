@@ -31,9 +31,7 @@ app.use(express.json());
 
 app.use("/api/posts", routes.posts);
 app.use("/api/users", routes.users);
-
 ///test
-
 app.use('/api/auth', routes.auth);
 
 
@@ -41,6 +39,10 @@ app.use('/api/auth', routes.auth);
 app.all('/api/*', (req, res, next) => {
 	res.send("This isn't what you're looking for!");
 });
+
+app.use((req, res, next) => {
+	res.sendFile(path.join(__dirname, "build", "index.html"))
+})
 
 /* ===== Server Listener ===== */
 app.listen(config.PORT, () => {

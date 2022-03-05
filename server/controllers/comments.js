@@ -30,7 +30,7 @@ const db = require ('../models');
 // }
 
 const commentsIdx = (req, res) => {
-    db.Post.find({"comments._id":req.params.id}, (err, foundComment) => {
+    db.Post.findById({"comments._id":req.params.id}, (err, foundComment) => {
         if (err) return res.status(400).json({
             message: "Can't find comments",
             error: err
