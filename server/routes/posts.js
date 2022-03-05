@@ -2,6 +2,7 @@ const router = require('express').Router();
 const ctrl = require('../controllers');
 
 router.get('/', ctrl.posts.index);
+router.get("/:id/comments", ctrl.comments.commentsIdx);
 router.get('/new', ctrl.posts.newPost);
 router.get('/:id', ctrl.posts.show);
 router.get('/:id/edit', ctrl.posts.edit);
