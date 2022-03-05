@@ -9,6 +9,10 @@ import Signup from '../SignupPage';
 import Login from '../LoginPage';
 import Landing from '../../components/Landing';
 import UserHomePageIcon from '../../components/NavBarIcons/UserHomePage.index';
+import ProfilePage from '../ProfilePage';
+import BrowsePage from '../BrowsePage';
+import UsersPage from '../UsersPage';
+
 
 const Home = () => {
 	return (
@@ -22,6 +26,9 @@ const Home = () => {
 					<Route path='/SignupPage' element={<Signup />}></Route>
 
 					<Route path='/LoginPage' element={<Login />}></Route>
+					<Route path='/ProfilePage' element={<ProfilePage />}></Route>
+					<Route path='/BrowsePage' element={<BrowsePage />}></Route>
+					<Route path='/UsersPage' element={<UsersPage />}></Route>
 				</Routes>
 			</div>
 		</>

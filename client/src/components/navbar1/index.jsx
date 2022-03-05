@@ -26,6 +26,9 @@ export default function NavBar1() {
 					})}>
 					Login
 				</NavLink>
+				<NavLink to='/ProfilePage' style={({ isActive }) => ({color: isActive ? 'green' : 'blue',})}>Profile</NavLink>
+				<NavLink to='/BrowsePage' style={({ isActive }) => ({color: isActive ? 'green' : 'blue',})}>Browse</NavLink>
+				<NavLink to='/UsersPage' style={({ isActive }) => ({color: isActive ? 'green' : 'blue',})}>Users</NavLink>
 			</div>
 		</>
 	);
