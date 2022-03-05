@@ -1,6 +1,23 @@
+import {useState} from "react";
+import PropTypes from 'prop-types';
 import style from './loginForm.module.css';
 
-const LoginForm = () => {
+
+const LoginForm = ({setToken}) => {
+	const [username, setUsername] = useState("");
+	const [password, setPassword] = useState("");
+
+	async function loginUser(credentials) {
+		return fetch('http://localhost:4000/BrowsePage', {
+		  method: 'POST',
+		  headers: {
+			'Content-Type': 'application/json'
+		  },
+		  body: JSON.stringify(credentials)
+		})
+		  .then(data => data.json())
+	   }
+	
 	return (
 		<div>
 			<div className={style.logo}>
@@ -15,33 +32,24 @@ const LoginForm = () => {
 				<div className={style.label}>
 					<label>
 						User Name:
-						<input
-							className={style.input}
-							type='text'
-							name='user name'
-						/>
+						<input className={style.input} type='text' name='userName' onChange={e => setUsername(e.target.value)}/>
 					</label>
 				</div>
-
 				<div className={style.label}>
 					<label>
 						Password:
-						<input
-							className={style.input}
-							type='text'
-							name='password'
-						/>
+						<input className={style.input} type='text' name='password' onChange={e => setPassword(e.target.value)}/>
 					</label>
 				</div>
-
-				<input
-					className={style.button}
-					type='submit'
-					value='submit'
-				/>
+				<input className={style.button} type='submit' value='submit'/>
 			</form>
 		</div>
 	);
+
+};
+
+LoginForm.propTypes = {
+	setToken: PropTypes.func.isRequired
 };
 
 export default LoginForm;
