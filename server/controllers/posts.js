@@ -31,21 +31,21 @@ const index = (req, res) => {
 
 
 // show
-const show = (req,res) => {
-    db.Post.findById(req.params.id)
-    .populate('user')
-    .populate('comments')
-    .exec((err, foundPost) =>{
-        if(err) return res.send(err)
-        db.Comment.find({}, (err, foundComments) =>{
-            if(err) return res.send(err);
-                res.render('posts/show', {
-                    post: foundPost,
-                    comment: foundComments,
-                })
-        })
-    })
-}
+
+const show = (req, res) => {
+	db.Post.findById(req.params.id, (err, foundPost) => {
+		if (err)
+			return res.status(400).json({
+				message: "Utter Failure!",
+				error: err,
+			});
+		return res.status(200).json({
+			message: "Success! with",
+			data: foundPost,
+		});
+	});
+};
+
 
 // can use this after Users & Comments are created
 
