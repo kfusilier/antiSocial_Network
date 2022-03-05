@@ -1,6 +1,7 @@
 // jwt middleware for verification
 // const jwt = require("jsonwebtoken");
 
+
 module.exports = async (req, res, next) => {
 	try {
 		//grab that token
@@ -29,3 +30,4 @@ module.exports = async (req, res, next) => {
 			});
 	}
 };
+

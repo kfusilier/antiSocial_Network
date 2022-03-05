@@ -1,13 +1,8 @@
-// import { useState, useEffect } from 'react';
-// import Post from '../../components/Post';
-// import Welcome from '../../components/Welcome';
-// import PostForm from '../../components/PostForm';
-// import UsersPage from '../UsersPage';
-
 import { Routes, Route } from 'react-router-dom';
 import Signup from '../SignupPage';
 import Login from '../LoginPage';
 import Landing from '../../components/Landing';
+
 import ProfilePage from '../ProfilePage';
 import BrowsePage from '../BrowsePage';
 import UsersPage from '../UsersPage';
