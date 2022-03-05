@@ -3,11 +3,12 @@
 // import Welcome from '../../components/Welcome';
 // import PostForm from '../../components/PostForm';
 // import UsersPage from '../UsersPage';
-import NavBar1 from '../../components/NavBar1';
+
 import { Routes, Route } from 'react-router-dom';
 import Signup from '../SignupPage';
 import Login from '../LoginPage';
 import Landing from '../../components/Landing';
+import NavBar1 from '../../components/NavBar1';
 
 const Home = () => {
 	return (
