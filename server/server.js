@@ -31,7 +31,7 @@ app.use('/api/users', routes.users);
 
 ///test
 
-// app.use('/api/auth', routes.auth);
+app.use('/api/auth', routes.auth);
 
 app.all('/api/*', (req, res, next) => {
 	res.send("This isn't what you're looking for!");
