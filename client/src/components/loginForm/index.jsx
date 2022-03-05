@@ -6,6 +6,7 @@ const LoginForm = () => {
 			<div className={style.logo}>
 				<h3>antiSocial</h3>
 			</div>
+
 			<form className={style.loginForm}>
 				<div>
 					<h2>Login</h2>
@@ -14,11 +15,7 @@ const LoginForm = () => {
 				<div className={style.input}>
 					<label>
 						User Name:
-						<input
-							type='text'
-							name='user name'
-							padding='5px'
-						/>
+						<input type='text' name='user name' />
 					</label>
 				</div>
 
