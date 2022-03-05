@@ -5,7 +5,6 @@ import NavBar1 from '../../components/NavBar1';
 const Login = () => {
 	return (
 		<div>
-			<NavBar1 />
 			<LoginForm />
 		</div>
 	);

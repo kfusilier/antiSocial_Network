@@ -8,7 +8,6 @@ import { Routes, Route } from 'react-router-dom';
 import Signup from '../SignupPage';
 import Login from '../LoginPage';
 import Landing from '../../components/Landing';
-import UserHomePageIcon from '../../components/NavBarIcons/UserHomePage.index';
 
 const Home = () => {
 	return (
