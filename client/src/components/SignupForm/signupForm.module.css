@@ -2,7 +2,7 @@ body {
 	min-height: 100vh;
 }
 
-.loginForm {
+.signupForm {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -23,7 +23,9 @@ body {
 .input {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
+	align-items: right;
 }
+
 .button {
 	padding: 8px 20px;
 	border-radius: 10px;

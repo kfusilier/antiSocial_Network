@@ -1,12 +1,10 @@
-import { NavLink, Link } from 'react-router-dom';
-// import SignUpIcon from '../NavBarIcons/SignUp.index';
-// import style from './navBar.module.css';
-import heart from './heart.png';
+import { NavLink } from 'react-router-dom';
+import style from './navBar.module.css';
 
 export default function NavBar1() {
 	return (
 		<>
-			<div className='nav'>
+			<div className={style.navBar}>
 				{/* <a href="/">Home</<a> essentially. We can inline style Link!
                 <Link to="/">Home</Link>
                 <Link to="/posts">Posts</Link> */}
@@ -14,15 +12,17 @@ export default function NavBar1() {
 				<NavLink
 					to='/SignupPage'
 					style={({ isActive }) => ({
-						color: isActive ? 'green' : 'blue',
+						color: isActive ? '#37ecba' : 'white',
+						textDecoration: 'none',
+						padding: '10px',
 					})}>
-					<img src={heart} width='50' height='33' alt='heart' />
+					SignUp
 				</NavLink>
-
 				<NavLink
 					to='/LoginPage'
 					style={({ isActive }) => ({
-						color: isActive ? 'green' : 'blue',
+						color: isActive ? '#37ecba' : 'white',
+						textDecoration: 'none',
 					})}>
 					Login
 				</NavLink>

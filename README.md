@@ -4,15 +4,13 @@
 
 ★·.·´¯`·.·★ AUTHORS ★·.·´¯`·.·★
 
-* [Xavier Comacho](https://github.com/x-camacho)
 
-* [Kristin Fusilier](https://github.com/kfusilier)
+[Xavier Comacho](https://github.com/x-camacho)
+[Kristin Fusilier](https://github.com/kfusilier)
+[Pete Sertthin](https://github.com/preteyz)
+[Erik Yang](https://github.com/ErikYSH)
+[Nat Zeng](https://github.com/fthbby)
 
-* [Pete Sertthin](https://github.com/preteyz)
-
-* [Erik Yang](https://github.com/ErikYSH)
-
-* [Nat Zeng](https://github.com/fthbby)
 
 ★·.·´¯`·.·★ DESCRIPTION ★·.·´¯`·.·★
 

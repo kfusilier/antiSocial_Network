@@ -19,16 +19,14 @@ const Home = () => {
 		<>
 			<div>
 				<NavBar1 />
-				<UserHomePageIcon />
 				<Routes>
-					<Route path='/' element={<Landing />}></Route>
-
 					<Route path='/SignupPage' element={<Signup />}></Route>
-
 					<Route path='/LoginPage' element={<Login />}></Route>
+					<Route path='/' element={<Landing />}></Route>
 					<Route path='/ProfilePage' element={<ProfilePage />}></Route>
 					<Route path='/BrowsePage' element={<BrowsePage />}></Route>
 					<Route path='/UsersPage' element={<UsersPage />}></Route>
+
 				</Routes>
 			</div>
 		</>

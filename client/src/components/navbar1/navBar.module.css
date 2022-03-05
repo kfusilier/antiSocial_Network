@@ -1,4 +1,6 @@
-.nav {
-	display: inline-block;
-	justify-content: space-between;
+.navBar {
+	float: right;
+	font-family: 'Fredoka One', cursive;
+	margin: 5px;
+	padding: 10px;
 }
