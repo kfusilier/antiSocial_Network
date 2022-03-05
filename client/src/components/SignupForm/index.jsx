@@ -12,24 +12,36 @@ const SignupForm = () => {
 					<h2>Sign Up</h2>
 				</div>
 
-				<div className={style.input}>
+				<div className={style.label}>
 					<label>
 						User Name:
-						<input type='text' name='user name' />
+						<input
+							className={style.input}
+							type='text'
+							name='user name'
+						/>
 					</label>
 				</div>
 
-				<div className={style.input}>
+				<div className={style.label}>
 					<label>
 						E-mail:
-						<input type='text' name='e-mail' />
+						<input
+							className={style.input}
+							type='text'
+							name='e-mail'
+						/>
 					</label>
 				</div>
 
-				<div className={style.input}>
+				<div className={style.label}>
 					<label>
 						Password:
-						<input type='text' name='password' />
+						<input
+							className={style.input}
+							type='text'
+							name='password'
+						/>
 					</label>
 				</div>
 

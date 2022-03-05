@@ -12,17 +12,25 @@ const LoginForm = () => {
 					<h2>Login</h2>
 				</div>
 
-				<div className={style.input}>
+				<div className={style.label}>
 					<label>
 						User Name:
-						<input type='text' name='user name' />
+						<input
+							className={style.input}
+							type='text'
+							name='user name'
+						/>
 					</label>
 				</div>
 
-				<div className={style.input}>
+				<div className={style.label}>
 					<label>
 						Password:
-						<input type='text' name='password' />
+						<input
+							className={style.input}
+							type='text'
+							name='password'
+						/>
 					</label>
 				</div>
 

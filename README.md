@@ -27,6 +27,7 @@ antiSocial is a MERN stack project created by the above authors while completing
 While antiSocial in its current state is a project out team is very proud of, there is always room for growth on feature, usability, design and efficiency. Some of out future build out plans include:
 
 -    Adding Emoji commenting on Posts
+-         Adding icons to links
 -    Dark and light mode
 -    Toggle posts from public to private
 -    Tag other users or friends
@@ -63,19 +64,3 @@ Thanks for your interest in antiSocial. We are open your input! We want to make 
 If you submit code changes, your submissions are understood to be under the same [MIT License](https://choosealicense.com/licenses/mit/) that covers the project.
 
 ★·.·´¯`·.·★ Support ★·.·´¯`·.·★
-
-<!-- https://www.makeareadme.com/ -->
-
-<!-- Temp Storage for code that goes other place -->
-
-    		<!-- <form>
-    			<h2>Login</h2>
-    			<h3>antiSocial</h3>
-    			<label>
-    				User Name:
-    				<input type='text' name='user name' />
-    				Password:
-    				<input type='text' name='password' />
-    			</label>
-    			<input type='submit' value='submit' />
-    		</form> -->
