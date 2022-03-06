@@ -1,19 +1,25 @@
-// Small User Name + Set Avatar Image
-
-import style from './avatarSmall.module.css';
+import style from './followUser.module.css';
 import Smiley from './Smiley.png';
 
-const AvatarSmall = () => {
+const FollowUser = () => {
 	return (
-		<div>
-			<div className={style.avatarImage}>
-				<img src={Smiley} alt='smiley' />
+		<div className={style.wrapper}>
+			<div>
+				<img
+					className={style.icon}
+					src={Smiley}
+					width='60px'
+					height='60px'
+					alt='smiley icon'
+				/>
 			</div>
-			<div className={style.avatarName}>
-				<p>USER NAME</p>
+			<div>
+				<button className={style.button} type='button'>
+					+ Follow
+				</button>
 			</div>
 		</div>
 	);
 };
 
-export default AvatarSmall;
+export default FollowUser;

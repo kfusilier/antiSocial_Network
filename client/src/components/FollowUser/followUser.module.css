@@ -1,38 +1,36 @@
-/* .avatarLocation {
-	position: absolute;
-	top: 35%;
-	left: 20%;
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-content: center;
+	align-items: center;
+
+	height: 60px;
+	width: 200px;
+	margin: 15px;
+	/* padding: 15px; */
+}
+
+/* .followerContainer {
+	border: 3px solid white;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	border: 3px solid;
 } */
 
-.avatarWrapper {
-	height: 50px;
-	width: 100px;
-	padding: 5px;
-	/* border: 5px solid white; */
-	border-radius: 75px;
-	display: flex;
-	/* flex-direction: column; */
-	/* justify-content: center;
-	align-items: center; */
+.button {
+	padding: 8px 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	color: #37ecba;
+	border: none;
+	background-color: white;
+	font-weight: bold;
 }
 
-.avatarName {
+.button:hover {
+	background-color: #37ecba;
 	color: white;
-	font-family: 'Fredoka One', cursive;
-	/* font-size: 25px;
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center; */
-}
-
-.avatarImage {
-	/* width: 100px;
-	height: 100px; */
-	/* padding: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center; */
 }

@@ -1,13 +1,37 @@
+// Frame + Title + other Components
+
+import FollowUser from '../FollowUser';
 import style from './usersDisplay.module.css';
 
 const UsersDisplay = () => {
 	return (
 		<div>
+			<div id={style.title}>
+				<p>User List</p>
+			</div>
 			<div className={style.displayWrapper}>
-				<p className={style.title}>User List Page</p>
-
-				<div className={style.objectWrapper}>
-					<p>follow user</p>
+				<div className={style.usersContainer}>
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
+					<FollowUser />
 				</div>
 			</div>
 		</div>
