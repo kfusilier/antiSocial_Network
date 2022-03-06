@@ -1,11 +1,14 @@
-import UserProfile from "../../components/UserProfile";
+import Avatar from '../../components/Avatar';
+import Logo from '../../components/Logo';
+import UserProfile from '../../components/UserProfile';
 
 const ProfilePage = () => {
-    return(
-        <div>
-            <UserProfile />
-        </div>
-    )
-}
+	return (
+		<div>
+			<Logo />
+			<UserProfile />
+		</div>
+	);
+};
 
 export default ProfilePage;
