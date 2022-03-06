@@ -22,7 +22,7 @@
 
 .avatarPlacement {
 	position: absolute;
-	top: 10%;
+	top: 15%;
 }
 
 .edit {
@@ -32,7 +32,7 @@
 	position: absolute;
 	/* height: 10%;
 	width: 25%; */
-	top: 52%;
+	top: 58%;
 	left: center;
 	/* transform: translate(-50%, -50%); */
 }
