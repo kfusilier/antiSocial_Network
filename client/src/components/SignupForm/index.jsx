@@ -1,5 +1,6 @@
 import style from './signupForm.module.css';
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import * as authService from "../../api/auth.service";
 
 const SignupForm = () => {
@@ -8,10 +9,13 @@ const SignupForm = () => {
 	const [password, setPassword] = useState("");
 	const [success, setSuccess] = useState("");
 	
+	let navigate = useNavigate();
+
 	const handleSubmit = async (e) => {
 	  e.preventDefault();
 	  await authService.register(email, password, screenName);
 	  setSuccess("REGISTERED");
+	  navigate("/LoginPage");
 	};
   
 	return (
