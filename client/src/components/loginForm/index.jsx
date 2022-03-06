@@ -1,22 +1,24 @@
 import {useState} from "react";
-import PropTypes from 'prop-types';
+import { useNavigate } from "react-router-dom";
 import style from './loginForm.module.css';
+import * as authService from "../../api/auth.service";
 
 
-const LoginForm = ({setToken}) => {
-	const [username, setUsername] = useState("");
+
+const LoginForm = () => {
+	let navigate = useNavigate();
+
+	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
-	async function loginUser(credentials) {
-		return fetch('http://localhost:4000/BrowsePage', {
-		  method: 'POST',
-		  headers: {
-			'Content-Type': 'application/json'
-		  },
-		  body: JSON.stringify(credentials)
-		})
-		  .then(data => data.json())
-	   }
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		await authService.login(email, password).then(() => {
+			setEmail("");
+			setPassword("");
+			navigate("/BrowsePage");
+		});
+	  };
 	
 	return (
 		<div>
@@ -31,8 +33,8 @@ const LoginForm = ({setToken}) => {
 
 				<div className={style.label}>
 					<label>
-						User Name:
-						<input className={style.input} type='text' name='userName' onChange={e => setUsername(e.target.value)}/>
+						Email:
+						<input className={style.input} type='text' name='userName' onChange={e => setEmail(e.target.value)}/>
 					</label>
 				</div>
 				<div className={style.label}>
@@ -41,15 +43,11 @@ const LoginForm = ({setToken}) => {
 						<input className={style.input} type='text' name='password' onChange={e => setPassword(e.target.value)}/>
 					</label>
 				</div>
-				<input className={style.button} type='submit' value='submit'/>
+				<input className={style.button} type='submit' value='submit' onClick={handleSubmit}/>
 			</form>
 		</div>
 	);
 
-};
-
-LoginForm.propTypes = {
-	setToken: PropTypes.func.isRequired
 };
 
 export default LoginForm;
