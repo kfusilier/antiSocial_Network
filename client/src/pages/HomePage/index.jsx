@@ -13,6 +13,7 @@ import UserHomePageIcon from '../../components/NavBarIcons/UserHomePage.index';
 import ProfilePage from '../ProfilePage';
 import BrowsePage from '../BrowsePage';
 import UsersPage from '../UsersPage';
+import CommentPage from '../CommentPage';
 
 
 const Home = () => {
@@ -27,6 +28,9 @@ const Home = () => {
 					<Route path='/ProfilePage' element={<ProfilePage />}></Route>
 					<Route path='/BrowsePage' element={<BrowsePage />}></Route>
 					<Route path='/UsersPage' element={<UsersPage />}></Route>
+
+					<Route path='/CommentPage' element={<CommentPage />}></Route>
+
 
 				</Routes>
 			</div>

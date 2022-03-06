@@ -4,7 +4,7 @@ import antiSocialAppTo from "./axios.config";
 const posts = "/posts";
 
 const getAll = () => {
-	return antiSocialAppTo.get(`${posts}`);
+	return antiSocialAppTo.get('/posts');
 };
 
 const get = (id) => {
