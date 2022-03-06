@@ -1,14 +1,39 @@
-#avatar {
-	border: 5px solid black;
-}
-
-.userName {
-	color: white;
-	font-family: 'Fredoka One', cursive;
-	font-size: 30px;
+/* avatarLocation will change with every use */
+/* .avatarLocation {
 	position: absolute;
-	top: 80%;
-	left: 50%;
+	top: 35%;
+	left: 20%;
+} */
+
+.avatarWrapper {
+	height: 200px;
+	width: 200px;
+	padding: 20px;
 	border: 5px solid white;
 	border-radius: 75px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatarName {
+	color: white;
+	font-family: 'Fredoka One', cursive;
+	font-size: 25px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatarImage {
+	width: 40%;
+	height: 40%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

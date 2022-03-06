@@ -1,0 +1,46 @@
+.postForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: 20px;
+	/* border: 5px solid white; */
+	border-radius: 75px;
+	position: fixed;
+	height: 20%;
+	width: 50%;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-family: 'Fredoka One', cursive;
+}
+
+.input {
+	border: 3px solid white;
+	/* border-radius: 75px; */
+	padding: 5px;
+	margin: 5px;
+	height: 100px;
+	width: 300px;
+}
+
+.label {
+	font-family: 'Fredoka One', cursive;
+	font-size: 18px;
+}
+
+.button {
+	padding: 8px 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	color: #37ecba;
+	border: none;
+	background-color: white;
+	font-weight: bold;
+}
+
+.button:hover {
+	background-color: #37ecba;
+	color: white;
+}

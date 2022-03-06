@@ -1,25 +1,58 @@
-body {
+/* body {
 	min-height: 100vh;
-}
+} */
 
-/* .userProfile {
+.userProfile {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly;
+	/* justify-content: space-around; */
 	font-size: 40px;
 	border: 5px solid white;
 	border-radius: 75px;
 	position: fixed;
-	height: 40%;
-	width: 25%;
-	top: 45%;
+	height: 600px;
+	width: 450px;
+	top: 55%;
 	left: 20%;
 	transform: translate(-50%, -50%);
 	color: white;
 	font-family: 'Fredoka One', cursive;
-} */
+}
 
+.avatarPlacement {
+	position: absolute;
+	top: 15%;
+}
+
+.edit {
+	font-family: 'Fredoka One', cursive;
+	font-size: 15px;
+	color: white;
+	position: absolute;
+	/* height: 10%;
+	width: 25%; */
+	top: 58%;
+	left: center;
+	/* transform: translate(-50%, -50%); */
+}
+
+.toggle {
+	font-family: 'Fredoka One', cursive;
+	font-size: 15px;
+	color: white;
+	position: absolute;
+	/* height: 10%;
+	width: 25%; */
+	top: 95%;
+	left: 10%;
+	/* transform: translate(-50%, -50%); */
+}
+
+.formPlacement {
+	position: absolute;
+	top: 100%;
+}
 /* .input {
 	border: 3px solid white;
 	border-radius: 75px;
@@ -32,7 +65,7 @@ body {
 	font-size: 18px;
 } */
 
-.button {
+/* .button {
 	padding: 8px 20px;
 	border-radius: 10px;
 	overflow: hidden;
@@ -52,4 +85,4 @@ body {
 	font-family: 'Fredoka One', cursive;
 	font-size: 50px;
 	padding: 10px 20px;
-}
+} */

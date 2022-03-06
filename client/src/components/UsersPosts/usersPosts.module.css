@@ -1,0 +1,30 @@
+.postsWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: 40px;
+	border: 5px solid white;
+	border-radius: 75px;
+	position: fixed;
+	height: 780px;
+	width: 750px;
+	top: 50%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-family: 'Fredoka One', cursive;
+}
+
+.posts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 12px;
+	border: 3px solid white;
+	border-radius: 30px;
+	width: 500px;
+	height: 100px;
+	left: 10%;
+}
