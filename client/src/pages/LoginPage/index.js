@@ -1,5 +1,7 @@
-import LoginForm from '../../components/LoginForm';
+import LoginForm from '../../components/loginForm';
+import NavBar1 from '../../components/navbar1';
 import Logo from '../../components/Logo';
+
 
 // import { Routes, Route } from 'react-router-dom';
 

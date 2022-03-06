@@ -2,44 +2,48 @@
 import { useEffect, useState } from "react";
 import antiSocialAppTo from "../../api/axios.config";
 import * as postService from "../../api/post.service";
+import style from './CommentShow.module.css';
 
 
 
-export default function CommentShow() {
+const CommentsList = () => {
 
-    const [comments, setComments] = useState([]);
+    const [posts, setPosts] = useState([]);
 
-    // const fetchComments = async () => {
-    //     await antiSocialAppTo.get(`/posts/${comments._id}`).then((res) => {
-    //         setComments(res.data.data);
-    //     });
-    // };
-
-    const fetchComments = async () => {
-		await postService.get('').then((res) => {
-			setComments(res.data.data);
-		});
-	};
+    const fetchPosts = async () => {
+        await antiSocialAppTo.get("/posts").then((res) => {
+            console.log(res.data.data)
+            setPosts(res.data.data);
+        });
+    };
 
     useEffect(() => {
-        fetchComments();
+        fetchPosts();
     }, []);
 
-    return (
-        <div>
+    return(
+        <div className = 'hi'>
         
-        {comments.map((comment) => {
-            return (
-                <div>
-                <br></br><br></br>
-                <h1>Post: {comment.text}</h1>
-                <h2>Comments: {comment.content}</h2>
+            {posts.map((post) => {
+                return (
+                    <div className={style.CommentShow}>
+                    
+                        <h3>Post: {post.text} <br/>
+                        {/* Created at: {post.createdAt} */}
+                        <br/>
+                       <ul>
+                           {post.comments.map((sub)=>
+                           <li>{sub.content}</li>)}
+                       </ul>
+                        </h3>
+                      
+                {/* <h3>{user.use
+                rName}</h3> */}
                 </div>
-            )
-        })}
-            {/* <h1> This is the commetn show component!</h1> */}
-        </div>
+            )})}
+            </div>
     )
 }
 
+export default CommentsList;
 

@@ -43,6 +43,8 @@ const create = (req, res) => {
   });
 };
 
+
+
 const update = (req, res) => {
   db.User.findByIdAndUpdate(
     req.params.id,
