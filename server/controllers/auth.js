@@ -4,7 +4,7 @@ const db = require('../models');
 
 
 const register = async (req, res) => {
-    const { userName, password, screenName} = req.body
+    const { email, password, screenName} = req.body
     if(password.length < 6){
         return res.status(400).json({message: "Password must be longer than 6 characters"})
     }
@@ -13,7 +13,7 @@ const register = async (req, res) => {
         const hash = await bcrypt.hash(req.body.password, salt)
         await db.User.create({
             screenName,
-            userName,
+            email,
             password: hash,
         }).then(user=> 
             res.status(200).json({
@@ -30,7 +30,7 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
     try {
-        const foundUser = await db.User.findOne({userName: req.body.userName}).select("+password")
+        const foundUser = await db.User.findOne({email: req.body.email}).select("+password")
 
         if (!foundUser) {
             return res
