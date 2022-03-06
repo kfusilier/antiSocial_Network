@@ -6,8 +6,10 @@ import Landing from '../../components/Landing';
 import ProfilePage from '../ProfilePage';
 import BrowsePage from '../BrowsePage';
 import UsersPage from '../UsersPage';
+
 import CommentPage from '../CommentPage';
 import NavBar2 from '../../components/NavBar2';
+
 // import NavBar1 from '../../components/NavBar1';
 
 

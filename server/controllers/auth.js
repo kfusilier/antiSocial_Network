@@ -67,7 +67,18 @@ const login = async (req, res) => {
     }
 }
 
+const deleteUser = async (req, res) => {
+    const { id } = req.body
+    await db.User.findById(id)
+    .then(user => user.remove())
+    .then (user => res.status(201).json({message: "Success Delete User"}))
+    .catch (error =>
+    res.status(400).json({message: "error occurred", error: error.message})
+    )
+}
+
 module.exports = {
     register, 
     login,
+    deleteUser,
 }
