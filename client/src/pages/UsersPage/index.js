@@ -1,23 +1,13 @@
-import UserList from "../../components/UserList";
-import './style.css'
+import Logo from '../../components/Logo';
+import UsersDisplay from '../../components/UsersDisplay';
 
 const UsersPage = () => {
-    return(
-        <div> 
-        {/* <div className ='title'> antiSocial</div> */}
-        
-        
-        <div className ='userBox'>
-        <h1>Users</h1>
-            {/* <div className='users'>   */}
-            <UserList />
-            {/* </div> */}
-      
-        </div>
-        
-        </div>
-       
-    )
-}
+	return (
+		<div>
+			<Logo />
+			<UsersDisplay />
+		</div>
+	);
+};
 
 export default UsersPage;

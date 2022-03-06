@@ -1,3 +1,5 @@
+// User Name + Set Avatar Image
+
 import style from './avatar.module.css';
 import Smiley from './Smiley.png';
 
