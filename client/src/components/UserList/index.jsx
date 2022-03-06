@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import antiSocialAppTo from "../../api/axios.config";
+import style from './userList.module.css';
+
 
 const UserList = () => {
 
@@ -16,12 +18,15 @@ const UserList = () => {
     }, []);
 
     return(
-        <div>
+        <div className = 'userList'>
             {users.map((user) => {
                 return (
-                    <div>
-                <h2>{user.screenName}</h2>
-                <h3>{user.userName}</h3>
+                    <div className={style.UserList}>
+                    
+                        <h3>user: {user.screenName}  <button type ='button'>+Follow</button></h3>
+                      
+                {/* <h3>{user.use
+                rName}</h3> */}
                 </div>
             )})}
             </div>
