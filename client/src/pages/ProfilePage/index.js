@@ -1,3 +1,4 @@
+import Avatar from '../../components/Avatar';
 import Logo from '../../components/Logo';
 import UserProfile from '../../components/UserProfile';
 

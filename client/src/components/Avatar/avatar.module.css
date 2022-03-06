@@ -1,0 +1,14 @@
+#avatar {
+	border: 5px solid black;
+}
+
+.userName {
+	color: white;
+	font-family: 'Fredoka One', cursive;
+	font-size: 30px;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	border: 5px solid white;
+	border-radius: 75px;
+}

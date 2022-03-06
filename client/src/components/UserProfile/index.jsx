@@ -3,8 +3,7 @@ import style from './userProfile.module.css';
 const UserProfile = () => {
 	return (
 		<div className={style.userProfile}>
-			<p>Name:</p>
-			<p>UserName:</p>
+			<p>Profile</p>
 		</div>
 	);
 };

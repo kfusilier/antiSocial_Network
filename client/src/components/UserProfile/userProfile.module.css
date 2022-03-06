@@ -2,11 +2,11 @@ body {
 	min-height: 100vh;
 }
 
-.userProfile {
-	/* display: flex;
+/* .userProfile {
+	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly; */
+	justify-content: space-evenly;
 	font-size: 40px;
 	border: 5px solid white;
 	border-radius: 75px;
@@ -18,7 +18,7 @@ body {
 	transform: translate(-50%, -50%);
 	color: white;
 	font-family: 'Fredoka One', cursive;
-}
+} */
 
 /* .input {
 	border: 3px solid white;
