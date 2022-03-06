@@ -1,20 +1,30 @@
 .displayWrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* align-items: centered; */
 	/* justify-content: space-around; */
-	font-size: 40px;
 	border: 5px solid white;
 	border-radius: 75px;
 	position: fixed;
-	height: 600px;
-	width: 1000px;
+	height: 700px;
+	width: 1100px;
 	top: 55%;
 	left: 40%;
 	transform: translate(-50%, -50%);
 	color: white;
-	font-family: 'Fredoka One', cursive;
 }
 
 .userWrapper {
+	border: 3px solid black;
+}
+
+.title {
+	font-family: 'Fredoka One', cursive;
+	font-size: 40px;
+	color: white;
+	/* align-self: flex-end; */
+	text-align: center;
+}
+
+.objectWrapper {
 }

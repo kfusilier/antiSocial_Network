@@ -1,12 +1,14 @@
-import Avatar from '../Avatar';
 import style from './usersDisplay.module.css';
 
 const UsersDisplay = () => {
 	return (
-		<div className={style.displayWrapper}>
-			<p>User List</p>
-			<div className={style.userWrapper}>
-				<Avatar />
+		<div>
+			<div className={style.displayWrapper}>
+				<p className={style.title}>User List Page</p>
+
+				<div className={style.objectWrapper}>
+					<p>follow user</p>
+				</div>
 			</div>
 		</div>
 	);
