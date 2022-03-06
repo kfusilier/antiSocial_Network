@@ -1,5 +1,5 @@
 // jwt middleware for verification
-// const jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 
 
 module.exports = async (req, res, next) => {

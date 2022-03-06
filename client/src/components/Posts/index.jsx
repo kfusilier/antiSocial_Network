@@ -6,7 +6,7 @@ function Post(props) {
 			<h1>{props.title}</h1>
 			<div>
 				<p>{props.body}</p>
-                <p>By:{props.author}</p>
+                <p>By:{props.user}</p>
 				<p>Comments:{props.comments}</p>
 			</div>
 		</>
@@ -14,13 +14,13 @@ function Post(props) {
 }
 
 Post.propTypes = {
-	title: string.isRequired,
+	// title: string.isRequired,
 	author: string.isRequired,
 	body: string.isRequired,
 };
 
-Post.defaultProps = {
-	author: "Tester",
-};
+// Post.defaultProps = {
+// 	author: "Xavier",
+// };
 
 export default Post;
