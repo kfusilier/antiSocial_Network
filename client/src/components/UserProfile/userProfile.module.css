@@ -1,0 +1,55 @@
+body {
+	min-height: 100vh;
+}
+
+/* .userProfile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: 40px;
+	border: 5px solid white;
+	border-radius: 75px;
+	position: fixed;
+	height: 40%;
+	width: 25%;
+	top: 45%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-family: 'Fredoka One', cursive;
+} */
+
+/* .input {
+	border: 3px solid white;
+	border-radius: 75px;
+	padding: 3px;
+	margin: 3px;
+} */
+
+/* .label {
+	font-family: 'Fredoka One', cursive;
+	font-size: 18px;
+} */
+
+.button {
+	padding: 8px 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	color: #37ecba;
+	border: none;
+	background-color: white;
+	font-weight: bold;
+}
+
+.button:hover {
+	background-color: #37ecba;
+	color: white;
+}
+
+.logo {
+	color: white;
+	font-family: 'Fredoka One', cursive;
+	font-size: 50px;
+	padding: 10px 20px;
+}

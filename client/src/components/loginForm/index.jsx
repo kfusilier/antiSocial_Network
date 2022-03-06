@@ -1,29 +1,26 @@
 import {useState} from "react";
-import PropTypes from 'prop-types';
+import { useNavigate } from "react-router-dom";
 import style from './loginForm.module.css';
+import Logo from '../Logo';
+import * as authService from "../../api/auth.service";
 
+const LoginForm = () => {
+	let navigate = useNavigate();
 
-const LoginForm = ({setToken}) => {
-	const [username, setUsername] = useState("");
+	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
-	async function loginUser(credentials) {
-		return fetch('http://localhost:4000/BrowsePage', {
-		  method: 'POST',
-		  headers: {
-			'Content-Type': 'application/json'
-		  },
-		  body: JSON.stringify(credentials)
-		})
-		  .then(data => data.json())
-	   }
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		await authService.login(email, password).then(() => {
+			setEmail("");
+			setPassword("");
+			navigate("/BrowsePage");
+		});
+	  };
 	
 	return (
 		<div>
-			<div className={style.logo}>
-				<h3>antiSocial</h3>
-			</div>
-
 			<form className={style.loginForm}>
 				<div>
 					<h2>Login</h2>
@@ -31,8 +28,8 @@ const LoginForm = ({setToken}) => {
 
 				<div className={style.label}>
 					<label>
-						User Name:
-						<input className={style.input} type='text' name='userName' onChange={e => setUsername(e.target.value)}/>
+						Email:
+						<input className={style.input} type='text' name='userName' onChange={e => setEmail(e.target.value)}/>
 					</label>
 				</div>
 				<div className={style.label}>
@@ -41,48 +38,11 @@ const LoginForm = ({setToken}) => {
 						<input className={style.input} type='text' name='password' onChange={e => setPassword(e.target.value)}/>
 					</label>
 				</div>
-				<input className={style.button} type='submit' value='submit'/>
+				<input className={style.button} type='submit' value='submit' onClick={handleSubmit}/>
 			</form>
 		</div>
 	);
 
 };
 
-LoginForm.propTypes = {
-	setToken: PropTypes.func.isRequired
-};
-
 export default LoginForm;
-
-// <div>
-// 			<form class='login-form'>
-// 				<h1>Login</h1>
-// 				<div class='form-input-material'>
-// 					<input
-// 						type='text'
-// 						name='username'
-// 						id='username'
-// 						placeholder=' '
-// 						autocomplete='off'
-// 						class='form-control-material'
-// 						required
-// 					/>
-// 					<label for='username'>Username</label>
-// 				</div>
-// 				<div class='form-input-material'>
-// 					<input
-// 						type='password'
-// 						name='password'
-// 						id='password'
-// 						placeholder=' test'
-// 						autocomplete='off'
-// 						class='form-control-material'
-// 						required
-// 					/>
-// 					<label for='password'>Password</label>
-// 				</div>
-// 				<button type='submit' class='btn btn-primary btn-ghost'>
-// 					Login
-// 				</button>
-// 			</form>
-// 		</div>
