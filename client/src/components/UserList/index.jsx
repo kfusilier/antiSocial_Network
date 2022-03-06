@@ -23,7 +23,9 @@ const UserList = () => {
                 return (
                     <div className={style.UserList}>
                     
-                        <h3>user: {user.screenName}  <button type ='button'>+Follow</button></h3>
+                        <h3>user: {user.screenName}  
+                        <button type ='button'>+Follow</button>
+                        </h3>
                       
                 {/* <h3>{user.use
                 rName}</h3> */}
