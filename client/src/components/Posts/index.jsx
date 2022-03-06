@@ -6,7 +6,7 @@ function Post(props) {
 			<h1>{props.title}</h1>
 			<div>
 				<p>{props.body}</p>
-                <p>By:{props.user}</p>
+                <p>By:{props.author}</p>
 				<p>Comments:{props.comments}</p>
 			</div>
 		</>

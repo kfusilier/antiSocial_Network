@@ -18,16 +18,26 @@ const login = (email, password) => {
             console.log(res)
             if (res.data.token) {
                 localStorage.setItem("user", JSON.stringify(res.data.token))
+                localStorage.setItem("userId",res.data.userId)
             }
         })
     } catch (error) {
         console.log(error)
     }
 }
+
+// const getProfile = () => {
+//     return antiSocialAppTo
+//     .get(`${users}/profile`)
+// }
+
+
+//get UserId attempt
 const getProfile = () => {
-    return antiSocialAppTo
-    .get(`${users}/profile`)
+    let userId = localStorage.getItem("userId")
+    return JSON.parse(userId)
 }
+
 // check current user exist 
 const currentUser = () => {
     let user = localStorage.getItem("user")

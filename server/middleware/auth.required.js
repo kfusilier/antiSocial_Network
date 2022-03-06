@@ -18,6 +18,7 @@ module.exports = async (req, res, next) => {
 		const payload = await jwt.verify(token, 'hailsatan');
 		console.log(payload, 'THIS IS THE SUPER AMAZING PAYLOAD');
 		req.userId = payload._id;
+		console.log(req.userId);
 
 		next();
 	} catch (error) {
