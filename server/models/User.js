@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+
 const userSchema = new Schema(
     {  
         screenName: { type: String, required: true },
@@ -8,9 +9,10 @@ const userSchema = new Schema(
         email: { type: String, required: true },
         password: { type: String, required: true },
         // token: { type: String, required: true },
-        followList: [String],
         posts: [{ type: Schema.Types.ObjectId, ref: "Post" }],
-        comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }]
+        comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
+        followers: [{type: Schema.Types.ObjectId, ref: 'User'}],
+        following: [{type: Schema.Types.ObjectId, ref:"User"}],
     },
     {
         timestamps: true,

@@ -6,7 +6,7 @@ import Landing from '../../components/Landing';
 import ProfilePage from '../ProfilePage';
 import BrowsePage from '../BrowsePage';
 import UsersPage from '../UsersPage';
-import NavBar2 from '../../components/NavBar2';
+import NavBar2 from '../../components/navbar2';
 // import NavBar1 from '../../components/NavBar1';
 
 const Home = () => {
