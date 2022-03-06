@@ -50,17 +50,22 @@ const show = (req, res) => {
 // can use this after Users & Comments are created
 
 // const show = (req, res) => {
-// 	db.Post.findById(req.params.id, (err, foundPost) => {
-// 		if (err)
-// 			return res.status(400).json({
-// 				message: "Utter Failure for SHOW!",
-// 				error: err,
-// 			});
-// 		return res.status(200).json({
-// 			message: "Success!",
-// 			data: foundPost,
-// 		});
-// 	});
+//     db.Post.findById(req.params.id)
+//         .populate("user")
+//         .populate("comments")
+//         .exec((err, foundPost) => {
+//             if (err) return res.send(err)
+//             console.log(foundPost, "found post")
+//             db.Comment.find({}, (err, foundComments) => {
+//                 if (err) return res.send(err);
+//                     res.render("posts/show", {
+//                         post: foundPost,
+//                         comments: foundComments,
+//                         // loginUser: req.user,
+//                     }
+//                 )
+//             })
+//         })
 // };
 
 
@@ -72,8 +77,8 @@ const newPost =(req,res) => {
         if(err) return res.send(err);
         db.Comment.find({}, (err, foundComments) => {
         res.render('posts/new', {
-            // users: foundUsers,
-            // comment: foundComments,
+            users: foundUsers,
+            comment: foundComments,
             post: post,
             })
         })
@@ -83,42 +88,42 @@ const newPost =(req,res) => {
 
 // create --- can use this after Users & Comments are created
 
-// const create = async (req,res) => {
-//     const post = new db.Post({
-//         text: req.body.text,
-//         // comment: req.body.comment,
-//         // user: req.user
-//     })
-//     // if (req.file) {
-//     //     post.image= req.file.path
-//     // }
-//     const createdPost = await post.save();
-//     db.User.findById(createdPost.user)
-//         .exec((err, foundUser) => {
-//             if(err) return console.log('error in posts creation', err)
-//             foundUser.posts.push(createdPost)
-//         // foundUser.save();
-//         // res.redirect(`/users/${foundUser._id}`)
-//             return res.status(201).json({
-//                 message: 'success!',
-//                 data: createdPost
-//             })
-//     })
-// }
+const create = async (req,res) => {
+    const post = new db.Post({
+        text: req.body.text,
+        // comment: req.body.comment,
+        user: req.user
+    })
+    // if (req.file) {
+    //     post.image= req.file.path
+    // }
+    const createdPost = await post.save();
+    db.User.findById(createdPost.user)
+        .exec((err, foundUser) => {
+            if(err) return console.log('error in posts creation', err)
+            foundUser.posts.push(createdPost)
+        	foundUser.save();
+        // res.redirect(`/users/${foundUser._id}`)
+            return res.status(201).json({
+                message: 'success!',
+                data: createdPost
+            })
+    })
+}
 
-const create = (req, res) => {
-	db.Post.create(req.body, (err, createdPost) => {
-		if (err)
-			return res.status(400).json({
-				message: "Utter Failure! for create",
-				error: err,
-			});
-		return res.status(201).json({
-			message: "Success",
-			data: createdPost,
-		});
-	});
-};
+// const create = (req, res) => {
+// 	db.Post.create(req.body, (err, createdPost) => {
+// 		if (err)
+// 			return res.status(400).json({
+// 				message: "Utter Failure! for create",
+// 				error: err,
+// 			});
+// 		return res.status(201).json({
+// 			message: "Success",
+// 			data: createdPost,
+// 		});
+// 	});
+// };
 
 
 //edit

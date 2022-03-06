@@ -20,10 +20,6 @@ const SignupForm = () => {
   
 	return (
 		<div>
-			<div className={style.logo}>
-				<h3>antiSocial</h3>
-			</div>
-
 			<form className={style.signupForm}>
 				<div>
 					<h2>Sign Up</h2>

@@ -8,27 +8,34 @@ import style from './CommentShow.module.css';
 
 const CommentsList = () => {
 
-    const [users, setUsers] = useState([]);
+    const [posts, setPosts] = useState([]);
 
-    const fetchUsers = async () => {
-        await antiSocialAppTo.get("/users").then((res) => {
+    const fetchPosts = async () => {
+        await antiSocialAppTo.get("/posts").then((res) => {
             console.log(res.data.data)
-            setUsers(res.data.data);
+            setPosts(res.data.data);
         });
     };
 
     useEffect(() => {
-        fetchUsers();
+        fetchPosts();
     }, []);
 
     return(
-        
         <div className = 'hi'>
-            {users.map((user) => {
+        
+            {posts.map((post) => {
                 return (
                     <div className={style.CommentShow}>
                     
-                        <h3>user: {user.screenName} </h3>
+                        <h3>Post: {post.text} <br/>
+                        {/* Created at: {post.createdAt} */}
+                        <br/>
+                       <ul>
+                           {post.comments.map((sub)=>
+                           <li>{sub.content}</li>)}
+                       </ul>
+                        </h3>
                       
                 {/* <h3>{user.use
                 rName}</h3> */}

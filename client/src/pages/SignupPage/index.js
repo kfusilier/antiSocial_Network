@@ -1,8 +1,14 @@
+import Logo from '../../components/Logo';
 import SignupForm from '../../components/SignupForm';
 // import { Routes, Route } from 'react-router-dom';
 
 const Signup = () => {
-	return <SignupForm />;
+	return (
+		<div>
+			<Logo />
+			<SignupForm />
+		</div>
+	);
 };
 
 export default Signup;
