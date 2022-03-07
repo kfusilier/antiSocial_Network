@@ -9,7 +9,7 @@ import UsersPage from '../UsersPage';
 
 import CommentPage from '../CommentPage';
 
-import NavBar2 from '../../components/navbar2';
+import NavBar2 from '../../components/NavBar2';
 import CommentDisplay from '../../components/CommentDisplay'
 import CommentShow from '../../components/CommentShow'
 
