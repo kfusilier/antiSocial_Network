@@ -44,3 +44,18 @@
 
 
 }
+
+.button {
+	padding: 8px 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	color: #37ecba;
+	border: none;
+	background-color: white;
+	font-weight: bold;
+}
+
+.button:hover {
+	background-color: #37ecba;
+	color: white;
+}

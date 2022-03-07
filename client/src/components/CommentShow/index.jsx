@@ -1,4 +1,4 @@
-// import style from './CommentShow.module.css';
+import style from './CommentShow.module.css';
 import { useEffect, useState } from 'react';
 import antiSocialAppTo from '../../api/axios.config';
 import * as postService from '../../api/post.service';
@@ -22,7 +22,10 @@ const CommentsList = () => {
 
 	return (
 		<div>
-			{posts.map((post) => {
+        
+    
+    
+    {posts.map((post) => {
 				return (
 					<div>
 						<h3>
@@ -35,16 +38,17 @@ const CommentsList = () => {
 									<li>{sub.content}</li>
 								))}
 								<NavLink to={`/posts/${post._id}`}>
-								<button type="button">See Post</button>
+                                <button type ='button' className={style.button}>See Post</button>
 								</NavLink>
 							</ul>
 						</h3>
 
-						{/* <h3>{user.use
-                rName}</h3> */}
+
+				
 					</div>
 				);
 			})}
+			
 		</div>
 	);
 };

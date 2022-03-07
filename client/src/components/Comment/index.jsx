@@ -1,8 +1,14 @@
-// import style from './CommentDisplay.module.css';
+import style from './Comment.module.css';
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom'
 // import antiSocialAppTo from "../../api/axios.config";
 import * as postService from "../../api/post.service";
+import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 
 const Comment = (props) => {
@@ -24,17 +30,30 @@ const Comment = (props) => {
   }, []);
 
   return (
-    <div>
-      this the comments display component...
-      <h3>
-							<ul>
-								{posts.map((sub) => (
-                                    
-									<li>{sub.content}</li>
-								))}
-							</ul>
-	</h3>
+    <div className = {style.usersContainer}>
+     
+    <Card sx={{ minWidth: 275 }}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+          Comments
+        </Typography>
+        
+        <Typography variant="body2">
+        <ul>
+			    {posts.map((sub) => (
+       
+				<li>{sub.content}</li>
+				))}
+			</ul>
+        </Typography>
+      </CardContent>
+      <CardActions>
+        {/* <Button size="small">Learn More</Button> */}
+      </CardActions>
+    </Card>
+
     </div>
+    
   );
 };
 export default Comment;
