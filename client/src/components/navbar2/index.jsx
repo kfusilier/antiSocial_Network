@@ -1,7 +1,16 @@
 import { NavLink } from 'react-router-dom';
 import style from './navBar2.module.css';
+import { useNavigate } from 'react-router-dom';
+import * as authService from "../../api/auth.service"
 
 export default function NavBar2() {
+	const navigate = useNavigate();
+	const logOut = async () => {
+		await authService.logout().then(() => {
+		  navigate("/login");
+		})
+	  }
+
 	return (
 		<>
 			<div className={style.navBar}>
@@ -54,9 +63,10 @@ export default function NavBar2() {
 					User List
 				</NavLink>
 				<NavLink
-					to='/HomePage'
+					to='/LoginPage'
+					onClick={logOut}
 					style={({ isActive }) => ({
-						color: isActive ? '#37ecba' : 'white',
+						color: 'white',
 						textDecoration: 'none',
 						padding: '5px',
 					})}>
