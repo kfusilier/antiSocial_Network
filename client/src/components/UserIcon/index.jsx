@@ -4,7 +4,7 @@ import style from './userIcon.module.css';
 import FollowButton from '../../components/FollowButton'
 import Avatar from "../Avatar";
 import Smiley from './Smiley.png';
-
+import NavBar2 from "../NavBar2";
 
 const UserIcon = () => {
 
@@ -21,7 +21,11 @@ const UserIcon = () => {
     }, []);
 
     return(
+        <>
+                        <NavBar2/>
+
         <div className = {style.displayWrapper}>
+
         <div className = {style.usersContainer}>
             {users.map((user) => {
                 return (
@@ -40,7 +44,7 @@ const UserIcon = () => {
                 </div>
                 </div>
             )})}
-            </div></div>
+            </div></div></>
     )
 }
 

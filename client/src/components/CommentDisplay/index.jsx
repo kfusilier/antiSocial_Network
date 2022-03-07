@@ -1,9 +1,15 @@
-// import style from './CommentDisplay.module.css';
+import style from './CommentDisplay.module.css';
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom'
+import styled from "styled-components";
 // import antiSocialAppTo from "../../api/axios.config";
 import * as postService from "../../api/post.service";
-
+import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 const CommentsList = (props) => {
   const [posts, setPosts] = useState([]);
@@ -23,20 +29,32 @@ const CommentsList = (props) => {
   }, []);
 
   return (
-    <div>
-      this the comment display page!
-      <h3>
-							Post: {posts.text} <br />
-							Created at: {posts.createdAt}
-							<br />
-							{/* <ul>
-								{posts.comments.map((sub) => (
-                                    
-									<li>{sub.content}</li>
-								))}
-							</ul> */}
-						</h3>
+      
+    <div className = {style.usersContainer}>
+    
+
+      
+    <Card sx={{ minWidth: 275 }}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+          POST
+        </Typography>
+        <Typography variant="h5" component="div">
+         
+        </Typography>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+		Created at: {posts.createdAt}  
+        </Typography>
+        <Typography variant="body2">
+        {posts.text} <br />
+        </Typography>
+      </CardContent>
+      <CardActions>
+        {/* <Button size="small">Learn More</Button> */}
+      </CardActions>
+    </Card>
     </div>
+    
   );
 };
 export default CommentsList;

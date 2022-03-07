@@ -1,0 +1,12 @@
+.usersContainer {
+	position: fixed;
+	height: 650px;
+	width: 800px;
+	top: 70%;
+	left: 52%;
+	/* margin: 10px; */
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	transform: translate(-50%, -50%);
+}
