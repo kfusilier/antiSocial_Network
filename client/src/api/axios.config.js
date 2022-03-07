@@ -9,7 +9,7 @@ const user = JSON.parse(localStorage.getItem('user'))
 const antiSocialAppTo = axios.create({
 	baseURL: `${backendAPI}`,
 	headers: {
-	"Content-type": "application/json",
+	"content-type": "application/json",
 	authorization: `Bearer ${user}`
 	},
 

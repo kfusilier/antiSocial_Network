@@ -11,6 +11,7 @@ import CommentPage from '../CommentPage';
 
 import NavBar2 from '../../components/NavBar2';
 import CommentDisplay from '../../components/CommentDisplay'
+import CommentShow from '../../components/CommentShow'
 
 // import NavBar1 from '../../components/NavBar1';
 
@@ -34,11 +35,11 @@ const Home = () => {
 						element={<UsersPage />}></Route>
 					<Route
 						path='/Posts'
-						element={<CommentPage />}></Route>
+						element={<CommentShow />}></Route>
 
 					<Route
 						path='/posts/:id'
-						element={<CommentDisplay />}></Route>
+						element={<CommentPage />}></Route>
 				</Routes>
 			</div>
 		</>
