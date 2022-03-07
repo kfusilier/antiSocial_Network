@@ -5,14 +5,15 @@ import { useParams } from 'react-router-dom'
 import * as postService from "../../api/post.service";
 
 
-const CommentsList = (props) => {
+const Comment = (props) => {
   const [posts, setPosts] = useState([]);
   let {id} = useParams()
 
   const fetchPosts = async () => {
-    await postService.get(id).then((res) => {
-    //   console.log(res.data.data);
-      setPosts(res.data.data);
+    await postService.get(`${id}`).then((res) => {
+      
+    console.log(res.data.data.comments);
+      setPosts(res.data.data.comments);
     });
   };
 
@@ -24,19 +25,16 @@ const CommentsList = (props) => {
 
   return (
     <div>
-      this the comment display page!
+      this the comments display component...
       <h3>
-							Post: {posts.text} <br />
-							Created at: {posts.createdAt}
-							<br />
-							{/* <ul>
-								{posts.comments.map((sub) => (
+							<ul>
+								{posts.map((sub) => (
                                     
 									<li>{sub.content}</li>
 								))}
-							</ul> */}
-						</h3>
+							</ul>
+	</h3>
     </div>
   );
 };
-export default CommentsList;
+export default Comment;

@@ -7,6 +7,7 @@ import Landing from '../../components/Landing';
 import CommentShow from "../../components/CommentShow"
 import NavBar2 from '../../components/NavBar2';
 
+
 const reducer = (prevState, action) => {
 	switch (action.type) {
 		case 'setPosts':
@@ -49,11 +50,13 @@ const BrowsePage = () => {
 	if (isLoggedIn) {
 		return (
 			<div>
+
 				<>
 				<NavBar2 />
 				<h1>antiSocial</h1>
 				<CommentShow />
 				</>
+
 				{/* <>
 					{posts.map((post) => {
 						return (

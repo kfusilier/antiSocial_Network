@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import antiSocialAppTo from "../../api/axios.config";
-import style from './userList.module.css';
+import style from './userIcon.module.css';
 import FollowButton from '../../components/FollowButton'
 import Avatar from "../Avatar";
+import Smiley from './Smiley.png';
 
-const UserList = () => {
+
+const UserIcon = () => {
 
     const [users, setUsers] = useState([]);
 
@@ -23,17 +25,23 @@ const UserList = () => {
         <div className = {style.usersContainer}>
             {users.map((user) => {
                 return (
+                    <div>
+                    <img src={Smiley} alt='smiley icon' width='60px'
+					height='60px' />
+
                     <div className={style.UserList}>
-                    
-                        <h1>user: {user.screenName}  
-    
-                        </h1>
+                 {/* <img src={Smiley} alt='smiley' /> */}
+
+                        <h4 className={style.h3}>{user.screenName}  
+                       <br/> 
+                       <button type ='button' className={style.button}>+Follow</button>
+                    </h4>
              
                 </div>
-                
+                </div>
             )})}
             </div></div>
     )
 }
 
-export default UserList;
+export default UserIcon;
