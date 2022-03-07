@@ -9,8 +9,8 @@ import UsersPage from '../UsersPage';
 
 import CommentPage from '../CommentPage';
 
-import NavBar2 from '../../components/NavBar2';
-
+import NavBar2 from '../../components/navbar2';
+import CommentDisplay from '../../components/CommentDisplay'
 
 // import NavBar1 from '../../components/NavBar1';
 
@@ -33,8 +33,12 @@ const Home = () => {
 						path='/UsersPage'
 						element={<UsersPage />}></Route>
 					<Route
-						path='/CommentPage'
+						path='/Posts'
 						element={<CommentPage />}></Route>
+
+					<Route
+						path='/posts/:id'
+						element={<CommentDisplay />}></Route>
 				</Routes>
 			</div>
 		</>

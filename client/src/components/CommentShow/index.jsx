@@ -22,26 +22,26 @@ const CommentsList = () => {
     }, []);
 
     return(
-        <div className = 'hi'>
+        <div className = {style.displayWrapper}>
         
             {posts.map((post) => {
                 return (
-                    <div className={style.CommentShow}>
+                    <div>
+                    <div className={style.edits}>
                     
-                        <h3>Post: {post.text} <br/>
-                        {/* Created at: {post.createdAt} */}
-                        <br/>
+                        Post: {post.text} <br/><br/>
+                        Comments:
                        <ul>
+                       
                            {post.comments.map((sub)=>
                            <li>{sub.content}</li>)}
                        </ul>
-                        </h3>
-                      
-                {/* <h3>{user.use
-                rName}</h3> */}
+
+                </div>
                 </div>
             )})}
             </div>
+            
     )
 }
 

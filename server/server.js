@@ -31,9 +31,12 @@ app.use('/api/posts', routes.posts);
 app.use('/api/users', routes.users);
 
 
-///test
+// ///test
 
 app.use('/api/auth', routes.auth);
+
+
+// app.use("/api", routes);
 
 
 app.all('/api/*', (req, res, next) => {

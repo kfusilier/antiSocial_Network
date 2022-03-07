@@ -8,7 +8,7 @@ const getAll = () => {
 };
 
 const get = (id) => {
-	return antiSocialAppTo.get(`${posts}/${id}`);
+	return antiSocialAppTo.get(`/posts/${id}`);
 };
 
 const create = (data) => {
