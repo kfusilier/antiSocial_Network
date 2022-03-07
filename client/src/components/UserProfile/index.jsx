@@ -9,13 +9,7 @@ const UserProfile = () => {
 			<div className={style.avatarPlacement}>
 				<Avatar />
 			</div>
-			<div className={style.edit}>
-				<p>edit user name</p>
-			</div>
 
-			<div className={style.toggle}>
-				<p>privacy toggle?</p>
-			</div>
 			<div className={style.formPlacement}>
 				<CreatePost />
 			</div>
@@ -24,3 +18,13 @@ const UserProfile = () => {
 };
 
 export default UserProfile;
+
+// privacy toggle
+// 			<div className={style.toggle}>
+//				<p>privacy toggle?</p>
+//			</div>
+
+// edit user name
+//			<div className={style.edit}>
+//				<p>edit user name</p>
+//			</div>

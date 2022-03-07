@@ -4,9 +4,9 @@ import Post from '../../components/Posts';
 import * as postService from '../../api/post.service';
 import * as authService from '../../api/auth.service';
 import Landing from '../../components/Landing';
-import CommentShow from "../../components/CommentShow"
+import CommentShow from '../../components/CommentShow';
 import NavBar2 from '../../components/NavBar2';
-
+import Logo from '../../components/Logo';
 
 const reducer = (prevState, action) => {
 	switch (action.type) {
@@ -50,11 +50,10 @@ const BrowsePage = () => {
 	if (isLoggedIn) {
 		return (
 			<div>
-
 				<>
-				<NavBar2 />
-				<h1>antiSocial</h1>
-				<CommentShow />
+					<NavBar2 />
+					<Logo />
+					<CommentShow />
 				</>
 
 				{/* <>
@@ -71,7 +70,11 @@ const BrowsePage = () => {
 			</div>
 		);
 	} else {
-		return <div></div>;
+		return (
+			<div>
+				<Logo />
+			</div>
+		);
 	}
 };
 

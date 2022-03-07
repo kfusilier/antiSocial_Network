@@ -2,7 +2,7 @@ import style from './CommentShow.module.css';
 import { useEffect, useState } from 'react';
 import antiSocialAppTo from '../../api/axios.config';
 import * as postService from '../../api/post.service';
-import {  Route, NavLink } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 // import style from './commentShow.module.css';
 
 const CommentsList = () => {
@@ -14,41 +14,35 @@ const CommentsList = () => {
 		});
 	};
 
-
-
 	useEffect(() => {
 		fetchPosts();
 	}, []);
 
 	return (
 		<div>
-        
-    
-    
-    {posts.map((post) => {
+			{posts.map((post) => {
 				return (
 					<div>
-						<h3>
+						<p>
 							Post: {post.text} <br />
-                            ID: {post._id} 
+							By User: {post._id}
 							{/* Created at: {post.createdAt} */}
-							<br />
 							<ul>
 								{post.comments.map((sub) => (
 									<li>{sub.content}</li>
 								))}
 								<NavLink to={`/posts/${post._id}`}>
-                                <button type ='button' className={style.button}>See Post</button>
+									<button
+										type='button'
+										className={style.button}>
+										View Post
+									</button>
 								</NavLink>
 							</ul>
-						</h3>
-
-
-				
+						</p>
 					</div>
 				);
 			})}
-			
 		</div>
 	);
 };
