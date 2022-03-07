@@ -1,5 +1,6 @@
 // jwt middleware for verification
 const jwt = require("jsonwebtoken");
+const db = require("../models")
 
 
 module.exports = async (req, res, next) => {
@@ -18,8 +19,12 @@ module.exports = async (req, res, next) => {
 		const payload = await jwt.verify(token, 'hailsatan');
 		console.log(payload, 'THIS IS THE SUPER AMAZING PAYLOAD');
 		req.userId = payload._id;
-
-		next();
+		
+		const {_id} = payload
+		db.User.findById(_id).then(userData =>{
+			req.user = userData
+			next();
+		})
 	} catch (error) {
 		console.log(error);
 		return res

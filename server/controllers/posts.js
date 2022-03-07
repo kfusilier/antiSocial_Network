@@ -1,4 +1,5 @@
 const db = require("../models");
+const Post = require("../models/Post");
 
 // can use this after Users & Comments are created
 
@@ -85,7 +86,6 @@ const newPost =(req,res) => {
     })
 }
 
-
 // create --- can use this after Users & Comments are created
 
 const create = async (req,res) => {
@@ -110,6 +110,36 @@ const create = async (req,res) => {
             })
     })
 }
+
+const allPosts = async (req, res) =>{
+	db.Post.find()
+	.then(posts=>{
+		res.json({posts})
+	})
+}
+
+
+
+const createPost = async (req, res) =>{
+	const {text} = req.body
+	if(!text){
+		return res.status(422).json({error: "Please add context"})
+	}
+	const post = new db.Post({
+		text,
+		user:req.user
+	})
+	post.save().then(result =>{
+		res.send({post:result})
+	})
+	.catch (err => {
+		res.status(422).json({
+			error: err
+		})
+	})
+}
+
+
 
 // const create = (req, res) => {
 // 	db.Post.create(req.body, (err, createdPost) => {
@@ -239,4 +269,5 @@ module.exports = {
     edit,
     update,
     destroy,
+	createPost
 }
