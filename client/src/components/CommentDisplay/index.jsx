@@ -28,12 +28,13 @@ const CommentsList = (props) => {
 							Post: {posts.text} <br />
 							Created at: {posts.createdAt}
 							<br />
-							<ul>
+							{/* <ul>
+
 								{posts.comments.map((sub) => (
                                     
 									<li>{sub.content}</li>
 								))}
-							</ul>
+							</ul> */}
 						</h3>
     </div>
   );

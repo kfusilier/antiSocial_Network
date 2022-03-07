@@ -9,6 +9,7 @@ import UsersPage from '../UsersPage';
 
 import CommentPage from '../CommentPage';
 
+import NavBar1 from "../../components/NavBar1"
 import NavBar2 from '../../components/NavBar2';
 import CommentDisplay from '../../components/CommentDisplay'
 import CommentShow from '../../components/CommentShow'
@@ -17,13 +18,18 @@ import CommentShow from '../../components/CommentShow'
 
 const Home = () => {
 	return (
-		<>
 			<div>
-				<NavBar2 />
+
 				<Routes>
-					<Route path='/SignupPage' element={<Signup />}></Route>
-					<Route path='/LoginPage' element={<Login />}></Route>
-					<Route path='/' element={<Landing />}></Route>
+					<Route
+						path='/SignupPage'
+						element={<Signup />}></Route>
+					<Route
+						path='/LoginPage'
+						element={<Login />}></Route>
+					<Route
+						path='/'
+						element={<Landing />}></Route>
 					<Route
 						path='/ProfilePage'
 						element={<ProfilePage />}></Route>
@@ -36,13 +42,11 @@ const Home = () => {
 					<Route
 						path='/Posts'
 						element={<CommentShow />}></Route>
-
 					<Route
 						path='/posts/:id'
 						element={<CommentPage />}></Route>
-				</Routes>
+					</Routes>
 			</div>
-		</>
 	);
 };
 

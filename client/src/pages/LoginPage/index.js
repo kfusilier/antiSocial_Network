@@ -1,5 +1,5 @@
 import LoginForm from '../../components/LoginForm';
-// import NavBar1 from '../../components/NavBar1';
+import NavBar1 from '../../components/NavBar1';
 import Logo from '../../components/Logo';
 
 
@@ -7,10 +7,13 @@ import Logo from '../../components/Logo';
 
 const Login = () => {
 	return (
+		<>
+		<NavBar1 />
 		<div>
 			<Logo />
 			<LoginForm />
 		</div>
+		</>
 	);
 };
 

@@ -5,10 +5,14 @@ export default function NavBar1() {
 	return (
 		<>
 			<div className={style.navBar}>
-				{/* <a href="/">Home</<a> essentially. We can inline style Link!
-                <Link to="/">Home</Link>
-                <Link to="/posts">Posts</Link> */}
-				{/* NavLink is helpful when differentiating between nav links and regular links. It also automatically assigns an "isActive" class that makes it easier to style! */}
+				<NavLink
+					to='/'
+					style={({ isActive }) => ({
+						color: isActive ? '#37ecba' : 'white',
+						textDecoration: 'none',
+						padding: '10px',
+					})}>
+				</NavLink>
 				<NavLink
 					to='/SignupPage'
 					style={({ isActive }) => ({
