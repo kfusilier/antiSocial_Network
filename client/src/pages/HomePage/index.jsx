@@ -6,13 +6,12 @@ import Landing from '../../components/Landing';
 import ProfilePage from '../ProfilePage';
 import BrowsePage from '../BrowsePage';
 import UsersPage from '../UsersPage';
-
+import UserIcon from '../../components/UserIcon'
 import CommentPage from '../CommentPage';
-
-import NavBar2 from '../../components/NavBar2';
+import UserList from '../../components/UserList';
+import NavBar2 from '../../components/navbar2';
 import CommentDisplay from '../../components/CommentDisplay'
 import CommentShow from '../../components/CommentShow'
-
 // import NavBar1 from '../../components/NavBar1';
 
 const Home = () => {
@@ -32,7 +31,7 @@ const Home = () => {
 						element={<BrowsePage />}></Route>
 					<Route
 						path='/UsersPage'
-						element={<UsersPage />}></Route>
+						element={<UserIcon />}></Route>
 					<Route
 						path='/Posts'
 						element={<CommentShow />}></Route>
@@ -40,6 +39,11 @@ const Home = () => {
 					<Route
 						path='/posts/:id'
 						element={<CommentPage />}></Route>
+
+					<Route
+						path='/users'
+						element={<UserIcon />}></Route>
+
 				</Routes>
 			</div>
 		</>

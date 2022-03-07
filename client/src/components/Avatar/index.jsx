@@ -1,5 +1,6 @@
 import style from './avatar.module.css';
 import Smiley from './Smiley.png';
+import UserList from '../UserList'
 
 const Avatar = () => {
 	return (
@@ -9,7 +10,7 @@ const Avatar = () => {
 					<img src={Smiley} alt='smiley' />
 				</div>
 				<div className={style.avatarName}>
-					<p>USER NAME</p>
+					<p>Name:</p>
 				</div>
 			</div>
 		</div>

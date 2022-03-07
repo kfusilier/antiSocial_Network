@@ -4,6 +4,8 @@ import Post from '../../components/Posts';
 import * as postService from '../../api/post.service';
 import * as authService from '../../api/auth.service';
 import Landing from '../../components/Landing';
+import CommentShow from '../../components/CommentShow'
+
 
 const reducer = (prevState, action) => {
 	switch (action.type) {
@@ -48,7 +50,7 @@ const BrowsePage = () => {
 		return (
 			<div>
 				<h1>antiSocial</h1>
-				<>
+				{/* <>
 					{posts.map((post) => {
 						return (
 							<Post
@@ -58,7 +60,8 @@ const BrowsePage = () => {
 						);
 					})}
 					<PostForms refreshPosts={() => fetchPosts()} />
-				</>
+				</> */}
+				<CommentShow/>
 			</div>
 		);
 	} else {
