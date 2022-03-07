@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import antiSocialAppTo from '../../api/axios.config';
 import * as postService from '../../api/post.service';
-import style from './commentShow.module.css';
+import style from './CommentShow.module.css';
 
 const CommentsList = () => {
 	const [posts, setPosts] = useState([]);
