@@ -1,4 +1,4 @@
-// import LoginForm from '../../components/LoginForm';
+import LoginForm from '../../components/LoginForm';
 // import NavBar1 from '../../components/NavBar1';
 import Logo from '../../components/Logo';
 
@@ -9,7 +9,7 @@ const Login = () => {
 	return (
 		<div>
 			<Logo />
-			{/* <LoginForm /> */}
+			<LoginForm />
 		</div>
 	);
 };

@@ -7,8 +7,8 @@ const getAll = () => {
 	return antiSocialAppTo.get('/posts');
 };
 
-const get = (id) => {
-	return antiSocialAppTo.get(`/posts/${id}`);
+const get = (_id) => {
+	return antiSocialAppTo.get(`/posts/${_id}`);
 };
 
 const create = (data) => {

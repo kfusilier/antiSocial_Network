@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import antiSocialAppTo from '../../api/axios.config';
 import * as postService from '../../api/post.service';
-import style from './commentShow.module.css';
+// import style from './commentShow.module.css';
 
 const CommentsList = () => {
 	const [posts, setPosts] = useState([]);
@@ -19,12 +19,13 @@ const CommentsList = () => {
 	}, []);
 
 	return (
-		<div className='hi'>
+		<div>
 			{posts.map((post) => {
 				return (
-					<div className={style.CommentShow}>
+					<div>
 						<h3>
 							Post: {post.text} <br />
+                            ID: {post._id} 
 							{/* Created at: {post.createdAt} */}
 							<br />
 							<ul>
