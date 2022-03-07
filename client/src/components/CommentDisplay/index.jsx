@@ -35,7 +35,7 @@ const CommentsList = (props) => {
 									<li>{sub.content}</li>
 								))}
 							</ul> */}
-	</h3>
+						</h3>
     </div>
   );
 };

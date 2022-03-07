@@ -4,7 +4,8 @@ import Post from '../../components/Posts';
 import * as postService from '../../api/post.service';
 import * as authService from '../../api/auth.service';
 import Landing from '../../components/Landing';
-import CommentShow from '../../components/CommentShow'
+import CommentShow from "../../components/CommentShow"
+import NavBar2 from '../../components/NavBar2';
 
 
 const reducer = (prevState, action) => {
@@ -49,7 +50,13 @@ const BrowsePage = () => {
 	if (isLoggedIn) {
 		return (
 			<div>
+
+				<>
+				<NavBar2 />
 				<h1>antiSocial</h1>
+				<CommentShow />
+				</>
+
 				{/* <>
 					{posts.map((post) => {
 						return (
@@ -61,7 +68,6 @@ const BrowsePage = () => {
 					})}
 					<PostForms refreshPosts={() => fetchPosts()} />
 				</> */}
-				<CommentShow/>
 			</div>
 		);
 	} else {
