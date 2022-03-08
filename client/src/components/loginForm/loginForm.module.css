@@ -7,8 +7,8 @@ body {
 	font-size: 40px;
 	color: white;
 	position: fixed;
-	top: 30%;
-	left: 46%;
+	top: 32%;
+	left: 47%;
 }
 .loginForm {
 	display: flex;
@@ -66,7 +66,7 @@ body {
 	font-weight: bold;
 	position: fixed;
 	top: 300px;
-	left: 38%;
+	left: 40%;
 }
 
 .button:hover {
