@@ -12,16 +12,7 @@ const UsersPosts = () => {
 					<p>body</p>
 					<p>edit post</p>
 				</div>
-				<div className={style.posts}>
-					<p>title</p>
-					<p>body</p>
-					<p>edit post</p>
-				</div>
-				<div className={style.posts}>
-					<p>title</p>
-					<p>body</p>
-					<p>edit post</p>
-				</div>
+
 				<div className={style.posts}>
 					<p>title</p>
 					<p>body</p>

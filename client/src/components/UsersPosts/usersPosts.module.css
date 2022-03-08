@@ -3,8 +3,8 @@
 	font-size: 40px;
 	color: white;
 	position: fixed;
-	top: 10%;
-	left: 35%;
+	top: 12%;
+	left: 52%;
 }
 
 .postsWrapper {
@@ -21,11 +21,12 @@
 	position: fixed;
 	height: 600px;
 	width: 750px;
-	top: 50%;
+	top: 54%;
 	left: 60%;
 	transform: translate(-50%, -50%);
 	color: white;
 	font-family: 'Fredoka One', cursive;
+	margin: 5px;
 }
 
 .posts {
