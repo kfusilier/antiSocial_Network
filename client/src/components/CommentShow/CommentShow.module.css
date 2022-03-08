@@ -9,12 +9,14 @@
 
 .center {
 	/* border: 5px solid hotpink; */
+	overflow-y: scroll;
+	scrollbar-width: thin;
 	position: absolute;
 	left: 150px;
 	top: 150px;
-	height: 800px;
+	height: 700px;
 	width: 700px;
-	border: 5px solid white;
+
 	border-radius: 75px;
 	display: flex-start;
 	/* flex-direction: column; */
@@ -36,7 +38,7 @@
 .post {
 	border: 3px solid white;
 	border-radius: 30px;
-	height: 120px;
+	height: 180px;
 	width: 575px;
 	display: flex;
 	justify-content: flex-start;
