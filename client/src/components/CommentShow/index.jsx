@@ -29,10 +29,13 @@ const CommentsList = () => {
 							<div className={style.post}>
 								<p className={style.text}>
 									<br />
-									Post: {post.text} <br />
+									Post: {post.text}
+									<br />
+									<br />
 									Author ID: {post._id}
 									{/* Created at: {post.createdAt} */}
 									<ul>
+										<br />
 										{post.comments.map((sub) => (
 											<li>{sub.content}</li>
 										))}
