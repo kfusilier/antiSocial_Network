@@ -11,8 +11,7 @@ export default function NavBar1() {
 						color: isActive ? '#37ecba' : 'white',
 						textDecoration: 'none',
 						padding: '10px',
-					})}>
-				</NavLink>
+					})}></NavLink>
 				<NavLink
 					to='/SignupPage'
 					style={({ isActive }) => ({

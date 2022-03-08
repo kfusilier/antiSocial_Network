@@ -38,7 +38,8 @@
 .post {
 	border: 3px solid white;
 	border-radius: 30px;
-	height: 180px;
+	min-height: 180px;
+	overflow: hidden;
 	width: 575px;
 	display: flex;
 	justify-content: flex-start;
