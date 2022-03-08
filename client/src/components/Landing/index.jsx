@@ -1,5 +1,4 @@
 import NavBar1 from '../Navbar1';
-
 import style from './landing.module.css';
 
 function Landing() {

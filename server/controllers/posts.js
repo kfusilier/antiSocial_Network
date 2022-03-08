@@ -33,17 +33,18 @@ const index = (req, res) => {
 // show
 
 const show = (req, res) => {
-  db.Post.findById(req.params.id, (err, foundPost) => {
-    if (err)
-      return res.status(400).json({
-        message: "Utter Failure!",
-        error: err,
-      });
-    return res.status(200).json({
-      message: "Success! with",
-      data: foundPost,
-    });
-  });
+	db.Post.findById(req.params.id, (err, foundPost) => {
+		if (err)
+			return res.status(400).json({
+				message: "Utter Failure!",
+				error: err,
+			});
+		return res.status(200).json({
+			message: "Success! with post show",
+			data: foundPost,
+		});
+	});
+
 };
 
 // can use this after Users & Comments are created

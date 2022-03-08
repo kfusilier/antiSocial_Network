@@ -36,9 +36,9 @@ const CommentsList = () => {
 									{/* Created at: {post.createdAt} */}
 									<ul>
 										<br />
-										{post.comments.map((sub) => (
+										{/* {post.comments.map((sub) => (
 											<li>{sub.content}</li>
-										))}
+										))} */}
 										<NavLink
 											to={`/posts/${post._id}`}>
 											<br />
