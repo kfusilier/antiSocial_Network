@@ -10,6 +10,8 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { NavLink } from 'react-router-dom';
+
 
 const CommentsList = (props) => {
   const [posts, setPosts] = useState([]);
@@ -47,6 +49,11 @@ const CommentsList = (props) => {
         </Typography>
         <Typography variant="body2">
         {posts.text} <br />
+
+        <NavLink to={`/posts/${id}/comments/new`}>
+                <button type ='button'>add a new comment!</button>
+				</NavLink>
+
         </Typography>
       </CardContent>
       <CardActions>

@@ -27,5 +27,31 @@ const destroy = (id) => {
 	return antiSocialAppTo.delete(`${posts}/${id}`);
 };
 
+const createComment = (id) => {
+    return antiSocialAppTo.post(`/posts/${id}/comments`);
+}
+
+const editComment = (postId, commentId) => {
+    return antiSocialAppTo.get(`/posts/${postId}/comments/${commentId}/edit`);
+}
+
+const updateComment = (postId, commentId) => {
+    return antiSocialAppTo.put(`/posts/${postId}/comments/${commentId}`);
+}
+
+const deleteComment = (id) => {
+    return antiSocialAppTo.delete(`/posts/${id}comments/${id}`);
+}
+
+
+
+
 // you can only export default when there's ONE thing to export
-export { getAll, get, create, update, destroy,getAllPost };
+export { getAll, get, create, update, destroy,
+createComment,
+editComment,
+updateComment,
+deleteComment,
+
+};
+
