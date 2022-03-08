@@ -40,7 +40,7 @@ const show = (req, res) => {
 				error: err,
 			});
 		return res.status(200).json({
-			message: "Success! with",
+			message: "Success! with post show",
 			data: foundPost,
 		});
 	});
