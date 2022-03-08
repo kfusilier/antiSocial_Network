@@ -44,8 +44,10 @@ const login = async (req, res) => {
             // jwt.sign(payload, secret key for signing, config object)
             // signature ensure that the token hasn't been altered, and we sign off on that with our secret key
             const token = jwt.sign({_id: foundUser._id}, "hailsatan", {
-                expiresIn: "3h"
+                expiresIn: "3h",
             })
+            const {_id, email, screenName} = foundUser;
+            res.json({token,user:{_id,email,screenName}})
 
             return res.status(200).json({
                 status: 200,

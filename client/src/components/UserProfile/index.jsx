@@ -1,8 +1,16 @@
 import style from './userProfile.module.css';
 import Avatar from '../Avatar';
 import CreatePost from '../CreatePost';
+import React, {useState, useEffect} from 'react';
+import postService from "../../api/post.service"
 
 const UserProfile = () => {
+
+	const [data, setData] = useState([])
+	// const fetchUser = async () =>{
+	// 	await postService.
+	// }
+
 	return (
 		<div className={style.userProfile}>
 			<p>User Profile</p>
