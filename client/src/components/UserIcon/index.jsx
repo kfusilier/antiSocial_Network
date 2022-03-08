@@ -36,7 +36,9 @@ const UserIcon = () => {
                     <div className={style.UserList}>
                  {/* <img src={Smiley} alt='smiley' /> */}
 
-                        <h4 className={style.h3}>{user.screenName}  
+                        <h4 className={style.h3}>{user.screenName}</h4>
+                        <br/>  
+                        <h4 className={style.h3}>{user._id} 
                        <br/> 
                        <button type ='button' className={style.button}>+Follow</button>
                     </h4>

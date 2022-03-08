@@ -25,14 +25,12 @@ const UserList = () => {
                 return (
                     <div className={style.UserList}>
                     
-                        <h1>user: {user.screenName}  
-    
-                        </h1>
-             
+                        <h1>user: {user.screenName}</h1>
+                        <h1>id:</h1>
                 </div>
-                
             )})}
             </div></div>
+
     )
 }
 
