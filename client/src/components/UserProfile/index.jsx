@@ -1,6 +1,9 @@
 import style from './userProfile.module.css';
 import Avatar from '../Avatar';
 import CreatePost from '../CreatePost';
+import PostForms from "../PostForms"
+import * as postService from "../../api/post.service"
+
 
 const UserProfile = () => {
 	return (
