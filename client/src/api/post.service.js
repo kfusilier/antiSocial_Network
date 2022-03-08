@@ -7,9 +7,9 @@ const getAll = () => {
 	return antiSocialAppTo.get('/posts');
 };
 
-const getAllPost = () => {
-	return antiSocialAppTo.get('/posts/allPosts')
-}
+// const getAllPost = () => {
+// 	return antiSocialAppTo.get('/posts/allPosts')
+// }
 
 const get = (_id) => {
 	return antiSocialAppTo.get(`/posts/${_id}`);
@@ -27,16 +27,16 @@ const destroy = (id) => {
 	return antiSocialAppTo.delete(`${posts}/${id}`);
 };
 
-const createComment = (id) => {
+const createComment = (id, data) => {
     return antiSocialAppTo.post(`/posts/${id}/comments`);
 }
 
-const editComment = (postId, commentId) => {
-    return antiSocialAppTo.get(`/posts/${postId}/comments/${commentId}/edit`);
+const editComment = (id, commentId) => {
+    return antiSocialAppTo.get(`/posts/${id}/comments/${commentId}/edit`);
 }
 
-const updateComment = (postId, commentId) => {
-    return antiSocialAppTo.put(`/posts/${postId}/comments/${commentId}`);
+const updateComment = (id, commentId) => {
+    return antiSocialAppTo.put(`/posts/${id}/comments/${commentId}`);
 }
 
 const deleteComment = (id) => {

@@ -55,15 +55,17 @@ import { func } from "prop-types";
 // };
 
 
-const CommentNew = ({ refreshPosts }) => {
+const CommentNew = (props) => {
 	const [body, setBody] = useState("");
-
+	
+	let {id} = useParams()
+	console.log(id)
 	const handleSubmit = async () => {
-		let newPost = { body };
-		let res = await postService.createComment(newPost).then(() => {
+		let newComment = { body };
+		let res = await postService.createComment(id, newComment).then(() => {
 			setBody("");
-			refreshPosts();
-			console.log(newPost);
+			props.refreshPosts();
+			console.log(newComment);
 		});
 
 		console.log(res);
