@@ -24,55 +24,58 @@ const SignupForm = () => {
 				<p>Sign Up</p>
 			</div>
 			<form className={style.signupForm}>
-				<div className={style.label}>
-					<label>
-						Display Name:
-						<input
-							onChange={(e) =>
-								setScreenName(e.target.value)
-							}
-							className={style.input}
-							type='text'
-							name='user name'
-							value={screenName}
-						/>
-					</label>
+				<div className={style.inputContainer}>
+					<div className={style.label}>
+						<label>
+							Display Name:
+							<input
+								onChange={(e) =>
+									setScreenName(e.target.value)
+								}
+								className={style.input}
+								type='text'
+								name='user name'
+								value={screenName}
+							/>
+						</label>
+					</div>
+					<div className={style.label}>
+						<label>
+							E-mail:
+							<input
+								onChange={(e) =>
+									setEmail(e.target.value)
+								}
+								className={style.input}
+								type='text'
+								name='e-mail'
+								value={email}
+							/>
+						</label>
+					</div>
+					<div className={style.label}>
+						<label>
+							Password:
+							<input
+								onChange={(e) =>
+									setPassword(e.target.value)
+								}
+								className={style.input}
+								type='text'
+								name='password'
+								value={password}
+							/>
+						</label>
+					</div>
 				</div>
-
-				<div className={style.label}>
-					<label>
-						E-mail:
-						<input
-							onChange={(e) => setEmail(e.target.value)}
-							className={style.input}
-							type='text'
-							name='e-mail'
-							value={email}
-						/>
-					</label>
-				</div>
-
-				<div className={style.label}>
-					<label>
-						Password:
-						<input
-							onChange={(e) => setPassword(e.target.value)}
-							className={style.input}
-							type='text'
-							name='password'
-							value={password}
-						/>
-					</label>
-				</div>
-
-				<input
-					className={style.button}
-					type='submit'
-					value='submit'
-					onClick={handleSubmit}
-				/>
-				{success}
-			</form>
+			</form>{' '}
+			<input
+				className={style.button}
+				type='submit'
+				value='submit'
+				onClick={handleSubmit}
+			/>
+			{success}
 		</div>
 	);
 };
