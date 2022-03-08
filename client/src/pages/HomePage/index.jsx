@@ -8,7 +8,6 @@ import BrowsePage from '../BrowsePage';
 import UsersPage from '../UsersPage';
 import UserIcon from '../../components/UserIcon';
 import CommentPage from '../CommentPage';
-import NavBar2 from '../../components/NavBar2';
 import UserList from '../../components/UserList';
 import CommentDisplay from '../../components/CommentDisplay';
 import CommentShow from '../../components/CommentShow';
@@ -17,7 +16,6 @@ import CommentShow from '../../components/CommentShow';
 const Home = () => {
 	return (
 		<div>
-			<NavBar2 />
 			<Routes>
 				<Route path='/SignupPage' element={<Signup />}></Route>
 				<Route path='/LoginPage' element={<Login />}></Route>

@@ -1,4 +1,4 @@
-import NavBar2 from '../Navbar2';
+import NavBar2 from '../NavBar2';
 import style from './landing.module.css';
 
 function Landing() {
