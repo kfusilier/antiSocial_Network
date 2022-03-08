@@ -2,8 +2,7 @@ import style from './CommentShow.module.css';
 import { useEffect, useState } from 'react';
 import antiSocialAppTo from '../../api/axios.config';
 import * as postService from '../../api/post.service';
-import {  Route, NavLink } from 'react-router-dom';
-// import style from './commentShow.module.css';
+import { Route, NavLink } from 'react-router-dom';
 
 const CommentsList = () => {
 	const [posts, setPosts] = useState([]);
@@ -14,41 +13,47 @@ const CommentsList = () => {
 		});
 	};
 
-
-
 	useEffect(() => {
 		fetchPosts();
 	}, []);
 
 	return (
 		<div>
-        
-    
-    
-    {posts.map((post) => {
-				return (
-					<div>
-						<h3>
-							Post: {post.text} <br />
-                            ID: {post._id} 
-							{/* Created at: {post.createdAt} */}
-							<br />
-							<ul>
-								{post.comments.map((sub) => (
-									<li>{sub.content}</li>
-								))}
-								<NavLink to={`/posts/${post._id}`}>
-                                <button type ='button' className={style.button}>See Post</button>
-								</NavLink>
-							</ul>
-						</h3>
-
-
-				
-					</div>
-				);
-			})}
-			
+			<div id={style.title}>
+				<p>Browse Posts</p>
+			</div>
+			<div className={style.center}>
+				<div className={style.container}>
+					{posts.map((post) => {
+						return (
+							<div className={style.post}>
+								<p className={style.text}>
+									<br />
+									Post: {post.text} <br />
+									Author ID: {post._id}
+									{/* Created at: {post.createdAt} */}
+									<ul>
+										{post.comments.map((sub) => (
+											<li>{sub.content}</li>
+										))}
+										<NavLink
+											to={`/posts/${post._id}`}>
+											<br />
+											<button
+												type='button'
+												className={
+													style.button
+												}>
+												View Post
+											</button>
+										</NavLink>
+									</ul>
+								</p>
+							</div>
+						);
+					})}
+				</div>
+			</div>
 		</div>
 	);
 };

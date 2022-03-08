@@ -1,58 +1,78 @@
-.displayWrapper {
-	display: flex;
-	/* flex-direction: column; */
-	/* align-items: centered; */
-	/* justify-content: space-around; */
+#title {
+	font-family: 'Fredoka One', cursive;
+	font-size: 40px;
+	color: white;
+	position: absolute;
+	left: 375px;
+	top: 100px;
+}
+
+.center {
+	/* border: 5px solid hotpink; */
+	position: absolute;
+	left: 150px;
+	top: 150px;
+	height: 800px;
+	width: 700px;
 	border: 5px solid white;
 	border-radius: 75px;
-	position: fixed;
-	height: 700px;
-	width: 1100px;
-	top: 55%;
-	left: 40%;
-	transform: translate(-50%, -50%);
+	display: flex-start;
+	/* flex-direction: column; */
+	/* justify-content: center; */
+	/* align-items: center; */
 }
 
-.usersContainer {
-	position: fixed;
-	height: 650px;
-	width: 800px;
-	top: 52%;
-	left: 52%;
-	/* margin: 10px; */
+.container {
+	/* border: 5px solid yellow; */
+	/* position: absolute;
+	left: 150px;
+	top: 150px; */
+	height: 600px;
+	width: 650px;
+	display: block;
+	margin: 20px 55px;
+}
+
+.post {
+	border: 3px solid white;
+	border-radius: 30px;
+	height: 120px;
+	width: 575px;
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	transform: translate(-50%, -50%);
+	justify-content: flex-start;
+	margin: 10px;
 }
 
+.text {
+	color: white;
+	font-size: 15px;
+	/* border: 1px solid blue; */
+	margin: 5px 35px 5px 35px;
+}
 
-
-.edits{
-    /* float: left; */
-    /* background-color: grey; */
-    /* display:inline-block; */
-    /* padding: 20px; */
-    margin: 10px;
-    list-style-type: none;
-    /* display: inline-block; */
-    border: 10px solid ;
-    padding:10px;
-    /* width: 200px;
+.edits {
+	/* float: left; */
+	/* background-color: grey; */
+	/* display:inline-block; */
+	/* padding: 20px; */
+	margin: 10px;
+	list-style-type: none;
+	/* display: inline-block; */
+	border: 10px solid;
+	padding: 10px;
+	/* width: 200px;
     height: 100px; */
-    border-radius: 6%;
-
-
+	border-radius: 6%;
 }
 
 .button {
-	padding: 8px 20px;
+	padding: 5px 15px;
 	border-radius: 10px;
 	overflow: hidden;
 	color: #37ecba;
 	border: none;
 	background-color: white;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 
 .button:hover {
