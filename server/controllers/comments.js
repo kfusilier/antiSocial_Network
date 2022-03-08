@@ -94,18 +94,18 @@ const editComment = (req, res) => {
 
 
 const updateComment = (req, res) => {
-    db.Post.findOne({"comment._id":req.params.id}, (err, post) => {
-        const commentId = post.comments.id(req.params.id);
+    db.Post.findOne({"comment._id":req.params.id}, (err, updatedComment) => {
+        const commentId = updatedComment.comments.id(req.params.id);
         commentId.set(req.body);
-        post.save(function() {
+        updatedComment.save(function() {
             if(err)
                 return res.status(400).json({
-                    message: "Failed to update comments",
+                    message: "Failure to update comments",
                     error: err,
                 });
                 return res.status(200).json({
-                    message: "Successfully updated comments!",
-                    data: post,
+                    message: "Gj updating comments!",
+                    data: updatedComment,
                 });
         });
     });

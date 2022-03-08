@@ -3,14 +3,14 @@ import CommentDisplay from '../../components/CommentDisplay';
 
 import NavBar2 from '../../components/NavBar2';
 import Comment from '../../components/Comment'
-import CommentEdit from '../../components/CommentEdit'
+import CommentNew from '../../components/CommentNew'
 
 
 const EditCommentPage = () => {
 	return (
 		<div>
 		<NavBar2 />
-        <CommentEdit/>
+        <CommentNew/>
 		
             
 		</div>
