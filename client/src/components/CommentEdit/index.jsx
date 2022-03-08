@@ -33,9 +33,9 @@ const CommentEdit = () => {
 	return (
 		<div>
         <div>
-     
-
-        {comments.content}
+        Hey! this is the edit comment show page
+        <br></br>
+        Comment: {comments.content}
 	
       
         </div>    

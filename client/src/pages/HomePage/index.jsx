@@ -15,7 +15,7 @@ import UserList from '../../components/UserList';
 import CommentDisplay from '../../components/CommentDisplay'
 import CommentShow from '../../components/CommentShow'
 
-import EditCommentPage from '../../components/CommentEdit'
+import EditCommentPage from '../EditCommentPage'
 
 
 // import NavBar1 from '../../components/NavBar1';
