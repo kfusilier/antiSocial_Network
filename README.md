@@ -4,13 +4,11 @@
 
 ★·.·´¯`·.·★ AUTHORS ★·.·´¯`·.·★
 
-
-[Xavier Comacho](https://github.com/x-camacho)
-[Kristin Fusilier](https://github.com/kfusilier)
-[Pete Sertthin](https://github.com/preteyz)
-[Erik Yang](https://github.com/ErikYSH)
+[Xavier Comacho](https://github.com/x-camacho)<br>
+[Kristin Fusilier](https://github.com/kfusilier)<br>
+[Pete Sertthin](https://github.com/preteyz)<br>
+[Erik Yang](https://github.com/ErikYSH)<br>
 [Nat Zeng](https://github.com/fthbby)
-
 
 ★·.·´¯`·.·★ DESCRIPTION ★·.·´¯`·.·★
 
@@ -27,7 +25,7 @@ antiSocial is a MERN stack project created by the above authors while completing
 While antiSocial in its current state is a project out team is very proud of, there is always room for growth on feature, usability, design and efficiency. Some of out future build out plans include:
 
 -    Adding Emoji commenting on Posts
--         Adding icons to links
+-            Adding icons to links
 -    Dark and light mode
 -    Toggle posts from public to private
 -    Tag other users or friends
