@@ -7,6 +7,10 @@ const getAll = () => {
 	return antiSocialAppTo.get('/posts');
 };
 
+const getAllPost = () => {
+	return antiSocialAppTo.get('/posts/allPosts')
+}
+
 const get = (_id) => {
 	return antiSocialAppTo.get(`/posts/${_id}`);
 };
@@ -24,4 +28,4 @@ const destroy = (id) => {
 };
 
 // you can only export default when there's ONE thing to export
-export { getAll, get, create, update, destroy };
+export { getAll, get, create, update, destroy,getAllPost };

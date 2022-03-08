@@ -4,6 +4,26 @@ import antiSocialAppTo from '../../api/axios.config';
 import * as postService from '../../api/post.service';
 import { Route, NavLink } from 'react-router-dom';
 
+// const UsersPosts = () => {
+
+// 	const [data, setData] = useState([])
+// 	const fetchUserPost = async () => {
+// 		await antiSocialAppTo.get('/posts/allPosts')
+// 		// .then((res) => {
+// 		// 	setData(res.data.data)
+// 		// 	console.log(res.data.data)
+// 		// })
+// 		.then(res =>res.data.data)
+// 		.then(result => {
+// 			console.log(result)
+// 		})
+// 	}
+// 	useEffect(()=>{
+// 		fetchUserPost()
+// 	},[])
+
+
+
 const UsersPosts = () => {
 	const [posts, setPosts] = useState([]);
 	const fetchPosts = async () => {
