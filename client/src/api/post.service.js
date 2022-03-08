@@ -7,6 +7,10 @@ const getAll = () => {
 	return antiSocialAppTo.get('/posts');
 };
 
+const getAllPost = () => {
+	return antiSocialAppTo.get('/posts/allPosts')
+}
+
 const get = (_id) => {
 	return antiSocialAppTo.get(`/posts/${_id}`);
 };
@@ -50,3 +54,4 @@ updateComment,
 deleteComment,
 
 };
+

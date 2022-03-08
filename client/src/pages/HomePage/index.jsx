@@ -6,7 +6,7 @@ import Landing from '../../components/Landing';
 import ProfilePage from '../ProfilePage';
 import BrowsePage from '../BrowsePage';
 import UsersPage from '../UsersPage';
-import UserIcon from '../../components/UserIcon'
+import UserIcon from '../../components/UserIcon';
 import CommentPage from '../CommentPage';
 import CommentEdit from '../../components/CommentEdit'
 import NavBar1 from "../../components/NavBar1"
@@ -61,6 +61,7 @@ const Home = () => {
 
 					</Routes>
 			</div>
+
 	);
 };
 
