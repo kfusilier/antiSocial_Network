@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const ctrl = require('../controllers');
+const authRequired = require('../middleware/auth.required');
 
+router.get('/allPosts', ctrl.posts.allPosts);
+router.post('/createPost',authRequired, ctrl.posts.createPost);
+router.get('/userPosts', authRequired, ctrl.posts.userPosts);
 router.get('/', ctrl.posts.index);
 router.get("/:id/comments", ctrl.comments.commentsIdx);
 router.get('/new', ctrl.posts.newPost);
