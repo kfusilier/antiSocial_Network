@@ -2,6 +2,14 @@ body {
 	min-height: 100vh;
 }
 
+#title {
+	font-family: 'Fredoka One', cursive;
+	font-size: 40px;
+	color: white;
+	position: fixed;
+	top: 10%;
+	left: 35%;
+}
 .signupForm {
 	display: flex;
 	flex-direction: column;
