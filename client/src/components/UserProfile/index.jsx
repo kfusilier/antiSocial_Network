@@ -1,8 +1,11 @@
 import style from './userProfile.module.css';
 import Avatar from '../Avatar';
 import CreatePost from '../CreatePost';
+
 import React, {useState, useEffect} from 'react';
-import postService from "../../api/post.service"
+
+import PostForms from "../PostForms"
+import * as postService from "../../api/post.service"
 
 const UserProfile = () => {
 

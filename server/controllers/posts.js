@@ -94,17 +94,27 @@ const create = async (req, res) => {
   // if (req.file) {
   //     post.image= req.file.path
   // }
-  const createdPost = await post.save();
-  db.User.findById(createdPost.user).exec((err, foundUser) => {
-    if (err) return console.log("error in posts creation", err);
-    foundUser.posts.push(createdPost);
-    foundUser.save();
-    // res.redirect(`/users/${foundUser._id}`)
-    return res.status(201).json({
-      message: "success!",
-      data: createdPost,
+  post
+    .save()
+    .then((result) => {
+      res.send({ post: result });
+    })
+    .catch((err) => {
+      res.status(422).json({
+        error: err,
+      });
     });
-  });
+//   const createdPost = await post.save();
+//   db.User.findById(createdPost.user).exec((err, foundUser) => {
+//     if (err) return console.log("error in posts creation", err);
+//     foundUser.posts.push(createdPost);
+//     foundUser.save();
+//     // res.redirect(`/users/${foundUser._id}`)
+//     return res.status(201).json({
+//       message: "success!",
+//       data: createdPost,
+//     });
+//   });
 };
 
 const allPosts = async (req, res) => {
@@ -149,8 +159,6 @@ const userPosts = async (req, res) => {
       console.log(err);
     });
 };
-
-
 
 // const create = (req, res) => {
 // 	db.Post.create(req.body, (err, createdPost) => {
