@@ -5,8 +5,8 @@ import * as postService from '../../api/post.service';
 import * as authService from '../../api/auth.service';
 import Landing from '../../components/Landing';
 import CommentShow from '../../components/CommentShow';
-import NavBar2 from '../../components/NavBar2';
 import Logo from '../../components/Logo';
+import NavBar2 from '../../components/Navbar2';
 
 const reducer = (prevState, action) => {
 	switch (action.type) {
