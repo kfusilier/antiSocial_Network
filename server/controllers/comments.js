@@ -30,9 +30,9 @@ const db = require ('../models');
 // }
 
 const commentsIdx = (req, res) => {
-    db.Post.findById({"comments._id":req.params.id}, (err, foundComment) => {
+    db.Post.findById({"comment._id":req.params.id}, (err, foundComment) => {
         if (err) return res.status(400).json({
-            message: "Can't find comments",
+            message: "Can't find comments!!!",
             error: err
         })
         return res.status(200).json({
@@ -41,6 +41,21 @@ const commentsIdx = (req, res) => {
         })
     })
 }
+
+
+const show = (req, res) => {
+	db.Post.findOne({'comment._id': req.params.id}, (err, foundComment) => {
+		if (err)
+			return res.status(400).json({
+				message: "Utter Failure! with show!!",
+				error: err,
+			});
+		return res.status(200).json({
+			message: "Success! with commentSHOW!!!",
+			data: foundComment,
+		});
+	}); 
+};
 
 
 
@@ -61,11 +76,41 @@ const newComments = (req, res) => {
     })
 }
 
-const editComments = (req, res) => {
-    db.Post.findByIdAndUpdate(req.params.id, (err, editComment) => {
-        editComment.comments
-    })
-}
+const editComment = (req, res) => {
+    db.Post.findOne({"comment._id":req.params.id}, (err, post) => {
+        const commentId = post.comments.id(req.params.id);
+        const context = {comment: commentId};
+            if(err)
+            return res.status(400).json({
+                message: "Can't edit comment!",
+                error: err,
+            });
+            return res.status(200).json({
+                message: "Comments retrieved for edit",
+                data: context,
+            });
+    });
+};
+
+
+const updateComment = (req, res) => {
+    db.Post.findOne({"comment._id":req.params.id}, (err, updatedComment) => {
+        const commentId = updatedComment.comments.id(req.params.id);
+        commentId.set(req.body);
+        updatedComment.save(function() {
+            if(err)
+                return res.status(400).json({
+                    message: "Failure to update comments",
+                    error: err,
+                });
+                return res.status(200).json({
+                    message: "Gj updating comments!",
+                    data: updatedComment,
+                });
+        });
+    });
+};
+
 
 const destroyComments = (req, res) => {
     db.Post.findOne({"comment._id":req.params.id}, (err, deleteComment) => {
@@ -87,9 +132,11 @@ const destroyComments = (req, res) => {
 
 
 module.exports = {
-    // idx,
+    show,
     commentsIdx,
     newComments,
     destroyComments,
+    editComment,
+    updateComment,
 }
 

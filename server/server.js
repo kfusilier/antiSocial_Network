@@ -30,7 +30,6 @@ app.use(express.json());
 app.use('/api/posts', routes.posts);
 app.use('/api/users', routes.users);
 
-
 // ///test
 
 app.use('/api/auth', routes.auth);
