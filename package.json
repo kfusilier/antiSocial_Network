@@ -36,6 +36,7 @@
     "start-client-dev": "yarn --cwd client start",
     "dev": "concurrently --kill-others --handle-input -n client,server 'yarn:start-client-dev' 'yarn:start-server-dev'"
   },
+  "heroku-run-build-script": true,
   "eslintConfig": {
     "extends": [
       "react-app",
