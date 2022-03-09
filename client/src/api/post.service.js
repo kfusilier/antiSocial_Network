@@ -7,9 +7,14 @@ const getAll = () => {
 	return antiSocialAppTo.get('/posts');
 };
 
-// const getAllPost = () => {
-// 	return antiSocialAppTo.get('/posts/allPosts')
-// }
+
+const getAllPost = () => {
+	return antiSocialAppTo.get('/posts/allPosts')
+}
+const getUserPost = () => {
+	return antiSocialAppTo.get('/posts/userPosts')
+}
+
 
 const get = (_id) => {
 	return antiSocialAppTo.get(`/posts/${_id}`);
@@ -18,6 +23,10 @@ const get = (_id) => {
 const create = (data) => {
 	return antiSocialAppTo.post(`${posts}`, data);
 };
+
+const createPost = (data) =>{
+	return antiSocialAppTo.post('/posts/createPost', data)
+}
 
 const update = (id, data) => {
 	return antiSocialAppTo.put(`${posts}/${id}`, data);
@@ -47,11 +56,12 @@ const deleteComment = (id) => {
 
 
 // you can only export default when there's ONE thing to export
+
 export { getAll, get, create, update, destroy,
 createComment,
 editComment,
 updateComment,
 deleteComment,
-
+getAllPost, getUserPost, createPost,
 };
 
