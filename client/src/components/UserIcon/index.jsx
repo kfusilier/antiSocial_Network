@@ -58,20 +58,17 @@ const UserIcon = () => {
 
 export default UserIcon;
 
+// const [users, setUsers] = useState([]);
 
+// const fetchUsers = async () => {
+//     await antiSocialAppTo.get("/users").then((res) => {
+//         setUsers(res.data.data);
+//     });
+// };
 
-
-    // const [users, setUsers] = useState([]);
-
-    // const fetchUsers = async () => {
-    //     await antiSocialAppTo.get("/users").then((res) => {
-    //         setUsers(res.data.data);
-    //     });
-    // };
-
-    // useEffect(() => {
-    //     fetchUsers();
-    // }, []);
+// useEffect(() => {
+//     fetchUsers();
+// }, []);
 
 //     return(
 //         <>
@@ -90,12 +87,12 @@ export default UserIcon;
 //                  {/* <img src={Smiley} alt='smiley' /> */}
 
 //                         <h4 className={style.h3}>{user.screenName}</h4>
-//                         <br/>  
-//                         <h4 className={style.h3}>{user._id} 
-//                        <br/> 
+//                         <br/>
+//                         <h4 className={style.h3}>{user._id}
+//                        <br/>
 //                        <button type ='button' className={style.button}>+Follow</button>
 //                     </h4>
-             
+
 //                 </div>
 //                 </div>
 //             )})}
@@ -103,4 +100,3 @@ export default UserIcon;
 //     )
 
 // export default UserIcon;
-
