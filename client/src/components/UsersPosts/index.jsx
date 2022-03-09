@@ -22,8 +22,6 @@ import { Route, NavLink } from 'react-router-dom';
 // 		fetchUserPost()
 // 	},[])
 
-
-
 const UsersPosts = () => {
 	const [posts, setPosts] = useState([]);
 	const fetchPosts = async () => {
@@ -36,95 +34,98 @@ const UsersPosts = () => {
 	useEffect(() => {
 		fetchPosts();
 	}, []);
-	
+
 	return (
-
 		<div>
-			<div id={style.title}>
-				<p>User's Posts</p>
-			</div>
-			<div className={style.postsWrapper}>
-				<div className={style.posts}>
-					<p>title</p>
-					<p>body</p>
-					<p>edit post</p>
+			<div>
+				<div id={style.title}>
+					<p>User's Posts</p>
 				</div>
+				<div className={style.postsWrapper}>
+					<div className={style.posts}>
+						<p>title</p>
+						<p>body</p>
+						<p>edit post</p>
+					</div>
+					<div className={style.posts}>
+						<p>title</p>
+						<p>body</p>
+						<p>edit post</p>
+					</div>
+					<div className={style.posts}>
+						<p>title</p>
+						<p>body</p>
+						<p>edit post</p>
+					</div>
+					<div className={style.posts}>
+						<p>title</p>
+						<p>body</p>
+						<p>edit post</p>
+					</div>
+					<div className={style.posts}>
+						<p>title</p>
+						<p>body</p>
+						<p>edit post</p>
+					</div>
+					<div className={style.posts}>
+						<p>title</p>
+						<p>body</p>
+						<p>edit post</p>
+					</div>
+				</div>
+			</div>
 
-				<div className={style.posts}>
-					<p>title</p>
-					<p>body</p>
-					<p>edit post</p>
-				</div>
-				<div className={style.posts}>
-					<p>title</p>
-					<p>body</p>
-					<p>edit post</p>
-				</div>
-				<div className={style.posts}>
-					<p>title</p>
-					<p>body</p>
-					<p>edit post</p>
-				</div>
-				<div className={style.posts}>
-					<p>title</p>
-					<p>body</p>
-					<p>edit post</p>
-				</div>
-				<div className={style.posts}>
-					<p>title</p>
-					<p>body</p>
-					<p>edit post</p>
-				</div>
-			</div>
-		</div>
-
-		<>
-		<div className={style.postsWrapper}>
-		<div className={style.center}>
-			<div id={style.title}>
-			<p>User's Posts</p>
-			</div>
-			{posts.map((post) => {
-						return (
-							<div className={style.posts}>
-								<p className={style.text}>
-									<br />
-									Post: {post.text}
-									<br />
-									<br />
-									Author ID: {post._id}
-									{/* Created at: {post.createdAt} */}
-									<ul>
+			<>
+				<div className={style.postsWrapper}>
+					<div className={style.center}>
+						<div id={style.title}>
+							<p>User's Posts</p>
+						</div>
+						{posts.map((post) => {
+							return (
+								<div className={style.posts}>
+									<p className={style.text}>
 										<br />
-										{post.comments.map((sub) => (
-											<li>{sub.content}</li>
-										))}
-										<NavLink
-											to={`/posts/${post._id}`}>
+										Post: {post.text}
+										<br />
+										<br />
+										Author ID: {post._id}
+										{/* Created at: {post.createdAt} */}
+										<ul>
 											<br />
-											<button
-												type='button'
-												className={
-													style.button
-												}>
-												View Post
-											</button>
-										</NavLink>
-									</ul>
-								</p>
-							</div>
-						);
-					})}
+											{post.comments.map(
+												(sub) => (
+													<li>
+														{
+															sub.content
+														}
+													</li>
+												)
+											)}
+											<NavLink
+												to={`/posts/${post._id}`}>
+												<br />
+												<button
+													type='button'
+													className={
+														style.button
+													}>
+													View Post
+												</button>
+											</NavLink>
+										</ul>
+									</p>
+								</div>
+							);
+						})}
+					</div>
 				</div>
-				</div>
-				</>
-
+			</>
+		</div>
 	);
 };
 
 export default UsersPosts;
-
-
 
 // <div className={style.posts}>
 // <p>title</p>
