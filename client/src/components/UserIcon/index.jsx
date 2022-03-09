@@ -7,7 +7,6 @@ import Smiley from './Smiley.png';
 import NavBar2 from '../NavBar2';
 
 const UserIcon = () => {
-
 	const [users, setUsers] = useState([]);
 
 	const fetchUsers = async () => {
@@ -23,7 +22,6 @@ const UserIcon = () => {
 	return (
 		<>
 			<NavBar2 />
-
 			<div className={style.displayWrapper}>
 				<div className={style.usersContainer}>
 					{users.map((user) => {
@@ -59,6 +57,8 @@ const UserIcon = () => {
 };
 
 export default UserIcon;
+
+
 
 
     // const [users, setUsers] = useState([]);

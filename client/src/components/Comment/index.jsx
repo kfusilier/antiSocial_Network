@@ -9,7 +9,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
+import { NavLink } from 'react-router-dom';
 
 const Comment = (props) => {
   const [posts, setPosts] = useState([]);
@@ -42,9 +42,22 @@ const Comment = (props) => {
         <ul>
 			    {posts.map((sub) => (
        
-				<li>{sub.content}</li>
+				<li>{sub.content}
+                <br/>
+                <NavLink to={`/posts/${id}/comments/${sub._id}/edit`}>
+                <button type ='button' className={style.button}>Edit</button>
+				</NavLink>
+
+                </li>
 				))}
-			</ul>
+
+                
+		</ul>
+
+         
+								
+								
+						
         </Typography>
       </CardContent>
       <CardActions>

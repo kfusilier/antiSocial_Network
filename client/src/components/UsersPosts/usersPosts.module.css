@@ -1,32 +1,44 @@
+#title {
+	font-family: 'Fredoka One', cursive;
+	font-size: 40px;
+	color: white;
+	position: fixed;
+	top: 12%;
+	left: 52%;
+}
+
 .postsWrapper {
 	overflow-y: scroll;
 	scrollbar-width: thin;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	align-content: flex-start;
 	justify-content: space-evenly;
 	font-size: 40px;
 	/* border: 5px solid white; */
 	border-radius: 75px;
 	position: fixed;
-	height: 780px;
+	height: 600px;
 	width: 750px;
-	top: 50%;
+	top: 54%;
 	left: 60%;
 	transform: translate(-50%, -50%);
 	color: white;
 	font-family: 'Fredoka One', cursive;
+	margin: 5px;
 }
 
 .posts {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	font-size: 12px;
 	border: 3px solid white;
 	border-radius: 30px;
+	min-height: 120px;
+	overflow: hidden;
 	width: 500px;
-	height: 100px;
 	left: 10%;
 }

@@ -1,10 +1,12 @@
-import NavBar2 from '../NavBar2';
+
+import NavBar1 from '../Navbar1';
+import NavBar1 from '../NavBar1';
 import style from './landing.module.css';
 
 function Landing() {
 	return (
 		<>
-			<NavBar2 />
+			<NavBar1 />
 			<div className={style.homeBrand}>
 				<div className={style.homeLogo}>
 					<p>antiSocial</p>
