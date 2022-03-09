@@ -37,7 +37,7 @@ const destroy = (id) => {
 };
 
 const createComment = (id, data) => {
-    return antiSocialAppTo.post(`/posts/${id}/comments`);
+    return antiSocialAppTo.post(`/posts/${id}/comments`, data);
 }
 
 const editComment = (id, commentId) => {

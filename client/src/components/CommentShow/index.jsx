@@ -8,8 +8,9 @@ const CommentsList = () => {
 	const [posts, setPosts] = useState([]);
 	const fetchPosts = async () => {
 		await antiSocialAppTo.get('/posts').then((res) => {
+			
 			console.log(res.data.data);
-			setPosts(res.data.data);
+			setPosts(res.data.data.reverse());
 		});
 	};
 
@@ -32,7 +33,7 @@ const CommentsList = () => {
 									Post: {post.text}
 									<br />
 									<br />
-									Author ID: {post._id}
+									Created At: {post.createdAt}
 									{/* Created at: {post.createdAt} */}
 									<ul>
 										<br />

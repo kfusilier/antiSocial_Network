@@ -3,7 +3,7 @@
 	font-size: 40px;
 	color: white;
 	position: fixed;
-	top: 12%;
+	top: 8%;
 	left: 52%;
 }
 
@@ -41,4 +41,23 @@
 	overflow: hidden;
 	width: 500px;
 	left: 10%;
+	margin: 5px
+}
+.button {
+    padding: 8px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #37ecba;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    /* position: fixed;
+    top: 325px;
+    left: 40%; */
+	margin-bottom: 4.5px;
+}
+
+.button:hover {
+    background-color: #37ecba;
+    color: white;
 }

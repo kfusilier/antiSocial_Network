@@ -60,21 +60,35 @@ const show = (req, res) => {
 
 
 
+// const newComments = (req, res) => {
+//     db.Post.findById(req.params.id, (err, newComment) => {
+//         newComment.comments.push(req.body);
+//         newComment.save(function() {
+//             if(err) return res.status(200).json({
+//                 message: "Fail comment",
+//                 error: err
+//             })
+//             return res.status(201).json({
+//                 message: "Comment Created",
+//                 data: newComment
+//             })
+//         })
+//     })
+// }
+
 const newComments = (req, res) => {
-    db.Post.findById(req.params.id, (err, newComment) => {
-        newComment.comments.push(req.body);
-        newComment.save(function() {
-            if(err) return res.status(200).json({
-                message: "Fail comment",
-                error: err
-            })
-            return res.status(201).json({
-                message: "Comment Created",
-                data: newComment
-            })
-        })
+    const comment = new db.Post({
+        content:req.body.content,
+        user: req.user,
+    })
+    comment 
+    .save()
+    .then((result) => {
+        res.send({comment: result})
+        console.log (result)
     })
 }
+
 
 const editComment = (req, res) => {
     db.Post.findOne({"comment._id":req.params.id}, (err, post) => {
