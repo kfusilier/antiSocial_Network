@@ -25,7 +25,7 @@ import EditCommentPage from '../EditCommentPage';
 const Home = () => {
 	return (
 		<div>
-			<Routes>
+			{/* <Routes>
 				<Route path='/LoginPage' element={<Login />}></Route>
 				<Route path='/' element={<Landing />}></Route>
 				<Route
@@ -35,7 +35,7 @@ const Home = () => {
 				<Route path='/UsersPage' element={<UserIcon />}></Route>
 				<Route path='/Posts' element={<CommentShow />}></Route>
 				<Route path='/posts/:id' element={<CommentPage />}></Route>
-			</Routes>
+			</Routes> */}
 
 			<Routes>
 				<Route path='/SignupPage' element={<Signup />}></Route>
