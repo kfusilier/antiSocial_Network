@@ -14,8 +14,8 @@ import CommentDisplay from '../../components/CommentDisplay';
 import CommentShow from '../../components/CommentShow';
 
 import CommentEdit from '../../components/CommentEdit';
-import NavBar1 from '../../components/NavBar1';
-import NavBar2 from '../../components/NavBar2';
+// import NavBar1 from '../../components/NavBar1';
+// import NavBar2 from '../../components/NavBar2';
 
 import NewCommentPage from '../NewCommentPage';
 import EditCommentPage from '../EditCommentPage';
