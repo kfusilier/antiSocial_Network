@@ -55,7 +55,7 @@ import { func } from "prop-types";
 // };
 
 
-const CommentNew = (props) => {
+const CommentNew = ({refreshPosts}) => {
 	const [body, setBody] = useState("");
 	
 	let {id} = useParams()
@@ -64,14 +64,14 @@ const CommentNew = (props) => {
 		let newComment = { body };
 		let res = await postService.createComment(id, newComment).then(() => {
 			setBody("");
-			props.refreshPosts();
 			console.log(newComment);
+			// refreshPosts();
 		});
 
-		console.log(res);
 		// 201 = create
 		if (!res === 201) {
 			alert(`ERROR! oh noes! not dope! it was code: ${res.status}`);
+			console.log(res);
 		}
 	};
 
@@ -79,7 +79,7 @@ const CommentNew = (props) => {
 		<div>
 			<form>
 				<label>
-					What's on your mind, homie?
+					Add Your Comment:
 					<textarea
 						onChange={(e) => setBody(e.target.value)}
 						value={body}
@@ -89,7 +89,7 @@ const CommentNew = (props) => {
 					/>
 				</label>
 			</form>
-			<button onClick={handleSubmit}> Add Post, Homie + </button>
+			<button onClick={handleSubmit}> Submit Comment </button>
 		</div>
 	);
 };

@@ -4,9 +4,9 @@ const authRequired = require('../middleware/auth.required');
 
 
 router.get('/userPosts', authRequired, ctrl.posts.userPosts);
-router.get('/allPosts', ctrl.posts.allPosts);
 router.get('/', ctrl.posts.index);
-router.post('/createPost',authRequired, ctrl.posts.createPost);
+router.get('/allPosts', ctrl.posts.allPosts);
+// router.post('/createPost',authRequired, ctrl.posts.createPost);
 
 
 router.get('/new', ctrl.posts.newPost);

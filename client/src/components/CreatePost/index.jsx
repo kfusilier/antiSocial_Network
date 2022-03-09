@@ -24,17 +24,18 @@ const CreatePost = ({ refreshPosts }) => {
 
     // };
 
-	const [text, setText] = useState([""])
-	const handleSubmit = async () => {
-		const formData = new FormData();
-		formData.append("text", text)
+	// const [text, setText] = useState([""])
+	// const handleSubmit = async () => {
+	// 	const formData = new FormData();
+	// 	formData.append("text", text)
 
-		let res = await postService.createPost(formData).then(()=>{
-			setText("")
-			refreshPosts();
-		})
+	// 	let res = await postService.create(formData).then(()=>{
+	// 		console.log(formData);
+	// 		setText("");
+	// 		refreshPosts();
+	// 	})
 		
-	}
+	// }
 
 	// const handleSubmit = async () =>{
 	// 	let newUserPost = {text};
@@ -46,7 +47,22 @@ const CreatePost = ({ refreshPosts }) => {
 	// 		// console.log(fetchCreatePost)
 	// 	})
 	// }
+	// const[title, setTitle] = useState("");
+	const[text, setText] = useState("");
 
+	const handleSubmit = async () => {
+        let newPost = { text };
+        let res = await postService.create(newPost).then(() => {
+            // setTitle("");
+            setText("");
+            refreshPosts();
+            console.log(newPost);
+        });
+
+        console.log(res);
+        if (!res === 201) {
+            alert(`ERROR! ${res.status}`)
+    }};
 
 	return (
 		<div>

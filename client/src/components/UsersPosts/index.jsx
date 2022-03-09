@@ -56,7 +56,7 @@ const UsersPosts = () => {
                   Author ID: {post.user.screenName}
          
                   <ul>
-                    <br />
+                  
                     {/* {post.comments.map((sub) => (
                       <li>{sub.content}</li>
                     ))} */}

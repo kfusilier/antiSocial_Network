@@ -28,7 +28,7 @@ const LoginForm = () => {
 				<div>
 					<div className={style.label}>
 						<label>
-							E-mail :
+							Username :
 							<input
 								className={style.input}
 								type='text'
@@ -40,17 +40,19 @@ const LoginForm = () => {
 						</label>
 
 						<div>
-							<label>
-								Password :
-								<input
-									className={style.input}
-									type='text'
-									name='password'
-									onChange={(e) =>
-										setPassword(e.target.value)
-									}
-								/>
-							</label>
+					
+							<label for='pass'>
+                                Password :
+                                <input
+                                    className={style.input}
+                                    type='password'
+                                    id='pass'
+                                    name='password'
+                                    onChange={(e) =>
+                                        setPassword(e.target.value)
+                                    }
+                                />
+                            </label>
 						</div>
 					</div>
 				</div>
