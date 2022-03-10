@@ -5,7 +5,7 @@ const commentSchema = require("./Comment.js");
 const postSchema = new Schema(
     {
         user: { type: Schema.Types.ObjectId, ref: "User" },
-        text: String,
+        text: {type: String},
         comments: [commentSchema],
         followers: {type: Boolean, default: false},
     }, 

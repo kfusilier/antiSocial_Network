@@ -30,22 +30,25 @@ const index = (req, res) => {
   });
 };
 
+
+
 // show
 
 const show = (req, res) => {
-	db.Post.findById(req.params.id, (err, foundPost) => {
-		if (err)
-			return res.status(400).json({
-				message: "Utter Failure!",
-				error: err,
-			});
-		return res.status(200).json({
-			message: "Success! with post show",
-			data: foundPost,
-		});
-	});
+	db.Post.findById(req.params.id)
+  .populate('user', "_id screenName email")
+  .exec((err, foundPosts) => {
+    if (err) return res.status(400).json({
+      message: "Failed to find Posts",
+      error: err,
+    })
+    return res.status(200).json({
+      message: "Success in show Posts",
+      data: foundPosts,
+    })
+  })
+}
 
-};
 
 // can use this after Users & Comments are created
 
@@ -89,33 +92,39 @@ const newPost = (req, res) => {
 const create = async (req, res) => {
   const post = new db.Post({
     text: req.body.text,
-    // comment: req.body.comment,
-    user: req.user,
+    user: req.userId
   });
-  // if (req.file) {
-  //     post.image= req.file.path
-  // }
-  post
-    .save()
-    .then((result) => {
-      res.send({ post: result });
+   db.Post.create(post,(err, createdPost) =>{
+    if(err) return res.status(400).json({
+      message: "Failed to Create",
+      error: err,
     })
-    .catch((err) => {
-      res.status(422).json({
-        error: err,
-      });
-    });
-//   const createdPost = await post.save();
-//   db.User.findById(createdPost.user).exec((err, foundUser) => {
-//     if (err) return console.log("error in posts creation", err);
-//     foundUser.posts.push(createdPost);
-//     foundUser.save();
-//     // res.redirect(`/users/${foundUser._id}`)
-//     return res.status(201).json({
-//       message: "success!",
-//       data: createdPost,
-//     });
-//   });
+    db.User.findById(createdPost.user)
+    .exec((err, foundUser) => {
+      if(err) return res.status(400).json({
+        message: "Faile to create Post with User",
+        error: err
+      })
+      foundUser.posts.push(createdPost)
+      foundUser.save()
+    })
+    return res.status(200).json({
+      message: "Success in Creating Post",
+      data: createdPost,
+    })
+  });
+
+  // post
+  //   .save()
+  //   .then((result) => {
+  //     res.send({ post: result });
+  //   })
+  //   .catch((err) => {
+  //     res.status(422).json({
+  //       error: err,
+  //     });
+  //   });
+
 };
 
 const allPosts = async (req, res) => {
@@ -269,6 +278,26 @@ const destroy = (req, res) => {
     });
   });
 };
+
+
+// ========= New Set of Controller ===========
+
+const indexPost = (req,res) =>{
+  db.Post.find()
+  .populate('user')
+  .exec((err, allPosts) => {
+    if(err) return res.status(400).json({
+      message: "Utter Failure for INDEX",
+      error:err,
+    })
+    return res.status(200).json({
+      message: "Success in INDEX",
+      data: allPosts,
+    })
+  })
+}
+
+
 
 module.exports = {
   index,
