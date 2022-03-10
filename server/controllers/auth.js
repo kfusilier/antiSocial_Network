@@ -33,38 +33,34 @@ const login = async (req, res) => {
         const foundUser = await db.User.findOne({email: req.body.email}).select("+password")
 
         if (!foundUser) {
-            return res
-                .status(400)
-                .json({status: 400, message: "cannot find user in database"})
+            return res.status(400).json({
+                status: 400, 
+                message: "Cannot find user in database",
+            })
         }
 
         const isMatch = await bcrypt.compare(req.body.password, foundUser.password)
-        // check if the password match
-        if(isMatch) {
-            // jwt.sign(payload, secret key for signing, config object)
-            // signature ensure that the token hasn't been altered, and we sign off on that with our secret key
-            const token = jwt.sign({_id: foundUser._id}, "hailsatan", {
+        if (isMatch) {
+            const token = jwt.sign({_id: foundUser._id}, "antiSocial", {
                 expiresIn: "3h",
             })
-            const {_id, email, screenName} = foundUser;
-            res.json({token,user:{_id,email,screenName}})
 
             return res.status(200).json({
                 status: 200,
                 message: "GREAT SUCCESS",
                 token,
+                foundUser,
             })
         } else {
-            //the password provided doesn't match the password in the database
             return res.status(400).json({
                 status: 400,
-                message: "password is wrong, Homie :((("
+                message: "Login credentials are incorrect.  Try again."
             })
         }
     } catch (error) {
-        return res.status(500).json({
-            status: 500,
-            message: "Site broke or something. oop. Try again."
+        return res.status(400).json({
+            status: 400,
+            message: "Login credentials are incorrect.  Try again."
         })
     }
 }
