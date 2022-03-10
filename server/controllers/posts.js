@@ -2,20 +2,6 @@ const db = require("../models");
 const Post = require("../models/Post");
 
 // can use this after Users & Comments are created
-
-//index
-// const index = (req,res) => {
-//     db.Post.find({}, (err, foundPosts) => {
-//         if(err) return res.send(err);
-//         db.Comment.find({}, (err, foundComments)=> {
-//             res.render('posts/index', {
-//                 posts:foundPosts,
-//                 comments: foundComments,
-//             })
-//         })
-//     })
-// }
-
 const index = (req, res) => {
   db.Post.find().exec((err, allPosts) => {
     if (err)
@@ -50,28 +36,6 @@ const show = (req, res) => {
 }
 
 
-// can use this after Users & Comments are created
-
-// const show = (req, res) => {
-//     db.Post.findById(req.params.id)
-//         .populate("user")
-//         .populate("comments")
-//         .exec((err, foundPost) => {
-//             if (err) return res.send(err)
-//             console.log(foundPost, "found post")
-//             db.Comment.find({}, (err, foundComments) => {
-//                 if (err) return res.send(err);
-//                     res.render("posts/show", {
-//                         post: foundPost,
-//                         comments: foundComments,
-//                         // loginUser: req.user,
-//                     }
-//                 )
-//             })
-//         })
-// };
-
-//new post // -- can use when Users is connected
 
 const newPost = (req, res) => {
   const post = db.Post();
@@ -86,8 +50,6 @@ const newPost = (req, res) => {
     });
   });
 };
-
-// create --- can use this after Users & Comments are created
 
 const create = async (req, res) => {
   const post = new db.Post({
@@ -126,6 +88,42 @@ const create = async (req, res) => {
   //   });
 
 };
+// =========== Secondary Code ==========
+//   let postData;
+//   if(req.file !== undefined) {
+//       postData = {
+//           text: req.body.text,
+//           user: req.userId
+//       }
+//   } else {
+//       postData = {
+//           text: req.body.text,    
+//           user: req.userId
+//       }
+//   }
+
+//   db.Post.create(postData, (err, savedPost) => {
+//   if(err)
+//       return res.status(400).json({
+//           message: "Failed to create post",
+//           error: err,
+//       });
+//       db.User.findById(savedPost.user)
+//       .exec((err, foundUser) => {
+//           if(err) return res.status(400).json({
+//               message: "Failed to create a post",
+//               error: err,
+//           })
+//           foundUser.post.push(savedPost)
+//           foundUser.save()
+//       })
+//       return res.status(200).json({
+//           message: "Successfully created post",
+//           data: savedPost,
+//       });
+// });
+}
+
 
 const allPosts = async (req, res) => {
   db.Post.find()
@@ -145,7 +143,7 @@ const createPost = async (req, res) => {
   }
   const post = new db.Post({
     text,
-    user: req.user,
+    user: req.userId,
   });
   post
     .save()

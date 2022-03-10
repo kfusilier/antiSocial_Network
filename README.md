@@ -25,7 +25,7 @@ antiSocial is a MERN stack project created by the above authors while completing
 While antiSocial in its current state is a project out team is very proud of, there is always room for growth on feature, usability, design and efficiency. Some of out future build out plans include:
 
 -    Adding Emoji commenting on Posts
--            Adding icons to links
+-    Adding icons to links
 -    Dark and light mode
 -    Toggle posts from public to private
 -    Tag other users or friends
@@ -35,9 +35,7 @@ While antiSocial in its current state is a project out team is very proud of, th
 
 ★·.·´¯`·.·★ Struggles ★·.·´¯`·.·★
 
-★·.·´¯`·.·★ Instructions for Use ★·.·´¯`·.·★
-
-★·.·´¯`·.·★ Contributing ★·.·´¯`·.·★
+It was the first time as a team layering in the front and back with a layer like React and with all new things in code it took a lot more time than we expected. 
 
 ★·.·´¯`·.·★ CONTRIBUTING INSTRUCTION ★·.·´¯`·.·★
 
@@ -54,8 +52,6 @@ Thanks for your interest in antiSocial. We are open your input! We want to make 
 -    Wait for Pull Request to merge
 -    Celebrate your contribution to the open Source World
 -    Find a new project, rinse, repeat!
-
-★·.·´¯`·.·★ Installation ★·.·´¯`·.·★
 
 ★·.·´¯`·.·★ License ★·.·´¯`·.·★
 
