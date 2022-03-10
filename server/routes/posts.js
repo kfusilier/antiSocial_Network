@@ -9,6 +9,7 @@ router.get('/allPosts', ctrl.posts.allPosts);
 // router.post('/createPost',authRequired, ctrl.posts.createPost);
 
 
+
 router.get('/new', ctrl.posts.newPost);
 router.get('/:id', ctrl.posts.show); 
 router.get('/:id/edit', ctrl.posts.edit);
