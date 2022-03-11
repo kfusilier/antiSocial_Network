@@ -1,8 +1,8 @@
-import CommentShow from '../../components/CommentShow';
-import CommentDisplay from '../../components/CommentDisplay';
-import Comment from '../../components/Comment';
+// import CommentShow from '../../components/CommentShow';
+// import CommentDisplay from '../../components/CommentDisplay';
+// import Comment from '../../components/Comment';
 import CommentNew from '../../components/CommentNew';
-import NavBar2 from '../../components/NavBar2';
+import NavBar2 from '../../components/Navbar2/index';
 
 const EditCommentPage = () => {
 	return (
