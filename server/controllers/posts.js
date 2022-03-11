@@ -10,7 +10,7 @@ const index = (req, res) => {
         error: err,
       });
     return res.status(200).json({
-      message: "Success!",
+      message: "Success pulling posts!",
       data: allPosts,
     });
   });

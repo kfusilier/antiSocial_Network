@@ -57,15 +57,19 @@ const CommentsList = (props) => {
             {posts.text} <br /> <br />
             <button className={style.button} onClick={deleteBtn}>
              
-              Delete
+              Deletes
             </button>
-            <br />
-            <br />
-          <NavLink to={`/posts/${id}/comments/new`}>
+
+            <NavLink to={`/posts/${id}/comments/new`}>
                 <button className={style.button}
                 type ='button'>add a new comment!
                 </button>
         </NavLink>
+
+        
+            <br />
+            <br />
+         
           </Typography>
         </CardContent>
         <CardActions>

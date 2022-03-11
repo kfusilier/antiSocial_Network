@@ -65,9 +65,9 @@
     padding: 8px 20px;
     border-radius: 10px;
     overflow: hidden;
-    color: #37ecba;
+    color: teal;
     border: none;
-    background-color: white;
+    background-color: lightgray;
     font-weight: bold;
     /* position: fixed; */
     /* top: 325px;
