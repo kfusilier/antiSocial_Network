@@ -1,6 +1,5 @@
 import style from './avatar.module.css';
 import Smiley from './Smiley.png';
-import * as authService from "../../api/auth.service"
 import {useState, useEffect} from 'react'
 
 

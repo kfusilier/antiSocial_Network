@@ -7,18 +7,6 @@ import * as authService from "../../api/auth.service"
 
 
 const UserProfile = () => {
-	const[user, setuser] = useState("");
-	
-
-	const fetchUser = async () => {
-		await userService.getAllUser().then((res)=> {
-			
-		});
-	};
-
-	useEffect(() => {
-		fetchUser();
-	}, []);
 
 		return (
 			<div className={style.userProfile}>
