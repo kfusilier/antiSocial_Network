@@ -23,21 +23,6 @@ const UsersPosts = () => {
     fetchUserPost();
   }, []);
 
-  // const UsersPosts = () => {
-  // 	const [posts, setPosts] = useState([]);
-  // 	const fetchPosts = async () => {
-  // 		await antiSocialAppTo.get('/posts').then((res) => {
-  // 			console.log(res.data.data);
-  // 			setPosts(res.data.data);
-  // 		});
-  // 	};
-
-
-  // 	useEffect(() => {
-  // 		fetchPosts();
-  // 	}, []);
-
-
   return (
     <>
       <div className={style.postsWrapper}>
