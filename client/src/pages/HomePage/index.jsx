@@ -42,11 +42,11 @@ const Home = () => {
 				<Route path='/LoginPage' element={<Login />}></Route>
 				<Route path='/' element={<Landing />}></Route>
 				<Route
-					path='/ProfilePage'
+					path='/profile'
 					element={<ProfilePage />}></Route>
 				<Route path='/BrowsePage' element={<BrowsePage />}></Route>
 				<Route path='/UsersPage' element={<UserIcon />}></Route>
-				<Route path='/Posts' element={<CommentShow />}></Route>
+				<Route path='/posts' element={<CommentShow />}></Route>
 				<Route path='/posts/:id' element={<CommentPage />}></Route>
 
 				<Route
