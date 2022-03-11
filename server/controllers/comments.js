@@ -43,20 +43,21 @@ const db = require ('../models');
 // }
 
 const commentsIdx = (req, res) => {
-    db.Post.findById({"comment._id":req.params.id}, (err, foundComment) => {
-        if (err) return res.status(400).json({
-            message: "Can't find comments!!!",
-            error: err
+    db.Post.findById({"comment._id": req.params.id}, (err, foundComment) => {
+        if (err) 
+            return res.status(400).json({
+                message: "Can't find comments!!!",
+                error: err,
         })
-        return res.status(200).json({
-            message: "found Comments",
-            data: foundComment
+            return res.status(200).json({
+                message: "found Comments",
+                data: foundComment
         })
     })
 }
 
 
-
+// this code works in post man 
 const show = (req, res) => {
 	db.Post.findOne({'comment._id': req.params.id}, (err, foundComment) => {
 		if (err)
@@ -73,7 +74,7 @@ const show = (req, res) => {
 
 
 
-
+//works in postman
 const newComments = (req, res) => {
     db.Post.findById(req.params.id, (err, newComment) => {
         newComment.comments.push(req.body);
@@ -104,6 +105,8 @@ const newComments = (req, res) => {
 // }
 
 
+//this works with postman
+
 const editComment = (req, res) => {
     db.Post.findOne({"comment._id":req.params.id}, (err, post) => {
         const commentId = post.comments.id(req.params.id);
@@ -120,7 +123,7 @@ const editComment = (req, res) => {
     });
 };
 
-
+//this works with postman
 const updateComment = (req, res) => {
     db.Post.findOne({"comment._id":req.params.id}, (err, updatedComment) => {
         const commentId = updatedComment.comments.id(req.params.id);
@@ -139,7 +142,7 @@ const updateComment = (req, res) => {
     });
 };
 
-
+// this works with postman
 const destroyComments = (req, res) => {
     db.Post.findOne({"comment._id":req.params.id}, (err, deleteComment) => {
         const commentLine = deleteComment.comments.id(req.params.id);
