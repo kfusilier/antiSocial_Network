@@ -1,30 +1,26 @@
 import style from './avatar.module.css';
 import Smiley from './Smiley.png';
-import UserList from '../UserList'
-import * as postService from "../../api/post.service"
-import antiSocialAppTo from "../../api/axios.config";
+import * as authService from "../../api/auth.service"
 import {useState, useEffect} from 'react'
 
+
 const Avatar = () => {
-	const [data, setData] = useState([]);
-  const fetchUserPost = async () => {
-    await antiSocialAppTo
-      .get("/posts/userPosts")
-      // .then((res) => {
-      // 	setData(res.data.data)
-      // 	console.log(res.data.data)
-      // })
-      .then((res) => res.data.userPosts)
-      .then((result) => {
-        console.log(result[0].user.screenName);
-		setData(result[0].user)
-      });
-  };
+  const[user, setUser] = useState("");
+  const fetchUserInfo = async () => {
+    let userName = JSON.parse(localStorage.getItem("screenName"))
+    // await authService.getUserName().then((res) => {
+    //   console.log(ResizeObserverEntry);
+       setUser(userName);
+    };
+
   useEffect(() => {
-    fetchUserPost();
+    fetchUserInfo();
   }, []);
 
+  console.log(user);
+
 	return (
+    <>
 		<div className={style.avatarLocation}>
 			<div className={style.avatarWrapper}>
 				<div className={style.avatarImage}>
@@ -32,11 +28,12 @@ const Avatar = () => {
 				</div>
 				<div className={style.avatarName}>
 					<h6>Name:</h6>
-					<h2> {data.screenName}</h2>
+					<h2> {user}</h2>
 				</div>
 			</div>
 		</div>
-	);
+    </>
+	)
 };
 
 export default Avatar;

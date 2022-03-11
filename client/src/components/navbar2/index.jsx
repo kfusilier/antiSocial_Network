@@ -45,7 +45,7 @@ export default function NavBar2() {
 					Browse
 				</NavLink>
 				<NavLink
-					to='/ProfilePage'
+					to='/profile'
 					style={({ isActive }) => ({
 						color: isActive ? '#37ecba' : 'white',
 						textDecoration: 'none',

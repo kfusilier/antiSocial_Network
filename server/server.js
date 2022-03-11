@@ -28,7 +28,7 @@ app.use(express.json());
 
 
 app.use('/api/posts', routes.posts);
-app.use('/api/users', routes.users);
+app.use('/api/users/profile', routes.users);
 
 // ///test
 

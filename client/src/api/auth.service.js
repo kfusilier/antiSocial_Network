@@ -18,6 +18,7 @@ const login = (email, password) => {
             console.log(res)
             if (res.data.token) {
                 localStorage.setItem("user", JSON.stringify(res.data.token))
+                localStorage.setItem("screenName", JSON.stringify(res.data.foundUser.screenName))
             }
         })
     } catch (error) {
@@ -33,7 +34,15 @@ const currentUser = () => {
     let user = localStorage.getItem("user")
     return JSON.parse(user)
 }
+
+// const getUserName = () => {
+//     let displayName = localStorage.getItem("screenName")
+//     return JSON.parse(displayName)
+// }
+
 const logout = () => {
     localStorage.removeItem("user")
+    localStorage.removeItem("id")
+    localStorage.removeItem("userName")
 }
 export {register , login, currentUser, logout, getProfile}

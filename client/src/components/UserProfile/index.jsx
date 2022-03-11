@@ -1,41 +1,37 @@
+import {useEffect, useState} from "react";
 import style from './userProfile.module.css';
 import Avatar from '../Avatar';
 import CreatePost from '../CreatePost';
+import * as userService from "../../api/user.service"
+import * as authService from "../../api/auth.service"
 
-import React, {useState, useEffect} from 'react';
-
-import PostForms from "../PostForms"
-import * as postService from "../../api/post.service"
 
 const UserProfile = () => {
+	const[user, setuser] = useState("");
+	
 
-	const [data, setData] = useState([])
-	// const fetchUser = async () =>{
-	// 	await postService.
-	// }
+	const fetchUser = async () => {
+		await userService.getAllUser().then((res)=> {
+			
+		});
+	};
 
-	return (
-		<div className={style.userProfile}>
-			<p>User Profile</p>
-			<div className={style.avatarPlacement}>
-				<Avatar />
+	useEffect(() => {
+		fetchUser();
+	}, []);
+
+		return (
+			<div className={style.userProfile}>
+				<p>Profile Page</p>
+				<div className={style.avatarPlacement}>
+					<Avatar />
+				</div>
+
+				<div className={style.formPlacement}>
+					<CreatePost />
+				</div>
 			</div>
-
-			<div className={style.formPlacement}>
-				<CreatePost />
-			</div>
-		</div>
-	);
-};
+		);
+	};
 
 export default UserProfile;
-
-// privacy toggle
-// 			<div className={style.toggle}>
-//				<p>privacy toggle?</p>
-//			</div>
-
-// edit user name
-//			<div className={style.edit}>
-//				<p>edit user name</p>
-//			</div>
