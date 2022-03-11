@@ -3,9 +3,9 @@ const ctrl = require('../controllers');
 const authRequired = require('../middleware/auth.required');
 
 
-router.get('/userPosts', authRequired, ctrl.posts.userPosts);
+// router.get('/userPosts', authRequired, ctrl.posts.userPosts);
 router.get('/', ctrl.posts.index);
-router.get('/allPosts', ctrl.posts.allPosts);
+// router.get('/allPosts', ctrl.posts.allPosts);
 // router.post('/createPost',authRequired, ctrl.posts.createPost);
 
 
@@ -13,7 +13,7 @@ router.get('/allPosts', ctrl.posts.allPosts);
 router.get('/new', ctrl.posts.newPost);
 router.get('/:id', ctrl.posts.show); 
 router.get('/:id/edit', ctrl.posts.edit);
-router.post('/',  ctrl.posts.create);
+router.post('/',authRequired, ctrl.posts.create);
 router.put('/:id', ctrl.posts.update);
 router.delete('/:id', ctrl.posts.destroy);
 
@@ -28,5 +28,4 @@ router.delete("/:id/comments/:id", ctrl.comments.destroyComments);
 
 
 module.exports = router;
-
 
