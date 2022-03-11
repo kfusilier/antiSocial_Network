@@ -67,7 +67,8 @@ const create = async (req, res) => {
         message: "Faile to create Post with User",
         error: err
       })
-      foundUser.posts.push(createdPost)
+      console.log(foundUser)
+      foundUser.post.push(createdPost)
       foundUser.save()
     })
     return res.status(200).json({
@@ -122,7 +123,7 @@ const create = async (req, res) => {
 //           data: savedPost,
 //       });
 // });
-}
+// }
 
 
 const allPosts = async (req, res) => {

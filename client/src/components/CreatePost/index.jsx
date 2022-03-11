@@ -2,12 +2,14 @@ import {useEffect, useState} from "react";
 import style from './createPost.module.css';
 import { func } from "prop-types";
 import * as postService from "../../api/post.service"
+import fetchPosts from "../../pages/BrowsePage"
 import antiSocialAppTo from "../../api/axios.config";
 
 const CreatePost = ({ refreshPosts }) => {
 	const[text, setText] = useState("");
 
-	const handleSubmit = async () => {
+	const handleSubmit = async (e) => {
+		e.preventDefault();
         let newPost = { text };
         let res = await postService.create(newPost).then(() => {
             // setTitle("");

@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const commentSchema = require("./Comment.js");
 
+
+
 const postSchema = new Schema(
     {
         user: { 
