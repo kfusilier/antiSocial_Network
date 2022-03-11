@@ -1,5 +1,5 @@
 import Logo from '../../components/Logo';
-import NavBar1 from '../../components/Navbar1/index.jsx';
+import NavBar1 from '../../components/navbar1/index.jsx';
 
 import SignupForm from '../../components/SignupForm';
 // import { Routes, Route } from 'react-router-dom';

@@ -1,6 +1,6 @@
 // import Avatar from '../../components/Avatar';
 import Logo from '../../components/Logo';
-import NavBar2 from '../../components/Navbar2/index.jsx';
+import NavBar2 from '../../components/navbar2/index.jsx';
 
 import UserProfile from '../../components/UserProfile';
 import UsersPosts from '../../components/UsersPosts';

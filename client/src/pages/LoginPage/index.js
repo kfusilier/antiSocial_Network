@@ -1,6 +1,6 @@
-import LoginForm from '../../components/LoginForm/index.jsx';
+import LoginForm from '../../components/loginForm/index.jsx';
 import Logo from '../../components/Logo/index.jsx';
-import NavBar1 from '../../components/Navbar1/index.jsx';
+import NavBar1 from '../../components/navbar1/index.jsx';
 
 // import { Routes, Route } from 'react-router-dom';
 

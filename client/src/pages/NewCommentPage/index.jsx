@@ -2,7 +2,7 @@
 // import CommentDisplay from '../../components/CommentDisplay';
 // import Comment from '../../components/Comment';
 import CommentNew from '../../components/CommentNew';
-import NavBar2 from '../../components/Navbar2/index';
+import NavBar2 from '../../components/navbar2/index';
 
 const EditCommentPage = () => {
 	return (
