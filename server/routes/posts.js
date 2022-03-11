@@ -4,14 +4,12 @@ const authRequired = require('../middleware/auth.required');
 
 
 // router.get('/userPosts', authRequired, ctrl.posts.userPosts);
-router.get('/', ctrl.posts.index);
 // router.get('/allPosts', ctrl.posts.allPosts);
 // router.post('/createPost',authRequired, ctrl.posts.createPost);
-
-
-
-router.get('/new', ctrl.posts.newPost);
+router.get('/', ctrl.posts.indexPost);
 router.get('/:id', ctrl.posts.show); 
+
+// router.get('/new', ctrl.posts.newPost);
 router.get('/:id/edit', ctrl.posts.edit);
 router.post('/',authRequired, ctrl.posts.create);
 router.put('/:id', ctrl.posts.update);

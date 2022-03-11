@@ -1,77 +1,110 @@
-import style from './CommentShow.module.css';
-import { useEffect, useState } from 'react';
-import antiSocialAppTo from '../../api/axios.config';
-import * as postService from '../../api/post.service';
-import * as userService from "../../api/user.service"
-import { Route, NavLink } from 'react-router-dom';
 
-const CommentsList = () => {
-	const [posts, setPosts] = useState([]);
-	const [user, setUsers] = useState([]);
-	const fetchPosts = async () => {
-		await antiSocialAppTo.get('/posts').then((res) => {
-			
-			console.log(res.data.data);
-			setPosts(res.data.data.reverse());
-		});
-	};
+import style from "./CommentShow.module.css";
+import { useEffect, useState } from "react";
+import antiSocialAppTo from "../../api/axios.config";
+import * as postService from "../../api/post.service";
+import * as userService from "../../api/user.service";
+import { Route, NavLink } from "react-router-dom";
 
-	const fetchUsers = async () => {
-		await antiSocialAppTo.getAllUser('/users').then((res) => {
+const CommentsList = (props) => {
+  // const [post, setPost] = useState("");
+  // const[user, setUser]= useState("");
 
-			console.log(res.data.data);
-			setUsers(res.data.data.reverse());
-		});
-	};
+  // const getPost = async () =>{
+  // 	await postService.getAll(`${props.id}`)
+  // 	.then((res) => {
+  // 		setPost(res.data.data)
+  // 		console.log(res.data.data)
+  // 	})
+  // }
 
-	useEffect(() => {
-		fetchPosts();
-		fetchUsers();
-	}, []);
+  // useEffect (()=> {
+  // 	getPost()
+  // }, [])
 
-	return (
-		<div>
-			<div id={style.title}>
-				<p>Browse Posts</p>
-			</div>
-			<div className={style.center}>
-				<div className={style.container}>
-					{posts.map((post, user) => {
-						return (
-							<div className={style.post}>
-								<p className={style.text}>
-									<br />
-									Post: {post.text}
-									<br />
-									By: {post.user}
-									<br />
-									Created At: {post.createdAt}
-									{/* Created at: {post.createdAt} */}
-									<ul>
-										<br />
-										{/* {post.comments.map((sub) => (
-											<li>{sub.content}</li>
-										))} */}
-										<NavLink
-											to={`/posts/${post._id}`}>
-											<br />
-											<button
-												type='button'
-												className={
-													style.button
-												}>
-												View Post
-											</button>
-										</NavLink>
-									</ul>
-								</p>
-							</div>
-						);
-					})}
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div>
+      <div id={style.title}>
+        <p>Browse Posts</p>
+      </div>
+	
+      <div className={style.post}>
+        <div className={style.text}>
+          <h1> {props.screenName} </h1>
+          <h1> {props.text} </h1>
+          {/* <NavLink to={`/posts/${post._id}`}> */}
+            <br />
+            <button type="button" className={style.button}>
+              View Post
+            </button>
+          {/* </NavLink> */}
+        </div>
+      </div>
+    </div>
+  );
 };
+
+// const CommentsList = () => {
+//   const [posts, setPosts] = useState([]);
+//   const [user, setUser] = useState([]);
+
+//   const fetchPosts = async () => {
+//     await antiSocialAppTo.get("/posts").then((res) => {
+//       console.log(res.data.data);
+//       setPosts(res.data.data.reverse());
+//     });
+//   };
+
+//   const fetchUser = async () => {
+//     await userService.getAllUser().then((res) => {
+//       setUser(res.data.data);
+//       console.log(res.data.data);
+//     });
+//   };
+
+//   useEffect(() => {
+//     fetchPosts();
+//     fetchUser();
+//   }, []);
+
+//   return (
+//     <div>
+//       <div id={style.title}>
+//         <p>Browse Posts</p>
+//       </div>
+
+//       <div className={style.post}>
+//         <div className={style.text}>
+//           {user.map((users) => {
+// 			  return (
+
+// 				  <>
+// 			  User: {users.screenName}
+
+// 			  {posts.map((post) => {
+// 				  return (
+// 					  <>
+//                 <br />
+//                 Post: {post.text}
+//                 <br />
+//                 <br />
+//                 Created At: {post.createdAt}
+//                 <ul>
+//                   <br />
+//                   <NavLink to={`/posts/${post._id}`}>
+//                     <br />
+//                     <button type="button" className={style.button}>View Post</button>
+//                   </NavLink>
+//                 </ul>
+//               </>
+//             );
+// 		})}
+// 		</>)
+// 		})}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default CommentsList;

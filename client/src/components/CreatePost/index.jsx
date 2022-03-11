@@ -14,7 +14,7 @@ const CreatePost = ({ refreshPosts }) => {
         let res = await postService.create(newPost).then(() => {
             // setTitle("");
             setText("");
-            refreshPosts();
+            // refreshPosts();
             console.log(newPost);
         });
 

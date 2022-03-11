@@ -16,17 +16,31 @@ const index = (req, res) => {
 };
 
 const show = (req, res) => {
-  db.User.findById(req.params.id, (err, foundUser) => {
-    if (err)
-      return res.status(400).json({
-        message: "Utter Failure on user Show!",
-        error: err,
-      });
-    return res.status(201).json({
-      message: "Success",
-      data: foundUser,
-    });
-  });
+ db.User.findById(req.params.id)
+ .populate('post')
+ .exec((err, foundUser) => {
+   if(err)
+   return res.status(400).json({
+     message: "Fail to find User",
+     error: err
+   })
+   return res.status(200).json({
+     message: "Success Found Show User",
+     data: foundUser
+   })
+ })
+ 
+  // db.User.findById(req.params.id, (err, foundUser) => {
+  //   if (err)
+  //     return res.status(400).json({
+  //       message: "Utter Failure on user Show!",
+  //       error: err,
+  //     });
+  //   return res.status(201).json({
+  //     message: "Success",
+  //     data: foundUser,
+  //   });
+  // });
 };
 
 const create = (req, res) => {

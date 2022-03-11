@@ -1,3 +1,4 @@
+const { text } = require("express");
 const db = require("../models");
 const Post = require("../models/Post");
 
@@ -37,19 +38,8 @@ const show = (req, res) => {
 
 
 
-const newPost = (req, res) => {
-  const post = db.Post();
-  db.User.find({}, (err, foundUsers) => {
-    if (err) return res.send(err);
-    db.Comment.find({}, (err, foundComments) => {
-      res.render("posts/new", {
-        users: foundUsers,
-        comment: foundComments,
-        post: post,
-      });
-    });
-  });
-};
+
+
 
 const create = async (req, res) => {
   const post = new db.Post({
@@ -226,22 +216,25 @@ const edit = (req, res) => {
 // }
 
 const update = (req, res) => {
-  db.Post.findByIdAndUpdate(
+  let post = {
+    text: req.body.text,
+    user: req.userId
+  }
+  db.Post.findByIdAndUpdate( 
     req.params.id,
-    req.body,
-    { new: true },
-    (err, updatedPost) => {
-      if (err)
-        return res.status(400).json({
-          message: "Utter Failure! with update",
-          error: err,
-        });
+    post,
+    {new:true},
+    (err, updatePost) => {
+      if(err) return res.status(400).json({
+        message: "Failed to Update",
+        error: err
+      })
       return res.status(202).json({
-        message: "Success",
-        data: updatedPost,
-      });
+        message:"Successfully Update",
+        data: updatePost,
+      })
     }
-  );
+  )
 };
 
 //delete // can use this after Users & Comments are created
@@ -301,7 +294,6 @@ const indexPost = (req,res) =>{
 module.exports = {
   index,
   show,
-  newPost,
   create,
   edit,
   update,
@@ -309,4 +301,5 @@ module.exports = {
   createPost,
   allPosts,
   userPosts,
+  indexPost,
 };

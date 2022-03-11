@@ -8,12 +8,12 @@ const getAll = () => {
 };
 
 
-const getAllPost = () => {
-	return antiSocialAppTo.get('/posts/allPosts')
-}
-const getUserPost = () => {
-	return antiSocialAppTo.get('/posts/userPosts')
-}
+// const getAllPost = () => {
+// 	return antiSocialAppTo.get('/posts/allPosts')
+// }
+// const getUserPost = () => {
+// 	return antiSocialAppTo.get('/posts/userPosts')
+// }
 
 
 const get = (_id) => {
@@ -62,6 +62,6 @@ createComment,
 editComment,
 updateComment,
 deleteComment,
-getAllPost, getUserPost, createPost,
+createPost,
 };
 
