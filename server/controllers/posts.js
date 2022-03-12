@@ -41,6 +41,9 @@ const show = (req, res) => {
 
 
 
+
+
+
 const create = async (req, res) => {
   const post = new db.Post({
     text: req.body.text,

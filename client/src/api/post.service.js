@@ -48,8 +48,8 @@ const updateComment = (id, commentId) => {
     return antiSocialAppTo.put(`/posts/${id}/comments/${commentId}`);
 }
 
-const deleteComment = (id) => {
-    return antiSocialAppTo.delete(`/posts/${id}comments/${id}`);
+const deleteComment = (id, commentId) => {
+    return antiSocialAppTo.delete(`/posts/${id}/comments/${commentId}`);
 }
 
 
