@@ -1,5 +1,5 @@
 import EditPost from '../../components/EditPost';
-import NavBar2 from '../../components/NavBar2';
+import NavBar2 from '../../components/navbar2';
 
 const EditPostPage = () => {
 	return (
