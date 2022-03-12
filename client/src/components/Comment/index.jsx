@@ -15,11 +15,12 @@ const Comment = (props) => {
   const [posts, setPosts] = useState([]);
   // let {id} = useParams()
   let {id, commentId } = useParams();
-  // console.log(id, commentId)
+  console.log(id, commentId)
   const fetchPosts = async () => {
     await postService.get(`${id}`).then((res) => {
       
     console.log(res.data.data.comments);
+
       setPosts(res.data.data.comments);
     });
   };

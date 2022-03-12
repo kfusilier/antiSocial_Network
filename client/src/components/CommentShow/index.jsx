@@ -5,6 +5,7 @@ import antiSocialAppTo from "../../api/axios.config";
 import * as postService from "../../api/post.service";
 import * as userService from "../../api/user.service";
 import { Route, NavLink } from "react-router-dom";
+import Like from '../Like'
 
 const CommentsList = (props) => {
   const [post, setPost] = useState("");
@@ -38,6 +39,8 @@ const CommentsList = (props) => {
               View Post
             </button>
           </NavLink>
+
+          <Like/>
         </div>
       </div>
     </div>
