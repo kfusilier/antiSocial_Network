@@ -25,16 +25,10 @@ const CommentsList = (props) => {
   };
 
   const deleteBtn = async () => {
-    // let navigate = useNavigate();
     await postService.destroy(id).then(() => {
       document.location = "/BrowsePage";
     });
-    // useNavigate(-1);
   };
-
-  // const goBack = async () => {
-  //   // navigate('/BrowsePage')
-  // }
 
   useEffect(() => {
     fetchPosts();

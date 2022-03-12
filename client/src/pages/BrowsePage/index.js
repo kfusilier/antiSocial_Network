@@ -61,7 +61,6 @@ const BrowsePage = () => {
 				<>
 					<NavBar2 />
 					<Logo />
-					<h1>Browse Page</h1>
 					<br/>
 					<br/>
 					<br/>
@@ -77,18 +76,6 @@ const BrowsePage = () => {
 						);
 					})}
 				</>
-
-				{/* <>
-					{posts.map((post) => {
-						return (
-							<Post
-								author={post.user}
-								body={post.text}
-								key={post._id}></Post>
-						);
-					})}
-					<PostForms refreshPosts={() => fetchPosts()} />
-				</> */}
 			</div>
 		);
 	} else {
