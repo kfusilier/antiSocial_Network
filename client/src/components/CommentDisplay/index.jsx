@@ -50,6 +50,13 @@ const CommentsList = (props) => {
             <button className={style.button} onClick={deleteBtn}>
               Deletes
             </button>
+
+            <NavLink to={`/posts/${id}/edit`}>
+              <button className={style.button} type="button">
+                Edit Post
+              </button>
+            </NavLink>
+              
             <NavLink to={`/posts/${id}/comments/new`}>
               <button className={style.button} type="button">
                 add a new comment!

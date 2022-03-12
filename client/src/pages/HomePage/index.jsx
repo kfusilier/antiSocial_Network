@@ -12,7 +12,7 @@ import CommentPage from '../CommentPage';
 import UserList from '../../components/UserList';
 import CommentDisplay from '../../components/CommentDisplay';
 import CommentShow from '../../components/CommentShow';
-
+import EditPostPage from '../EditPostPage'
 import CommentEdit from '../../components/CommentEdit';
 // import NavBar1 from '../../components/NavBar1';
 // import NavBar2 from '../../components/NavBar2';
@@ -54,6 +54,11 @@ const Home = () => {
 				<Route
 					path='/posts/:id/comments/new'
 					element={<NewCommentPage />}></Route>
+
+				<Route
+					path='/posts/:id/edit'
+					element={<EditPostPage />}></Route>
+	
 			</Routes>
 		</div>
 	);
