@@ -13,8 +13,8 @@ const CommentsList = (props) => {
   const getPost = async () =>{
   	await postService.getAll().then((res) => {
   		setPost(res.data.data)
-      setPostId(res.data.data[0]._id)
-  		console.log(res.data.data[0]._id)
+      	setPostId(res.data.data)
+  		// console.log(res.data.data)
   	})
   }
 
@@ -31,8 +31,8 @@ const CommentsList = (props) => {
       <div className={style.post}>
         <div className={style.text}>
           <h1> {props.screenName} </h1>
-          <h1> {props.text} </h1>
-          <NavLink to={`/post/${postId}`}>
+          <h3>{props.text} </h3>
+          <NavLink to={`/post/${props.postId}`}>
             <br />
             <button type="button" className={style.button}>
               View Post

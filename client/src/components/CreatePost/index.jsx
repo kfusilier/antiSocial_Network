@@ -2,11 +2,11 @@ import {useState} from "react";
 import style from './createPost.module.css';
 import * as postService from "../../api/post.service"
 
-const CreatePost = ({ refreshPosts }) => {
+const CreatePost = ({ refreshPosts }, props) => {
 	const[text, setText] = useState("");
 
 	const handleSubmit = async () => {
-        let newPost = { text };
+        let newPost = { text, user:`${props.user}` };
         let res = await postService.create(newPost).then(() => {
             setText("");
             refreshPosts();
@@ -22,8 +22,10 @@ const CreatePost = ({ refreshPosts }) => {
 			<form className={style.postForm}>
 				<textarea
 					className={style.input}
-					// onChange={(e) => setText(e.target.value)}
 					onChange={(e) => setText(e.target.value)}
+					value={text}
+					type="text"
+					name= "text"
 					placeholder='Create a post...'></textarea>
 				<div>
 					<input

@@ -7,7 +7,7 @@ const CommentPage = () => {
 		<div>
 			<NavBar2 />
 			<CommentDisplay />
-			<Comment />
+			{/* <Comment /> */}
 		</div>
 	);
 };

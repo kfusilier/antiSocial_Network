@@ -8,11 +8,11 @@ const authRequired = require('../middleware/auth.required');
 // router.post('/createPost',authRequired, ctrl.posts.createPost);
 router.get('/', ctrl.posts.indexPost);
 router.get('/:id', ctrl.posts.show); 
-
-// router.get('/new', ctrl.posts.newPost);
 router.get('/:id/edit', ctrl.posts.edit);
 router.post('/',authRequired, ctrl.posts.create);
 router.put('/:id', ctrl.posts.update);
+
+// router.get('/new', ctrl.posts.newPost);
 router.delete('/:id', ctrl.posts.destroy);
 
 

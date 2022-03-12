@@ -1,8 +1,23 @@
 import style from './userProfile.module.css';
 import Avatar from '../Avatar';
 import CreatePost from '../CreatePost';
+import { useState, useEffect } from "react"
+import * as postService from "../../api/post.service"
 
 const UserProfile = () => {
+	const [posts, setposts] = useState([])
+
+	const fetchPosts = async () => {
+
+		await postService.getAll().then((res) => {
+			console.log(res.data.data);
+			setposts(res.data.data)
+		});
+	};
+
+	useEffect(()=>{
+		fetchPosts();
+	},[])
 
 		return (
 			<div className={style.userProfile}>
@@ -12,7 +27,9 @@ const UserProfile = () => {
 				</div>
 
 				<div className={style.formPlacement}>
-					<CreatePost />
+					<CreatePost
+					refreshPosts={()=>{fetchPosts()}}
+					/>
 				</div>
 			</div>
 		);

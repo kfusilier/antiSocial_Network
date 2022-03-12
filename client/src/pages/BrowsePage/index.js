@@ -61,12 +61,17 @@ const BrowsePage = () => {
 				<>
 					<NavBar2 />
 					<Logo />
+					<h1>Browse Page</h1>
+					<br/>
+					<br/>
+					<br/>
 					{posts.map((post) => {
 						return (
 							<>
 								<CommentShow
 									screenName={post.user.screenName}
 									text={post.text}
+									postId={post._id}
 								/>
 							</>
 						);
