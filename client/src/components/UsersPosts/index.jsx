@@ -2,6 +2,7 @@ import style from "./usersPosts.module.css";
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"
 import * as userService from "../../api/user.service"
+import { NavLink } from "react-router-dom";
 
 const UsersPosts = () => {
   const [profile, setProfile] = useState();
@@ -17,15 +18,10 @@ const UsersPosts = () => {
 			console.log(res.data.data.screenName)
 		})
 	}
-//   const fetchUserProfile = async () => {
-//     await authService.getProfile().then((res) => {
-// 		setProfile(res.data.data);
-// 		console.log(res.data.data)
-//       });
-//   };
+
   useEffect(() => {
     showUser();
-  }, []);
+  },[]);
 
   return (
     <>
@@ -44,20 +40,16 @@ const UsersPosts = () => {
 							{/* </div> */}
 							{/* <div className="post-body-info"> */}
 								{/* <p key={post._id}>{post.body}</p> */}
-								</>
-					  )
-				  })}
-                  <ul>
-					  <br />
-
-					 {/* <p>Post:</p> */}
-
-                    {/* <NavLink to={`/posts/${post._id}`}>
+								<NavLink to={`/post/${post._id}`}>
                       <br />
                       <button type="button" className={style.button}>
                         View Post
                       </button>
-                    </NavLink> */}
+                    </NavLink>
+								</>
+					  )
+				  })}
+                  <ul>
                   </ul>
                 </p>
               </div>
