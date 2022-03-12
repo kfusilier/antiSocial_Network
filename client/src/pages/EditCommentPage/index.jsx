@@ -7,8 +7,9 @@ import NavBar2 from '../../components/NavBar2';
 const EditCommentPage = () => {
 	return (
 		<div>
-			<CommentEdit />
 			<NavBar2 />
+
+			<CommentEdit />
 		</div>
 	);
 };

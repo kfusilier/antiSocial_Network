@@ -13,8 +13,9 @@ import { NavLink } from 'react-router-dom';
 
 const Comment = (props) => {
   const [posts, setPosts] = useState([]);
-  let {id} = useParams()
-
+  // let {id} = useParams()
+  let {id, commentId } = useParams();
+  // console.log(id, commentId)
   const fetchPosts = async () => {
     await postService.get(`${id}`).then((res) => {
       
@@ -22,6 +23,14 @@ const Comment = (props) => {
       setPosts(res.data.data.comments);
     });
   };
+
+  const deleteComment = async() => {
+    
+    await postService.deleteComment(id,commentId).then(()=> {
+        // window.location = `/posts/${id}`
+        console.log(id,commentId)
+    })
+}
 
 
 
@@ -47,6 +56,8 @@ const Comment = (props) => {
                 <NavLink to={`/posts/${id}/comments/${sub._id}/edit`}>
                 <button type ='button' className={style.button}>Edit</button>
 				</NavLink>
+
+        <button onClick={deleteComment}>Delete</button>
 
                 </li>
 				))}

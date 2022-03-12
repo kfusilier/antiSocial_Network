@@ -21,12 +21,9 @@ const CommentEdit = () => {
     };
   
     const [newComment, setNewComment] = useState("");
-  
-  
     const handleSubmit = async (event) => {
-
-        event.preventDefault();
-		let commentId = ('6226e3027fd0995e56f2eefc');
+    event.preventDefault();
+		// let commentId = ('');
 		let res = await postService.updateComment(id, commentId).then(() => {
 
 			setNewComment("");
@@ -36,6 +33,13 @@ const CommentEdit = () => {
 			alert(`bad: ${res.status}`);
 		}
 	}
+
+  const deleteComment = async() => {
+    await postService.deleteComment(id,commentId).then(()=> {
+        // window.location = `/posts/${id}`
+        console.log(id,commentId)
+    })
+  }
 
 
     useEffect(() => {
@@ -49,8 +53,12 @@ const CommentEdit = () => {
         Hey! this is the edit comment show page
         <br></br>
         Comment: {comments.content}
+        <button onClick={deleteComment}>Delete</button>
+
       
-        <form onSubmit = {handleSubmit}>
+      <form onSubmit = {handleSubmit}>
+
+
 
 
       <label>Edit your comment:
@@ -59,8 +67,8 @@ const CommentEdit = () => {
         onChange={(e) => setComments(e.target.value)}
         />
       </label>
-      <input type ='submit'/>
 
+      <input type ='submit'/>
     </form>
         </div>    
 		</div>
