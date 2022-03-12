@@ -60,6 +60,9 @@ const EditPost = (props) => {
 
           <input type="submit" />
         </form>
+		<button className={style.button} onClick={deleteBtn}>
+              Deletes
+            </button>
 
 		</div>
 	  
