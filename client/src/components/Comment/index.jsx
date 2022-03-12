@@ -35,7 +35,7 @@ const Comment = (props) => {
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Comments
+          Comments:
         </Typography>
         
         <Typography variant="body2">
