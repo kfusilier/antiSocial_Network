@@ -1,13 +1,10 @@
 import { useEffect, useReducer, useState } from 'react';
-import PostForms from '../../components/PostForms';
-import Post from '../../components/Posts';
 import * as postService from '../../api/post.service';
 import * as userService from '../../api/user.service';
 import * as authService from '../../api/auth.service';
-import Landing from '../../components/Landing';
 import CommentShow from '../../components/CommentShow';
 import Logo from '../../components/Logo';
-import NavBar2 from '../../components/navbar2/index.jsx';
+import NavBar2 from '../../components/NavBar2/index.jsx';
 
 const reducer = (prevState, action) => {
 	switch (action.type) {

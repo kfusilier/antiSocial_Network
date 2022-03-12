@@ -1,6 +1,6 @@
 import CommentDisplay from '../../components/CommentDisplay';
 import Comment from '../../components/Comment';
-import NavBar2 from '../../components/navbar2/index.jsx';
+import NavBar2 from '../../components/NavBar2';
 
 const CommentPage = () => {
 	return (

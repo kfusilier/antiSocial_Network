@@ -21,7 +21,7 @@ router.get("/:id/comments/:id", ctrl.comments.show); // ok
 router.get("/:id/comments/:id/edit", ctrl.comments.editComment);
 router.post("/:id/comments", ctrl.comments.newComments);
 router.put("/:id/comments/:id", ctrl.comments.updateComment);
-router.delete("/:id/comments/:id", ctrl.comments.destroyComments);
+router.delete("/:id/comments/:commentId", ctrl.comments.destroyComments);
 
 
 

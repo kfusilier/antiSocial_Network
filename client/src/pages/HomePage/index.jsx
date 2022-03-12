@@ -44,8 +44,8 @@ const Home = () => {
 				<Route path='/users/:id'element={<ProfilePage />}></Route>
 				<Route path='/BrowsePage' element={<BrowsePage />}></Route>
 				<Route path='/UsersPage' element={<UserIcon />}></Route>
-				<Route path='/posts' element={<CommentShow />}></Route>
-				<Route path='/posts/:id' element={<CommentPage />}></Route>
+				<Route path='/post' element={<CommentShow />}></Route>
+				<Route path='/post/:id' element={<CommentPage />}></Route>
 
 				<Route
 					path='/posts/:id/comments/:commentId/edit'
