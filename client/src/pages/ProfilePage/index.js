@@ -1,5 +1,6 @@
 import Logo from '../../components/Logo';
-import NavBar2 from '../../components/NavBar2';
+import NavBar2 from '../../components/navbar2/index.jsx';
+
 import UserProfile from '../../components/UserProfile';
 import UsersPosts from '../../components/UsersPosts';
 
@@ -9,9 +10,9 @@ const ProfilePage = () => {
 			<NavBar2 />
 			<Logo />
 			<UserProfile />
-			<>
+			<div>
 				<UsersPosts />
-			</>
+			</div>
 		</div>
 	);
 };
