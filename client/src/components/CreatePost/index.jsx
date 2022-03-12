@@ -1,21 +1,15 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import style from './createPost.module.css';
-import { func } from "prop-types";
 import * as postService from "../../api/post.service"
-import fetchPosts from "../../pages/BrowsePage"
-import antiSocialAppTo from "../../api/axios.config";
 
 const CreatePost = ({ refreshPosts }) => {
 	const[text, setText] = useState("");
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
+	const handleSubmit = async () => {
         let newPost = { text };
         let res = await postService.create(newPost).then(() => {
-            // setTitle("");
             setText("");
-            // refreshPosts();
-            console.log(newPost);
+            refreshPosts();
         });
 
         console.log(res);
@@ -42,10 +36,5 @@ const CreatePost = ({ refreshPosts }) => {
 		</div>
 	);
 };
-
-CreatePost.propTypes = {
-    refreshPosts: func,
-};
-
 
 export default CreatePost;

@@ -1,10 +1,6 @@
-import {useEffect, useState} from "react";
 import style from './userProfile.module.css';
 import Avatar from '../Avatar';
 import CreatePost from '../CreatePost';
-import * as userService from "../../api/user.service"
-import * as authService from "../../api/auth.service"
-
 
 const UserProfile = () => {
 

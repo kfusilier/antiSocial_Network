@@ -1,10 +1,7 @@
 import { useEffect, useReducer, useState } from "react";
-import PostForms from "../../components/PostForms";
-import Post from "../../components/Posts";
 import * as postService from "../../api/post.service";
 import * as userService from "../../api/user.service";
 import * as authService from "../../api/auth.service";
-import Landing from "../../components/Landing";
 import CommentShow from "../../components/CommentShow";
 import Logo from "../../components/Logo";
 import NavBar2 from "../../components/NavBar2";
@@ -40,14 +37,12 @@ const BrowsePage = () => {
 	};
 	const fetchPosts = async () => {
 	  await postService.getAll().then((res) => {
-		console.log(res.data.data);
 		dispatch({ type: "setPosts", payload: res.data.data.reverse() });
 	  });
 	};
 
   const fetchUser = async () => {
     await userService.getAllUser().then((res) => {
-      console.log(res.data.data);
       setUsers(res.data.data);
     });
   };
@@ -68,7 +63,7 @@ const BrowsePage = () => {
             return (
               <>
                     <CommentShow
-                      screenName={post.user.screenName}
+                      screenName={post.users}
                       text={post.text}
                     />
               

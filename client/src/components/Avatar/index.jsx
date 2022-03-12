@@ -15,9 +15,7 @@ const Avatar = () => {
   useEffect(() => {
     fetchUserInfo();
   }, []);
-
-  console.log(user);
-
+  
 	return (
     <>
 		<div className={style.avatarLocation}>

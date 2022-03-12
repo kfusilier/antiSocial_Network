@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const ctrl = require("../controllers");
-const authRequired = require('../middleware/auth.required');
+// const authRequired = require('../middleware/auth.required');
 
 router.get("/", ctrl.users.index);
+// router.get("/profile", ctrl.users.show);
 router.get("/:id", ctrl.users.show);
 router.put("/:id/follow", ctrl.users.follow);
 router.post("/", ctrl.users.create);
