@@ -16,6 +16,7 @@ import Comment from "../Comment";
 const CommentsList = (props) => {
   const [posts, setPosts] = useState([]);
   let { id } = useParams();
+  const [isEdit, setIsEdit] = useState(false);
 
   const fetchPosts = async () => {
     await postService.get(id).then((res) => {
@@ -34,6 +35,34 @@ const CommentsList = (props) => {
     fetchPosts();
   }, []);
 
+  const handleClick = () => {
+    {
+      !isEdit ? setIsEdit(true) : setIsEdit(false);
+    }
+  };
+
+  let ids = JSON.parse(localStorage.getItem("id"));
+  // console.log(ids)
+  const Button = () => {
+    if (ids === props.user) {
+      return (
+        <>
+          <NavLink to={`/posts/${props.postId}/edit`}>
+            <button
+              onClick={handleClick}
+              className={style.button}
+              type="button"
+            >
+              Edit Post
+            </button>
+          </NavLink>
+        </>
+      );
+    } else {
+      return <></>;
+    }
+  };
+
   return (
     <div className={style.usersContainer}>
       <Card sx={{ minWidth: 275 }}>
@@ -43,21 +72,20 @@ const CommentsList = (props) => {
           </Typography>
           <Typography variant="h5" component="div"></Typography>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            Created at: {posts.createdAt}
+            Created at: {props.createdAt}
           </Typography>
           <Typography variant="body2">
-            {posts.text} <br /> <br />
+            {props.text} <br /> <br />
             <button className={style.button} onClick={deleteBtn}>
               Deletes
             </button>
-
-            <NavLink to={`/posts/${id}/edit`}>
+            <Button />
+            {/* <NavLink to={`/posts/${id}/edit`}>
               <button className={style.button} type="button">
                 Edit Post
               </button>
-            </NavLink>
-              
-            <NavLink to={`/posts/${id}/comments/new`}>
+            </NavLink> */}
+            <NavLink to={`/posts/${props.postId}/comments/new`}>
               <button className={style.button} type="button">
                 add a new comment!
               </button>
@@ -66,7 +94,7 @@ const CommentsList = (props) => {
             <br />
           </Typography>
         </CardContent>
-            {/* <Comment /> */}
+        {/* <Comment /> */}
         <CardActions>
           {/* <Button size="small">Learn More</Button> */}
         </CardActions>

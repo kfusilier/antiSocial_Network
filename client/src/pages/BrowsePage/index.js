@@ -20,7 +20,7 @@ const reducer = (prevState, action) => {
 const initialState = {
 	posts: [],
 	isLoggedIn: false,
-};
+};	
 
 const BrowsePage = () => {
 	const [state, dispatch] = useReducer(reducer, initialState);
@@ -35,7 +35,6 @@ const BrowsePage = () => {
 		}
 	};
 	const fetchPosts = async () => {
-
 		await postService.getAll().then((res) => {
 			console.log(res.data.data);
 			dispatch({ type: 'setPosts', payload: res.data.data.reverse() });
@@ -71,6 +70,7 @@ const BrowsePage = () => {
 									screenName={post.user.screenName}
 									text={post.text}
 									postId={post._id}
+									user={post.user._id}
 								/>
 							</>
 						);
