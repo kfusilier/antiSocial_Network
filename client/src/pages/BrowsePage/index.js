@@ -61,7 +61,6 @@ const BrowsePage = () => {
 				<>
 					<NavBar2 />
 					<Logo />
-					<h1>Browse Page</h1>
 					<br/>
 					<br/>
 					<br/>

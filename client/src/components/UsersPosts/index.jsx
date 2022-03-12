@@ -15,20 +15,18 @@ const UsersPosts = () => {
 		await userService.showUser(id).then((res) =>{
 			setProfile(res.data.data);
 			setPosts(res.data.data.post);
-			setScreenName(res.data.data.screenName)
-      setPostId(res.data.data.post[0]._id)
-      console.log(res.data.data.post[0]._id)
-		})
-	}
+			setScreenName(res.data.data.screenName);
+      setPostId(res.data.data.post[0]._id);
+    });
+	};
   const deleteBtn = async () => {
     return postService.destroy(postId).then(() => {
       document.location = `/users/${id}`;
-    })
-  }
-
+    });
+  };
   useEffect(() => {
     showUser();
-  },);
+  });
 
   return (
     <>
@@ -48,7 +46,11 @@ const UsersPosts = () => {
                       <br />
                       <button type="button" className={style.button}>View Post</button>
                     </NavLink>
-                    <button type="button" className={style.button} onClick={deleteBtn}>Delete</button>
+                    <button 
+                    key={postId} 
+                    type="button" 
+                    className={style.button} 
+                    onClick={deleteBtn}>Delete</button>
 								</>
 					  )
 				  })}
