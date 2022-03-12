@@ -1,5 +1,5 @@
 import Logo from '../../components/Logo';
-import NavBar2 from '../../components/NavBar2';
+import NavBar2 from '../../components/navbar2';
 
 import UserProfile from '../../components/UserProfile';
 import UsersPosts from '../../components/UsersPosts';
