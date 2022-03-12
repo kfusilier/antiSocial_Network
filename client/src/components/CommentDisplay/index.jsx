@@ -11,6 +11,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { NavLink } from "react-router-dom";
+import Comment from "../Comment";
 
 const CommentsList = (props) => {
   const [posts, setPosts] = useState([]);
@@ -26,17 +27,14 @@ const CommentsList = (props) => {
   const deleteBtn = async () => {
     // let navigate = useNavigate();
     await postService.destroy(id).then(() => {
-      document.location="/BrowsePage";
-
+      document.location = "/BrowsePage";
     });
     // useNavigate(-1);
   };
 
-// const goBack = async () => {
-//   // navigate('/BrowsePage')
-// }
-
-
+  // const goBack = async () => {
+  //   // navigate('/BrowsePage')
+  // }
 
   useEffect(() => {
     fetchPosts();
@@ -56,22 +54,18 @@ const CommentsList = (props) => {
           <Typography variant="body2">
             {posts.text} <br /> <br />
             <button className={style.button} onClick={deleteBtn}>
-             
               Deletes
             </button>
-
             <NavLink to={`/posts/${id}/comments/new`}>
-                <button className={style.button}
-                type ='button'>add a new comment!
-                </button>
-        </NavLink>
-
-        
+              <button className={style.button} type="button">
+                add a new comment!
+              </button>
+            </NavLink>
             <br />
             <br />
-         
           </Typography>
         </CardContent>
+            {/* <Comment /> */}
         <CardActions>
           {/* <Button size="small">Learn More</Button> */}
         </CardActions>
