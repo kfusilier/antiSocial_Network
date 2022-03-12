@@ -2,14 +2,26 @@ import { NavLink } from 'react-router-dom';
 import style from './navBar2.module.css';
 import { useNavigate } from 'react-router-dom';
 import * as authService from "../../api/auth.service"
+import { useEffect, useState } from 'react';
 
 export default function NavBar2() {
+	const[userID, setUserID] = useState("");
+	const fetchId = async () => {
+		let id = JSON.parse(localStorage.getItem('id'))
+		setUserID(id);
+	}
+
 	const navigate = useNavigate();
+	
 	const logOut = async () => {
 		await authService.logout().then(() => {
 		  navigate("/login");
 		})
 	  }
+
+	  useEffect(() => {
+		fetchId();
+	  })
 
 	return (
 		<>
@@ -45,7 +57,7 @@ export default function NavBar2() {
 					Browse
 				</NavLink>
 				<NavLink
-					to='/profile'
+					to={`/users/${userID}`}
 					style={({ isActive }) => ({
 						color: isActive ? '#37ecba' : 'white',
 						textDecoration: 'none',

@@ -1,4 +1,3 @@
-// import Avatar from '../../components/Avatar';
 import Logo from '../../components/Logo';
 import NavBar2 from '../../components/navbar2/index.jsx';
 

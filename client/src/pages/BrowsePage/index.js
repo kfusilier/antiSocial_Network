@@ -38,6 +38,7 @@ const BrowsePage = () => {
 		}
 	};
 	const fetchPosts = async () => {
+
 		await postService.getAll().then((res) => {
 			console.log(res.data.data);
 			dispatch({ type: 'setPosts', payload: res.data.data.reverse() });

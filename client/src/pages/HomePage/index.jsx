@@ -41,9 +41,7 @@ const Home = () => {
 				<Route path='/SignupPage' element={<Signup />}></Route>
 				<Route path='/LoginPage' element={<Login />}></Route>
 				<Route path='/' element={<Landing />}></Route>
-				<Route
-					path='/profile'
-					element={<ProfilePage />}></Route>
+				<Route path='/users/:id'element={<ProfilePage />}></Route>
 				<Route path='/BrowsePage' element={<BrowsePage />}></Route>
 				<Route path='/UsersPage' element={<UserIcon />}></Route>
 				<Route path='/posts' element={<CommentShow />}></Route>
