@@ -1,5 +1,5 @@
 import CommentEdit from '../../components/CommentEdit';
-import NavBar2 from '../../components/NavBar2';
+import NavBar2 from '../../components/navbar2';
 
 const EditCommentPage = () => {
 	return (
