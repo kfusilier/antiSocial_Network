@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import style from './loginForm.module.css';
-import Logo from '../Logo';
 import * as authService from '../../api/auth.service';
 
 const LoginForm = () => {

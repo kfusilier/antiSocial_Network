@@ -35,7 +35,7 @@ const CommentEdit = () => {
 	}
 
   const deleteComment = async() => {
-    await postService.deleteComment(id,commentId).then(()=> {
+    await postService.deleteComment(id, commentId).then(()=> {
         // window.location = `/posts/${id}`
         console.log(id,commentId)
     })

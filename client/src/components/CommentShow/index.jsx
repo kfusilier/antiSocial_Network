@@ -7,20 +7,20 @@ import * as userService from "../../api/user.service";
 import { Route, NavLink } from "react-router-dom";
 
 const CommentsList = (props) => {
-  // const [post, setPost] = useState("");
-  // const[user, setUser]= useState("");
+  const [post, setPost] = useState("");
+  const [postId, setPostId] = useState('');
 
-  // const getPost = async () =>{
-  // 	await postService.getAll(`${props.id}`)
-  // 	.then((res) => {
-  // 		setPost(res.data.data)
-  // 		console.log(res.data.data)
-  // 	})
-  // }
+  const getPost = async () =>{
+  	await postService.getAll().then((res) => {
+  		setPost(res.data.data)
+      setPostId(res.data.data[0]._id)
+  		console.log(res.data.data[0]._id)
+  	})
+  }
 
-  // useEffect (()=> {
-  // 	getPost()
-  // }, [])
+  useEffect (()=> {
+  	getPost()
+  }, [])
 
   return (
     <div>
@@ -32,12 +32,12 @@ const CommentsList = (props) => {
         <div className={style.text}>
           <h1> {props.screenName} </h1>
           <h1> {props.text} </h1>
-          {/* <NavLink to={`/posts/${post._id}`}> */}
+          <NavLink to={`/post/${postId}`}>
             <br />
             <button type="button" className={style.button}>
               View Post
             </button>
-          {/* </NavLink> */}
+          </NavLink>
         </div>
       </div>
     </div>

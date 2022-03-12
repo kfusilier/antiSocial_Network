@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
 import antiSocialAppTo from '../../api/axios.config';
 import style from './userIcon.module.css';
-import FollowButton from '../../components/FollowButton';
-import Avatar from '../Avatar';
 import Smiley from './Smiley.png';
-import NavBar2 from '../navbar2/index';
+import NavBar2 from '../NavBar2/index';
 
 const UserIcon = () => {
 	const [users, setUsers] = useState([]);

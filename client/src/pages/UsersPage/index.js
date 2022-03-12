@@ -1,6 +1,6 @@
 import Logo from '../../components/Logo';
 
-import NavBar1 from '../../components/navbar1/index.jsx';
+import NavBar1 from '../../components/NavBar1';
 import UsersDisplay from '../../components/UsersDisplay';
 
 const UsersPage = () => {
