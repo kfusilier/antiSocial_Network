@@ -73,6 +73,8 @@ const BrowsePage = () => {
 									text={post.text}
 									postId={post._id}
 									user={post.user._id}
+									likes={post.likes}
+									// post={post._id}
 								/>
 							</div>
 						);
