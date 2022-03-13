@@ -122,6 +122,7 @@ const edit = (req, res) => {
 const update = (req, res) => {
   let post = {
     text: req.body.text,
+    likes:req.body.likes,
     user: req.userId
   }
   db.Post.findByIdAndUpdate( 
