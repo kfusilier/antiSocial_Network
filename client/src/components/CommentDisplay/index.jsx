@@ -76,10 +76,10 @@ const CommentsList = (props) => {
           </Typography>
           <Typography variant="body2">
             {props.text} <br /> <br />
-            <button className={style.button} onClick={deleteBtn}>
+            {/* <button className={style.button} onClick={deleteBtn}>
               Deletes
-            </button>
-            <Button />
+            </button> */}
+            {/* <Button /> */}
             {/* <NavLink to={`/posts/${id}/edit`}>
               <button className={style.button} type="button">
                 Edit Post
