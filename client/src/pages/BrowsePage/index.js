@@ -5,6 +5,7 @@ import * as authService from '../../api/auth.service';
 import CommentShow from '../../components/CommentShow';
 import Logo from '../../components/Logo';
 import NavBar2 from '../../components/navbar2/index.jsx';
+import style from './browsepage.module.css';
 
 const reducer = (prevState, action) => {
 	switch (action.type) {
@@ -20,7 +21,7 @@ const reducer = (prevState, action) => {
 const initialState = {
 	posts: [],
 	isLoggedIn: false,
-};	
+};
 
 const BrowsePage = () => {
 	const [state, dispatch] = useReducer(reducer, initialState);
@@ -57,25 +58,26 @@ const BrowsePage = () => {
 	if (isLoggedIn) {
 		return (
 			<div>
-				<>
-					<NavBar2 />
-					<Logo />
-					<br/>
-					<br/>
-					<br/>
+				<NavBar2 />
+				<Logo />
+
+				<div id={style.title}>
+					<p>Browse Posts</p>
+				</div>
+				<div className={style.center}>
 					{posts.map((post) => {
 						return (
-							<>
+							<div>
 								<CommentShow
 									screenName={post.user.screenName}
 									text={post.text}
 									postId={post._id}
 									user={post.user._id}
 								/>
-							</>
+							</div>
 						);
 					})}
-				</>
+				</div>
 			</div>
 		);
 	} else {

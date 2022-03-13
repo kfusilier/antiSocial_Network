@@ -1,22 +1,22 @@
-/* #title {
+#title {
 	font-family: 'Fredoka One', cursive;
 	font-size: 40px;
 	color: white;
 	position: absolute;
-	left: 225px;
-	top: px;
-} */
+	left: 375px;
+	top: 100px;
+}
 
 .center {
 	/* border: 5px solid hotpink; */
 	overflow-y: scroll;
 	scrollbar-width: thin;
-	/* position: absolute; */
-	/* left: 150px;
-	top: 150px; */
-	/* height: 700px;
-	width: 700px; */
-	border: 3px solid yellow;
+	position: absolute;
+	left: 150px;
+	top: 150px;
+	height: 800px;
+	width: 700px;
+
 	/* border-radius: 75px; */
 	/* display: flex-start; */
 	/* flex-direction: column; */
