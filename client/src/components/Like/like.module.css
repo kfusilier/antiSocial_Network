@@ -3,7 +3,7 @@
 } */
 
 .button {
-	padding: 5px 15px;
+	padding: 3px 12px;
 	border-radius: 10px;
 	overflow: hidden;
 	color: #37ecba;
@@ -18,5 +18,9 @@
 
 .button:hover {
 	background-color: #37ecba;
+	color: white;
+}
+
+.span {
 	color: white;
 }

@@ -24,7 +24,7 @@ const Like = (props) => {
 				onClick={() => setLikes(likes + 1)}>
 				Like
 			</button>
-			<span> {likes}</span>
+			<span className={style.span}> {likes}</span>
 		</div>
 	);
 };

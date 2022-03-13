@@ -1,11 +1,11 @@
-/* #title {
+#title {
 	font-family: 'Fredoka One', cursive;
 	font-size: 40px;
 	color: white;
 	position: absolute;
 	left: 225px;
 	top: px;
-} */
+}
 
 .center {
 	/* border: 5px solid hotpink; */
@@ -42,34 +42,55 @@
 	overflow: hidden;
 	width: 575px;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
+
 	margin: 10px;
+	position: relative;
 }
 
-.text {
+.textWrapper {
 	color: white;
-	font-size: 15px;
-	/* border: 1px solid blue; */
-	margin: 5px 35px 5px 35px;
+
+	border: 1px solid blue;
+	width: 500px;
+	min-height: 100px;
+	/* position: absolute; */
+	justify-content: center;
+	/* left: 10px; */
+
+	/* margin: 5px 35px 5px 35px; */
 }
 
-.edits {
-	/* float: left; */
-	/* background-color: grey; */
-	/* display:inline-block; */
-	/* padding: 20px; */
-	margin: 10px;
-	list-style-type: none;
-	/* display: inline-block; */
-	border: 10px solid;
-	padding: 10px;
-	/* width: 200px;
-    height: 100px; */
-	border-radius: 6%;
+.userName {
+	font-family: 'Fredoka One', cursive;
+	font-size: 20px;
+	color: white;
+	/* position: absolute; */
+	border: 3px solid yellow;
+	/* left: 10px;
+	top: 10px; */
+}
+
+.userText {
+	font-family: 'Fredoka One', cursive;
+	font-size: 12px;
+	color: white;
+	/* position: absolute; */
+	border: 3px solid hotpink;
+	/* left: 225px;
+	top: px; */
+}
+.buttonWrapper {
+	border: 3px solid yellow;
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	width: 500px;
+	justify-content: space-around;
 }
 
 .button {
-	padding: 5px 15px;
+	padding: 3px 12px;
 	border-radius: 10px;
 	overflow: hidden;
 	color: #37ecba;

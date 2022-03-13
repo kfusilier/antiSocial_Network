@@ -53,20 +53,20 @@ const CommentsList = (props) => {
 		<div>
 			<div>
 				<div className={style.post}>
-					<div className={style.text}>
-						<h1> {props.screenName} </h1>
-						<h3>{props.text} </h3>
+					<div className={style.textWrapper}>
+						<p className={style.userName}>
+							{props.screenName}
+						</p>
+						<p className={style.userText}>{props.text} </p>
+					</div>
+					<div className={style.buttonWrapper}>
 						<NavLink to={`/post/${props.postId}`}>
-							<br />
 							<button
 								type='button'
 								className={style.button}>
 								View Post
 							</button>
 						</NavLink>
-						<div>
-							<Button />
-						</div>
 						<Like />
 					</div>
 				</div>
