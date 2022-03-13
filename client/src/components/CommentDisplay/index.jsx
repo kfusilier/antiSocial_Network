@@ -1,15 +1,8 @@
 import style from './CommentDisplay.module.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
 // import antiSocialAppTo from "../../api/axios.config";
 import * as postService from '../../api/post.service';
-import Card from '@mui/material/Card';
-import Box from '@mui/material/Box';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import { NavLink } from 'react-router-dom';
 import Comment from '../Comment';
 
@@ -81,11 +74,7 @@ const CommentsList = (props) => {
 					add a new comment!
 				</button>
 			</NavLink>
-			<br />
-			<br />
-			<div>
-				<Comment />
-			</div>
+			<Button />
 		</div>
 	);
 };
