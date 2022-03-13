@@ -8,7 +8,7 @@
 }
 
 .center {
-	border: 3px solid hotpink;
+	/* border: 3px solid hotpink; */
 	overflow-y: scroll;
 	scrollbar-width: thin;
 	position: absolute;
@@ -36,12 +36,11 @@
 .post {
 	border: 3px solid white;
 	border-radius: 30px;
-	min-height: 180px;
+	min-height: 160px;
 	overflow: hidden;
 	/* width: 575px; */
 	display: block;
 	/* justify-content: center; */
-
 	margin: 10px;
 	/* position: relative; */
 }
@@ -66,7 +65,7 @@
 	/* border: 3px solid yellow; */
 	/* left: 10px;
 	top: 10px; */
-	margin: 5px;
+	margin: 10px;
 }
 
 .userText {
@@ -75,7 +74,7 @@
 	color: white;
 	/* position: absolute; */
 	/* border: 3px solid hotpink; */
-	margin-left: 10px;
+	margin: 15px;
 	/* left: 225px;
 	top: px; */
 }
@@ -97,7 +96,7 @@
 	border: none;
 	background-color: white;
 	/* font-weight: bold; */
-	margin: 10px;
+	margin: 15px;
 }
 
 .button:hover {

@@ -30,18 +30,23 @@ const UsersPosts = () => {
 
 	return (
 		<>
+			<div id={style.title}>
+				<p>User's Posts</p>
+			</div>
 			<div className={style.center}>
-				<div id={style.title}>
-					<p>User's Posts</p>
-				</div>
 				<div>
 					<p>
 						{posts.map((post) => {
 							return (
 								<div>
-									<div>
-										<h2>Post:{post.text}</h2>
-										<h3>By: {screenName}</h3>
+									<div className={style.post}>
+										<p className={style.userName}>
+											{screenName}
+										</p>
+										<p className={style.userText}>
+											{post.text}
+										</p>
+										<br></br>
 										<NavLink
 											to={`/post/${post._id}`}>
 											<button
