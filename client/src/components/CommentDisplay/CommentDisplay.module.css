@@ -1,13 +1,8 @@
-.avatar {
-	max-width: 30px;
-}
-
 .displayWrapper {
 	display: inline-block;
 	color: white;
 	/* flex-direction: column; */
 	/* align-items: centered; */
-
 	border: 5px solid white;
 	border-radius: 75px;
 	position: fixed;
