@@ -1,0 +1,26 @@
+/* .container {
+	margin: 20px;
+} */
+
+.button {
+	padding: 3px 12px;
+	border-radius: 10px;
+	overflow: hidden;
+	color: #37ecba;
+	border: none;
+	background-color: white;
+	font-weight: bold;
+	/* position: fixed;
+	top: 325px;
+	left: 40%; */
+	margin: 10px;
+}
+
+.button:hover {
+	background-color: #37ecba;
+	color: white;
+}
+
+.span {
+	color: white;
+}
