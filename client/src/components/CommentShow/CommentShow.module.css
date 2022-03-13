@@ -16,7 +16,7 @@
 	top: 150px; */
 	/* height: 700px;
 	width: 700px; */
-	border: 3px solid yellow;
+	/* border: 3px solid yellow; */
 	/* border-radius: 75px; */
 	/* display: flex-start; */
 	/* flex-direction: column; */
@@ -50,43 +50,45 @@
 
 .textWrapper {
 	color: white;
-
-	border: 1px solid blue;
-	width: 500px;
-	min-height: 100px;
-	/* position: absolute; */
-	justify-content: center;
+	/* border: 1px solid blue; */
+	width: 520px;
+	min-height: 130px;
+	position: absolute;
+	/* justify-content: center; */
 	/* left: 10px; */
-
-	/* margin: 5px 35px 5px 35px; */
+	margin: 5px;
 }
 
 .userName {
 	font-family: 'Fredoka One', cursive;
 	font-size: 20px;
 	color: white;
+	/* font-weight: bold; */
 	/* position: absolute; */
-	border: 3px solid yellow;
+	/* border: 3px solid yellow; */
 	/* left: 10px;
 	top: 10px; */
+	margin: 5px;
 }
 
 .userText {
 	font-family: 'Fredoka One', cursive;
-	font-size: 12px;
+	font-size: 13px;
 	color: white;
 	/* position: absolute; */
-	border: 3px solid hotpink;
+	/* border: 3px solid hotpink; */
+	margin-left: 10px;
 	/* left: 225px;
 	top: px; */
 }
 .buttonWrapper {
-	border: 3px solid yellow;
+	/* border: 3px solid yellow; */
 	display: flex;
 	position: absolute;
 	bottom: 0;
 	width: 500px;
 	justify-content: space-around;
+	margin: 2px;
 }
 
 .button {
