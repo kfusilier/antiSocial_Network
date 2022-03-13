@@ -18,6 +18,8 @@ const Comment = (props) => {
 	console.log(id, commentId);
 	const fetchPosts = async () => {
 		await postService.get(`${id}`).then((res) => {
+			console.log(res.data);
+			console.log(res.data.data);
 			console.log(res.data.data.comments);
 
 			setPosts(res.data.data.comments);
