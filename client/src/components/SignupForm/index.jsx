@@ -41,7 +41,7 @@ const SignupForm = () => {
 					</div>
 					<div className={style.label}>
 						<label>
-							Username:
+							E-mail:
 							<input
 								onChange={(e) =>
 									setEmail(e.target.value)
@@ -54,19 +54,19 @@ const SignupForm = () => {
 						</label>
 					</div>
 					<div className={style.label}>
-					<label for='pass'>
-                            Password:
-                            <input
-                                onChange={(e) =>
-                                    setPassword(e.target.value)
-                                }
-                                className={style.input}
-                                id='pass'
-                                type='password'
-                                name='password'
-                                value={password}
-                            />
-                        </label>
+						<label for='pass'>
+							Password:
+							<input
+								onChange={(e) =>
+									setPassword(e.target.value)
+								}
+								className={style.input}
+								id='pass'
+								type='password'
+								name='password'
+								value={password}
+							/>
+						</label>
 					</div>
 				</div>
 			</form>{' '}
