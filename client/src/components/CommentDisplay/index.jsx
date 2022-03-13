@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import * as postService from '../../api/post.service';
 import { NavLink } from 'react-router-dom';
 import Comment from '../Comment';
+import Logo from '../Logo';
 
 const CommentsList = (props) => {
 	const [posts, setPosts] = useState([]);
@@ -56,25 +57,22 @@ const CommentsList = (props) => {
 	};
 
 	return (
-		<div className={style.usersContainer}>
-			<p>POST</p>
-			<p>Created at: {props.createdAt}</p>
-			<p>{props.text}</p> <br /> <br />
-			{/* <button className={style.button} onClick={deleteBtn}>
-              Deletes
-            </button> */}
-			{/* <Button /> */}
-			{/* <NavLink to={`/posts/${id}/edit`}>
-              <button className={style.button} type="button">
-                Edit Post
-              </button>
-            </NavLink> */}
-			<NavLink to={`/posts/${props.postId}/comments/new`}>
-				<button className={style.button} type='button'>
-					add a new comment!
-				</button>
-			</NavLink>
-			<Button />
+		<div>
+			<div className={style.displayWrapper}>
+				<div className={style.usersContainer}>
+					<p>User's Name???</p>
+					<br></br>
+					<p>{props.text}</p>
+					<br></br>
+					<p>Created at: {props.createdAt}</p>
+					<br /> <br />
+				</div>
+				<NavLink to={`/posts/${props.postId}/comments/new`}>
+					<button className={style.button} type='button'>
+						add a new comment!
+					</button>
+				</NavLink>
+			</div>
 		</div>
 	);
 };
