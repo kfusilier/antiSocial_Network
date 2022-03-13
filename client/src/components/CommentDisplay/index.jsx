@@ -83,6 +83,9 @@ const CommentsList = (props) => {
 			</NavLink>
 			<br />
 			<br />
+			<div>
+				<Comment />
+			</div>
 		</div>
 	);
 };
