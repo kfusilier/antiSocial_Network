@@ -37,3 +37,20 @@
 	justify-content: center;
 	align-items: center;
 }
+.button {
+    padding: 8px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    color: teal;
+    border: none;
+    background-color: lightgray;
+    font-weight: bold;
+    /* position: fixed; */
+    /* top: 325px;
+    left: 40%; */
+}
+
+.button:hover {
+    background-color: #37ecba;
+    color: white;
+}

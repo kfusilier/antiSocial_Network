@@ -13,6 +13,9 @@ const updateUser = (id, data) => {
 }
 
 const destroyUser = (id) => {
+    localStorage.removeItem("user")
+    localStorage.removeItem("id")
+    localStorage.removeItem("screenName")
     return antiSocialAppTo.delete(`/users/${id}`);
 }
 
