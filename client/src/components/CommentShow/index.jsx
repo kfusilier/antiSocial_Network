@@ -67,6 +67,7 @@ const CommentsList = (props) => {
 								View Post
 							</button>
 						</NavLink>
+						<Button />
 						<Like />
 					</div>
 				</div>

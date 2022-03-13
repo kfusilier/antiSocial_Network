@@ -2,62 +2,105 @@
 	font-family: 'Fredoka One', cursive;
 	font-size: 40px;
 	color: white;
-	position: fixed;
-	top: 8%;
-	left: 52%;
+	position: absolute;
+	left: 750px;
+	top: 100px;
 }
 
-.postsWrapper {
+.center {
+	border: 3px solid hotpink;
 	overflow-y: scroll;
 	scrollbar-width: thin;
-	display: flex;
+	position: absolute;
+	left: 500px;
+	top: 150px;
+	height: 700px;
+	width: 700px;
+	/* display: flex-start;
 	flex-direction: column;
-	align-items: center;
-	align-content: flex-start;
-	justify-content: space-evenly;
-	font-size: 40px;
-	/* border: 5px solid white; */
-	border-radius: 75px;
-	position: fixed;
-	height: 600px;
-	width: 750px;
-	top: 54%;
-	left: 60%;
-	transform: translate(-50%, -50%);
+	justify-content: center; */
+	/* align-items: center; */
+}
+
+.container {
+	border: 5px solid yellow;
+	/* position: absolute; */
+	/* left: 150px;
+	top: 150px; */
+	/* height: 600px; */
+	/* width: 650px;
+	display: block;
+	margin: 20px 55px; */
+}
+
+.post {
+	border: 3px solid white;
+	border-radius: 30px;
+	min-height: 180px;
+	overflow: hidden;
+	/* width: 575px; */
+	display: block;
+	/* justify-content: center; */
+
+	margin: 10px;
+	/* position: relative; */
+}
+
+.textWrapper {
 	color: white;
-	font-family: 'Fredoka One', cursive;
+	/* border: 1px solid blue; */
+	width: 520px;
+	min-height: 130px;
+	position: absolute;
+	/* justify-content: center; */
+	/* left: 10px; */
 	margin: 5px;
 }
 
-.posts {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-	font-size: 12px;
-	border: 3px solid white;
-	border-radius: 30px;
-	min-height: 120px;
-	overflow: hidden;
-	width: 500px;
-	left: 10%;
-	margin: 5px
+.userName {
+	font-family: 'Fredoka One', cursive;
+	font-size: 20px;
+	color: white;
+	/* font-weight: bold; */
+	/* position: absolute; */
+	/* border: 3px solid yellow; */
+	/* left: 10px;
+	top: 10px; */
+	margin: 5px;
 }
+
+.userText {
+	font-family: 'Fredoka One', cursive;
+	font-size: 13px;
+	color: white;
+	/* position: absolute; */
+	/* border: 3px solid hotpink; */
+	margin-left: 10px;
+	/* left: 225px;
+	top: px; */
+}
+.buttonWrapper {
+	/* border: 3px solid yellow; */
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	width: 500px;
+	justify-content: space-around;
+	margin: 2px;
+}
+
 .button {
-    padding: 8px 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    color: #37ecba;
-    border: none;
-    background-color: white;
-    font-weight: bold;
-    /* position: fixed;
-    top: 325px;
-    left: 40%; */
-	margin-bottom: 4.5px;
+	padding: 3px 12px;
+	border-radius: 10px;
+	overflow: hidden;
+	color: #37ecba;
+	border: none;
+	background-color: white;
+	/* font-weight: bold; */
+	margin: 10px;
 }
 
 .button:hover {
-    background-color: #37ecba;
-    color: white;
+	background-color: #37ecba;
+	color: white;
 }
