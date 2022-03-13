@@ -68,7 +68,10 @@ const CommentsList = (props) => {
 							</button>
 						</NavLink>
 						<Button />
+
+
 						<Like likes={props.likes} postId={props.postId}/>
+
 					</div>
 				</div>
 			</div>

@@ -1,36 +1,5 @@
-
-*{
-    font-family: 'Fredoka One', cursive;
-
-}
-
-
-.h3{
-    float: left;
-    /* background-color: grey; */
-    /* display:inline-block; */
-    /* padding: 20px; */
-    margin: 10px;
-    list-style-type: none;
-    /* display: inline-block; */
-    /* border: 10px solid; */
-    /* padding:10px; */
-    width: 100px;
-    height: 70px;
-    border-radius: 6%;
-
-
-}#title {
-	font-family: 'Fredoka One', cursive;
-	font-size: 40px;
-	color: white;
-	position: fixed;
-	top: 10%;
-	left: 35%;
-}
-
 .avatar {
-    max-width: 30px;
+	max-width: 30px;
 }
 
 .displayWrapper {
@@ -49,8 +18,9 @@
 }
 
 .usersContainer {
+	border: 3px solid hotpink;
 	position: fixed;
-	height: 650px;
+	height: 600px;
 	width: 800px;
 	top: 52%;
 	left: 52%;
@@ -62,19 +32,19 @@
 }
 
 .button {
-    padding: 8px 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    color: teal;
-    border: none;
-    background-color: lightgray;
-    font-weight: bold;
-    /* position: fixed; */
-    /* top: 325px;
+	padding: 8px 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	color: teal;
+	border: none;
+	background-color: lightgray;
+	font-weight: bold;
+	/* position: fixed; */
+	/* top: 325px;
     left: 40%; */
 }
 
 .button:hover {
-    background-color: #37ecba;
-    color: white;
+	background-color: #37ecba;
+	color: white;
 }

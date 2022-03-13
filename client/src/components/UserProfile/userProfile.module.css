@@ -13,9 +13,9 @@
 	position: fixed;
 	height: 600px;
 	width: 380px;
-	top: 55%;
-	left: 15%;
-	transform: translate(-50%, -50%);
+	top: 500px;
+	left: 100px;
+	transform: translate(-20%, -50%);
 	color: white;
 	font-family: 'Fredoka One', cursive;
 }
