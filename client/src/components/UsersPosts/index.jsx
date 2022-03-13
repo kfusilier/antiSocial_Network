@@ -16,7 +16,7 @@ const UsersPosts = () => {
 			setProfile(res.data.data);
 			setPosts(res.data.data.post);
 			setScreenName(res.data.data.screenName);
-      setPostId(res.data.data.post[0]._id);
+      // setPostId(res.data.data.post[0]._id);
     });
 	};
   const deleteBtn = async () => {
@@ -26,7 +26,7 @@ const UsersPosts = () => {
   };
   useEffect(() => {
     showUser();
-  });
+  },[]);
 
   return (
     <>

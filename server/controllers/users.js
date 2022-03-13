@@ -60,9 +60,13 @@ const create = (req, res) => {
 
 
 const update = (req, res) => {
+  let userData;
+  userData = {
+    screenName: req.body.screenName,
+  }
   db.User.findByIdAndUpdate(
     req.params.id,
-    req.body,
+    userData,
     { new: true },
     (err, updatedUser) => {
       if (err)
