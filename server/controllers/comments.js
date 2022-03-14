@@ -112,21 +112,42 @@ const newComments = (req, res) => {
 
 //this works with postman
 
+// const editComment = (req, res) => {
+//     db.Post.findOne({"comment._id":req.params.id}, (err, post) => {
+//         const commentId = post.comments.id(req.params.id);
+//         const context = {comment: commentId};
+//             if(err)
+//             return res.status(400).json({
+//                 message: "Can't edit comment!",
+//                 error: err,
+//             });
+//             return res.status(200).json({
+//                 message: "Comments retrieved for edit",
+//                 data: context,
+//             });
+//     });
+// };
+
 const editComment = (req, res) => {
-    db.Post.findOne({"comment._id":req.params.id}, (err, post) => {
+	db.Post.findOne({'comment._id': req.params.id}, (err, post) => {
         const commentId = post.comments.id(req.params.id);
         const context = {comment: commentId};
-            if(err)
-            return res.status(400).json({
-                message: "Can't edit comment!",
-                error: err,
-            });
-            return res.status(200).json({
-                message: "Comments retrieved for edit",
-                data: context,
-            });
-    });
+		if (err)
+			return res.status(400).json({
+				message: "Utter Failure! with show!!",
+				error: err,
+			});
+		return res.status(200).json({
+			message: "Success! with comment edit!!!",
+			data: context,
+            posts: post.comments
+
+		});
+	}); 
 };
+
+
+
 
 //this works with postman
 const updateComment = (req, res) => {

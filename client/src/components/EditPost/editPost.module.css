@@ -3,7 +3,7 @@
 	color: white;
 	/* flex-direction: column; */
 	/* align-items: centered; */
-	border: 5px solid white;
+	/* border: 5px solid white; */
 	border-radius: 75px;
 	position: fixed;
 	height: 250px;
@@ -27,13 +27,13 @@
 	padding: 8px 20px;
 	border-radius: 10px;
 	overflow: hidden;
-	color: #37ecba;
+	color: white;
 	border: none;
-	background-color: white;
+	background-color: #37ecba;
 	font-weight: bold;
-	position: fixed;
+	/* position: fixed;
 	top: 270px;
-	left: 85px;
+	left: 85px; */
 }
 
 .button:hover {

@@ -54,16 +54,19 @@ const Avatar = (props) => {
 					<h2>{user.email}</h2>
 				</div>
 			</div>
+
 			<div>
-				<h6>Change Name?</h6>
+				<p className={style.changename}>Change Name?</p>
 				<input
 					onChange={(e) => setScreenName(e.target.value)}
 					type="text"
 					placeholder='Change Name?'
 					value={screenName}
 				/>
+				<br/>
 				<button className={style.button} onClick={updateProfile}>Save</button>
-				<button onClick={deleteProfile}>Delete Profile</button>
+				<button className={style.button} onClick={deleteProfile}>Delete Profile</button>
+			<br/>
 			</div>
 		</div>
     </>

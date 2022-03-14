@@ -40,8 +40,8 @@ const createComment = (id, data) => {
     return antiSocialAppTo.post(`/posts/${id}/comments`, data);
 }
 
-const editComment = (id, commentId) => {
-    return antiSocialAppTo.get(`/posts/${id}/comments/${commentId}/edit`);
+const editComment = (id, commentId, data) => {
+    return antiSocialAppTo.get(`/posts/${id}/comments/${commentId}/edit`, data);
 }
 
 const updateComment = (id, commentId) => {

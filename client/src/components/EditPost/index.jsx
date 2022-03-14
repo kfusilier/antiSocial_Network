@@ -4,6 +4,11 @@ import antiSocialAppTo from '../../api/axios.config';
 import * as postService from '../../api/post.service';
 import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
 
 const EditPost = (props) => {
 	const [posts, setPosts] = useState([]);
@@ -19,7 +24,7 @@ const EditPost = (props) => {
 
 	const deleteBtn = async () => {
 		await postService.destroy(id).then(() => {
-			document.location = '/BrowsePage';
+			document.location = `/browsepage`;
 		});
 	};
 
@@ -43,32 +48,53 @@ const EditPost = (props) => {
 	}, []);
 
 	return (
-		<div>
-			<div id={style.title}>
-				<p>This is the edit post page!</p>
-				<br />
-				Post: <p>{props.text} </p>
+		<div className={style.displayWrapper}>
+
+<Card sx={{ maxWidth: 400 }}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+		Edit your Post:         
+		</Typography>
+    
+
+        <Typography variant="body2">
+		<p>{props.text}</p>
+		<br/>
 				<form>
 					<label>
-						Edit your post:
 						<textarea
 							type='text'
 							name='text'
-							placeholder='body'
+							placeholder={props.text}
 							value={text}
 							onChange={(e) => setText(e.target.value)}
 						/>
 					</label>
-
+					<br/>
 					<input
 						className={style.button}
 						type='submit'
-						value='Save'
+						value='Save New Post'
 						onClick={handleSubmit}></input>
 				</form>
+				<br/>
 				<button className={style.button} onClick={deleteBtn}>
-					Deletes
+					Delete Post
 				</button>
+
+	
+        </Typography>
+      </CardContent>
+	  
+      
+	  <br/>
+    </Card>
+
+
+			<div id={style.title}>
+				<br />
+				
+				
 			</div>
 		</div>
 	);

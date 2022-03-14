@@ -5,7 +5,11 @@ import { useParams } from 'react-router-dom';
 import * as postService from '../../api/post.service';
 import { NavLink } from 'react-router-dom';
 import Comment from '../Comment';
-import Logo from '../Logo';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
 
 const CommentsList = (props) => {
 	const [posts, setPosts] = useState([]);
@@ -58,8 +62,8 @@ const CommentsList = (props) => {
 
 	return (
 
-		<div>
-			<div className={style.displayWrapper}>
+		<div className = {style.displayWrapper}>
+			{/* <div className={style.displayWrapper}>
 				<div className={style.usersContainer}>
 					<p>User's Name???</p>
 					<br></br>
@@ -73,7 +77,39 @@ const CommentsList = (props) => {
 						add a new comment!
 					</button>
 				</NavLink>
-			</div>
+			</div> */}
+		
+
+			<Card sx={{ maxWidth: 400 }}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+Post by:
+        
+		</Typography>
+    
+
+        <Typography variant="body2">
+		<p>{props.text}</p>
+    
+	
+        </Typography>
+      </CardContent>
+	  
+      
+	  <br/>
+    </Card>
+<br/>
+
+<NavLink to={`/posts/${props.postId}/comments/new`}>
+        <button className={style.button} >Add a Comment</button></NavLink>
+	<br/>
+	<br/>
+
+	<Comment/>
+	<br/>
+
+
+
 		</div>
 	);
 };
