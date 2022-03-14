@@ -56,14 +56,14 @@ import { func } from "prop-types";
 
 
 const CommentNew = ({refreshPosts}) => {
-	const [body, setBody] = useState("");
+	const [content, setContent] = useState("");
 	
 	let {id} = useParams()
 	console.log(id)
 	const handleSubmit = async () => {
-		let newComment = { body };
+		let newComment = { content };
 		let res = await postService.createComment(id, newComment).then(() => {
-			setBody("");
+			setContent("");
 			console.log(newComment);
 			// refreshPosts();
 		});
@@ -81,8 +81,8 @@ const CommentNew = ({refreshPosts}) => {
 				<label>
 					Add Your Comment:
 					<textarea
-						onChange={(e) => setBody(e.target.value)}
-						value={body}
+						onChange={(e) => setContent(e.target.value)}
+						value={content}
 						type="text"
 						name="content"
 						placeholder="input body value target, homie"

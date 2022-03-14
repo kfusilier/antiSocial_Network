@@ -77,7 +77,12 @@ const show = (req, res) => {
 //works in postman
 const newComments = (req, res) => {
     db.Post.findById(req.params.id, (err, newComment) => {
-        newComment.comments.push(req.body);
+        let commentData = {
+            content: req.body.content,
+            user: req.userId
+        }
+        console.log(commentData)
+        newComment.comments.push(commentData);
         newComment.save(function() {
             if(err) return res.status(200).json({
                 message: "Fail comment",
