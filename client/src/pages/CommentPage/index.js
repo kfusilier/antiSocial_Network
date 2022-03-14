@@ -27,7 +27,7 @@ const CommentPage = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { posts, isLoggedIn } = state;
   const [users, setUsers] = useState([]);
-console.log(posts)
+  console.log(posts);
   const userActive = () => {
     if (authService.currentUser()) {
       dispatch({ type: "isLoggedIn", payload: true });
@@ -41,7 +41,7 @@ console.log(posts)
   const { id } = useParams();
   // console.log(id)
 
-    let ids = JSON.parse(localStorage.getItem("id"));
+  let ids = JSON.parse(localStorage.getItem("id"));
   // console.log(ids)
   const fetchPosts = async () => {
     await postService.get(id).then((res) => {
@@ -61,7 +61,7 @@ console.log(posts)
     fetchPosts();
     userActive();
     // fetchAllPosts();
-  }, [])
+  }, []);
 
   if (isLoggedIn) {
     return (
@@ -70,8 +70,8 @@ console.log(posts)
         <CommentDisplay
           createdAt={posts.createdAt}
           text={posts.text}
-		  /** NOTES: Currently setting user={ids} due to can't read post user */
-		  user={ids}
+          /** NOTES: Currently setting user={ids} due to can't read post user */
+          user={ids}
           postId={posts._id}
         />
         {/* {posts.map((post)=> {
@@ -91,7 +91,7 @@ console.log(posts)
     return (
       <div>
         <Logo />
-		<NavBar2 />
+        <NavBar2 />
       </div>
     );
   }

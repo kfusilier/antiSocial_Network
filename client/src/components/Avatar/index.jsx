@@ -3,6 +3,7 @@ import Smiley from './Smiley.png';
 import {useState, useEffect} from 'react'
 import {useParams, useNavigate, Navigate} from 'react-router-dom';
 import * as userService from "../../api/user.service.js"
+import * as authService from "../../api/auth.service"
 
 
 
@@ -32,12 +33,13 @@ const Avatar = (props) => {
 	navigate(`/users/${id}`)
 	}
 
-//   const deleteProfile = async () => {
-// 	await userService.destroyUser(id).then((res) => {
-// 		setInfo(res.data.data)
-// 		navigate('/SignupPage');
-// 	})
-//   }
+  const deleteProfile = async () => {
+	await userService.destroyUser(id).then((res) => {
+		authService.logout();
+		navigate('/');
+	})
+  }
+
 	return (
     <>
 		<div className={style.avatarLocation}>
@@ -61,6 +63,7 @@ const Avatar = (props) => {
 					value={screenName}
 				/>
 				<button className={style.button} onClick={updateProfile}>Save</button>
+				<button onClick={deleteProfile}>Delete Profile</button>
 			</div>
 		</div>
     </>

@@ -29,34 +29,35 @@ const CommentsList = (props) => {
 		fetchPosts();
 	}, []);
 
-	const handleClick = () => {
-		{
-			!isEdit ? setIsEdit(true) : setIsEdit(false);
-		}
-	};
+	// const handleClick = () => {
+	// 	{
+	// 		!isEdit ? setIsEdit(true) : setIsEdit(false);
+	// 	}
+	// };
 
-	let ids = JSON.parse(localStorage.getItem('id'));
-	// console.log(ids)
-	const Button = () => {
-		if (ids === props.user) {
-			return (
-				<>
-					<NavLink to={`/posts/${props.postId}/edit`}>
-						<button
-							onClick={handleClick}
-							className={style.button}
-							type='button'>
-							Edit Post
-						</button>
-					</NavLink>
-				</>
-			);
-		} else {
-			return <></>;
-		}
-	};
+	// let ids = JSON.parse(localStorage.getItem('id'));
+	// // console.log(ids)
+	// const Button = () => {
+	// 	if (ids === props.user) {
+	// 		return (
+	// 			<>
+	// 				<NavLink to={`/posts/${props.postId}/edit`}>
+	// 					<button
+	// 						onClick={handleClick}
+	// 						className={style.button}
+	// 						type='button'>
+	// 						Edit Post
+	// 					</button>
+	// 				</NavLink>
+	// 			</>
+	// 		);
+	// 	} else {
+	// 		return <></>;
+	// 	}
+	// };
 
 	return (
+
 		<div>
 			<div className={style.displayWrapper}>
 				<div className={style.usersContainer}>
