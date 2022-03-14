@@ -6,7 +6,8 @@ import * as userService from "../../api/user.service.js"
 import * as authService from "../../api/auth.service"
 
 
-const Avatar = () => {
+
+const Avatar = (props) => {
   const[user, setUser] = useState("");
   const[screenName, setScreenName] = useState('')
 	let {id} = useParams();
@@ -14,7 +15,7 @@ const Avatar = () => {
 	const fetchScreenName = async () => {
 		await userService.showUser(id).then((res) => {
 			setScreenName(res.data.data.screenName);
-			setUser(res.data.data.screenName);
+			setUser(res.data.data);
 			console.log(id)
 		})
 	}
@@ -25,9 +26,10 @@ const Avatar = () => {
   },[]);
 
   const updateProfile = async () => {
-	const updatedUser = new FormData();
-	updatedUser.append("screenName", screenName); 
-	await userService.updateUser(user._id, updatedUser);
+	const updatedUser = {screenName};
+	await userService.updateUser(id, updatedUser);
+	props.refreshPost()
+	document.location.reload()
 	navigate(`/users/${id}`)
 	}
 
@@ -46,10 +48,10 @@ const Avatar = () => {
 					<img src={Smiley} alt='smiley' />
 				</div>
 				<div className={style.avatarName}>
-					<h6>Name:</h6>
-					<h2>{user}</h2>
 					<h6>Screen Name:</h6>
-					<h2>{screenName}</h2>
+					<h2>{user.screenName}</h2>
+					<h6>Email:</h6>
+					<h2>{user.email}</h2>
 				</div>
 			</div>
 			<div>
@@ -57,6 +59,7 @@ const Avatar = () => {
 				<input
 					onChange={(e) => setScreenName(e.target.value)}
 					type="text"
+					placeholder='Change Name?'
 					value={screenName}
 				/>
 				<button className={style.button} onClick={updateProfile}>Save</button>
