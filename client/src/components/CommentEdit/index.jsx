@@ -9,12 +9,13 @@ const CommentEdit = (props) => {
   const [comments, setComments] = useState([]);
   const [isEdit, setIsEdit] = useState(false);
   let { id, commentId } = useParams();
+
   console.log(id, commentId);
 
   const fetchComments = async () => {
     await postService.editComment(id, commentId).then((res) => {
-      console.log(res.data.data.comment);
-      setComments(res.data.data.comment);
+      console.log(res.data);
+      setComments(res.data.data.comments);
     });
   };
 
@@ -25,7 +26,7 @@ const CommentEdit = (props) => {
     let res = await postService.updateComment(id, commentId).then(() => {
       setNewComment("");
     });
-    console.log(res);
+    // console.log(res);
     if (!res === 201) {
       alert(`bad: ${res.status}`);
     }
@@ -33,7 +34,8 @@ const CommentEdit = (props) => {
 
   const deleteComment = async () => {
     await postService.deleteComment(id, commentId).then(() => {
-      console.log(id, commentId);
+      // console.log(id, commentId);
+    
     });
   };
 
@@ -52,6 +54,7 @@ const CommentEdit = (props) => {
           <label>
             Edit your comment:
             <input
+              name='content'
               type="text"
               value={comments.content}
               onChange={(e) => setComments(e.target.value)}

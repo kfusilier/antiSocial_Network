@@ -14,7 +14,7 @@ const UsersPosts = () => {
   const showUser = async () => {
     await userService.showUser(id).then((res) => {
       setProfile(res.data.data);
-      setPosts(res.data.data.post);
+      setPosts(res.data.data.post.reverse());
       setScreenName(res.data.data.screenName);
       // setPostId(res.data.data.post[0]._id);
     });

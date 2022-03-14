@@ -10,3 +10,18 @@
 	flex-wrap: wrap;
 	transform: translate(-50%, -50%);
 }
+
+.button {
+	padding: 8px 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	color: white;
+	border: none;
+	background-color: #37ecba;
+	font-weight: bold;
+}
+
+.button:hover {
+	background-color: grey;
+	color: #37ecba;
+}

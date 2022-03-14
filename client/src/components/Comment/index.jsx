@@ -3,13 +3,13 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // import antiSocialAppTo from "../../api/axios.config";
 import * as postService from '../../api/post.service';
-import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { NavLink } from 'react-router-dom';
+import Card from '@mui/material/Card';
 
 const Comment = (props) => {
 	const [posts, setPosts] = useState([]);
@@ -38,14 +38,26 @@ const Comment = (props) => {
 	}, []);
 
 	return (
-		<div className={style.usersContainer}>
-			Comments:
-			<br />
-			<ul>
+
+<div>
+		
+		
+			       
+
+			<Card sx={{ maxWidth: 400 }}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        Comments
+		</Typography>
+    
+
+        <Typography variant="body2">
+		
+		<ul>
 				{posts.map((sub) => (
 					<li>
 						{sub.content}
-						<br />
+						{/* <br />
 						<NavLink
 							to={`/posts/${id}/comments/${sub._id}/edit`}>
 							<button
@@ -55,10 +67,18 @@ const Comment = (props) => {
 							</button>
 						</NavLink>
 
-						<button onClick={deleteComment}>Delete</button>
+						<button className={style.button} onClick={deleteComment}>Delete</button> */}
 					</li>
 				))}
-			</ul>
+			</ul>    
+        </Typography>
+      </CardContent>
+  
+    </Card>
+
+		
+	
+				
 		</div>
 	);
 };

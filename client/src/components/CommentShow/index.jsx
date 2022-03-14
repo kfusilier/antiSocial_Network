@@ -11,8 +11,8 @@ const CommentsList = (props) => {
 
 	const getPost = async () => {
 		await postService.getAll().then((res) => {
-			setPost(res.data.data);
-			setPostId(res.data.data);
+			setPost(res.data.data.reverse());
+			setPostId(res.data.data.reverse());
 			// console.log(res.data.data)
 		});
 	};

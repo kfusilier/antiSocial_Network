@@ -5,7 +5,10 @@ import * as postService from '../../api/post.service';
 import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 import { func } from "prop-types";
-
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 // const CommentNew = () => {
 
@@ -65,6 +68,7 @@ const CommentNew = ({refreshPosts}) => {
 		let res = await postService.createComment(id, newComment).then(() => {
 			setContent("");
 			console.log(newComment);
+			document.location=`/post/${id}`
 			// refreshPosts();
 		});
 
@@ -76,10 +80,18 @@ const CommentNew = ({refreshPosts}) => {
 	};
 
 	return (
-		<div>
-			<form>
+		<div className = {style.displayWrapper}>
+
+<Card sx={{ maxWidth: 400 }}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+Add a comment
+		</Typography>
+    
+
+        <Typography variant="body2">
+		<form>
 				<label>
-					Add Your Comment:
 					<textarea
 						onChange={(e) => setContent(e.target.value)}
 						value={content}
@@ -89,7 +101,14 @@ const CommentNew = ({refreshPosts}) => {
 					/>
 				</label>
 			</form>
-			<button onClick={handleSubmit}> Submit Comment </button>
+			<button className = {style.button} onClick={handleSubmit}> Submit Comment </button>
+
+        </Typography>
+      </CardContent>
+	  
+      
+	  <br/>
+    </Card>
 		</div>
 	);
 };
